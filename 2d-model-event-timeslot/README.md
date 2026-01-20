@@ -64,3 +64,13 @@ $$
 $$
 \forall_{r \in R} \forall_{s \in S} \qquad \sum_{l \in LR[r]} X[l][s] \leq AR[r][s]
 $$
+
+### Reletion between matrix X and matrix Y
+$$
+\forall_{t \in T} \forall_{s \in S} \qquad Y[t][s] = \sum_{l \in LT[t]} X[l][s]
+$$
+
+### Reletion between matrix X and matrix Z
+$$
+\forall_{r \in R} \forall_{s \in S} \qquad Z[r][s] = \sum_{l \in LR[r]} X[l][s]
+$$
