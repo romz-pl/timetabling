@@ -95,3 +95,31 @@ $$
 $$
 \forall_{r \in R} \forall_{s \in S} \qquad Z[r][s] = \sum_{l \in LR[r]} X[l][s]
 $$
+
+
+## Objective function
+
+The objective function is the linear function of the student's timetable, represented by the matrix $X$, and the teacher's timetable, represented by the matrix $Y$:
+
+$$
+\min_{X} \quad 
+w_L  \sum_{l \in L} \sum_{s \in S} (1 + H[s])^{q_L} X[l][s] +
+w_T  \sum_{t \in T} \sum_{s \in S} (1 + H[s])^{q_T} Y[t][s]
+$$
+
+where $q_L, q_t \in \mathbb{R}^+$ and coefficients $w_S, w_T \in \mathbb{R}^+$ fulfill the condition $w_S + w_T = 1$. 
+The recommended range for $q \in \mathbb{R}$ is $1/3 \leq q \leq 3$. However, the value of $q$ within this range has minimal impact on the speed of convergence.
+
+The coefficient $(1 + H[s])^q$ in the above equation enforces the timetable for small values of $H[s]$. Therefore, the consequences are as follows: 
++ Lectures start in the morning.
++ Timetables with an equal number of lectures during the day each week are preferred.
++ Free slots are penalized.
+
+### Questions
++ How to choose the values of $q_L, q_T, w_S, w_T$?
++ What is the relationship between the values of $q_L, q_T, w_S, w_T$ and the quality of the requested timetable?
++ Is the proposed objective function sufficient for generating high-quality timetables?
++ What are some other possible objective functions?
+
+
+
