@@ -19,6 +19,7 @@
 
 
 ### 2022
++ A Cutting Plane Algorithm for the International Timetabling Competition 2019 Problem, [Management and Economics Report](https://backend.orbit.dtu.dk/ws/portalfiles/portal/273636085/A_Cutting_Plane_Algorithm_for_the_International_Timetabling_Competition_2019_Problem.pdf)
 + A graph-based MIP formulation of the International Timetabling Competition 2019, [Journal of Scheduling](https://doi.org/10.1007/s10951-022-00724-y)
 + A mixed-integer programming approach for solving university course timetabling problems, [Journal of Scheduling](https://doi.org/10.1007/s10951-021-00715-5)
 + Mixed Integer Programming for University Timetabling, [Ph.D. Thesis](https://backend.orbit.dtu.dk/ws/portalfiles/portal/311617778/Mixed_Integer_Programming_for_University_Timetabling_Thesis_Dennis_Holm.pdf)
