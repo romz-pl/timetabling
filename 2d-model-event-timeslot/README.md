@@ -20,11 +20,14 @@
 + All lessons are taught: $\cup_{t \in T} LT[t] = L$
 + The lesson can take place in one room only: If $r_1, r_2 \in R$ and $r_1 \neq r_2$ then $LR[r_1] \cap LR[r_2] = \varnothing$
 + Each lesson is assigned to a specific room: $\cup_{r \in R} LR[r] = L$
-+ In the availability matrix $AL[l][s]$ value $1$ means that the lecure $l$ is available at slot $s$.
-+ In the availability matrix $AT[t][s]$ value $1$ means that the teacher $t$ is available at slot $s$.
-+ In the availability matrix $AR[r][s]$ value $1$ means that the room $r$ is available at slot $s$. 
++ In the availability matrix $AL[l][s]$ value $1$ means that the lecure $l \in L$ is available at slot $s \in S$.
++ In the availability matrix $AT[t][s]$ value $1$ means that the teacher $t \in T$ is available at slot $s \in S$.
++ In the availability matrix $AR[r][s]$ value $1$ means that the room $r \in R$ is available at slot $s \in S$. 
 
-## Objective variables
+## Variables
++ $X : L \times S \mapsto \{ 0, 1 \}$ - value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
++ $Y : T \times S \mapsto \{ 0, 1 \}$ - value $Y[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
++ $Z : R \times S \mapsto \{ 0, 1 \}$ - value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
 
 
 ## Constrains
