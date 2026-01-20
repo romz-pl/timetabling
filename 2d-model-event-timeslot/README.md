@@ -2,12 +2,17 @@
 
 ## Input parameters
 
-+ $T$ - the set of teachers;
-+ $L$ - the set of lectures;
-+ $R$ - the set of rooms;
-+ $S$ - the set of timeslots;
-+ $LT[t] \subseteq L$ - the set of lectures being taught by the teacher $t \in T$;
-+ $LR[r] \subseteq L$ - the set of lectures taking place in the room $r \in R$;
++ $T$ - the set of teachers.
++ $L$ - the set of lectures.
++ $R$ - the set of rooms.
++ $S$ - the set of timeslots.
++ $LT[t] \subseteq L$ - the set of lectures being taught by the teacher $t \in T$.
++ $LR[r] \subseteq L$ - the set of lectures taking place in the room $r \in R$.
++ $AX : L \times S \mapsto \{ 0, 1 \}$ - the availability matrix for lectures. See variable $X$.
++ $AY : L \times T \mapsto \{ 0, 1 \}$ - the availability matrix for teachers. See variable $Y$.
++ $AZ : L \times R \mapsto \{ 0, 1 \}$ - the availability matrix for rooms. See variable $Z$.
+
+
 
 ### Assumptions
 
