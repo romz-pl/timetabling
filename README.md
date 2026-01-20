@@ -17,8 +17,18 @@
 ## Models based on MILP that have been published in the literature
 
 
+
 ### 2022
 + Mixed Integer Programming for University Timetabling, [Ph.D. Thesis](https://backend.orbit.dtu.dk/ws/portalfiles/portal/311617778/Mixed_Integer_Programming_for_University_Timetabling_Thesis_Dennis_Holm.pdf)
+
+
+### 2021
+MILP. Try. Repeat. Computing solutions to the ITC 2021 instances by repeated massive parallel MILP computations, [Proceedings of the 13th International Conference on the Practice and Theory of Automated Timetabling - PATAT 2021](https://www.patatconference.org/patat2020/proceedings/papers/35.ITC2021_paper1.pdf)
+
+
+### 2019
++ A graph-based MIP formulation of the International Timetabling Competition 2019, [Journal of Scheduling](https://doi.org/10.1007/s10951-022-00724-y)
+
 
 ### 2014
 + Integer programming for the generalized high school timetabling problem [Journal of Scheduling](https://doi.org/10.1007/s10951-014-0405-x)
