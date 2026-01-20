@@ -28,6 +28,7 @@
 ### 2021
 + Application of Mixed Integer Programming Methods for Practical Educational Timetabling, [Ph.D. Thesis](https://backend.orbit.dtu.dk/ws/files/271654196/RasmusMikkelsen_PhD_Thesis.pdf)
 + MILP. Try. Repeat. Computing solutions to the ITC 2021 instances by repeated massive parallel MILP computations, [Proceedings of the 13th International Conference on the Practice and Theory of Automated Timetabling - PATAT 2021](https://www.patatconference.org/patat2020/proceedings/papers/35.ITC2021_paper1.pdf)
++ Solving a highly constrained Dutch school timetabling problem, [Master Thesis](https://studenttheses.uu.nl/bitstream/handle/20.500.12932/39490/Thesis.pdf)
 
 
 ### 2020
