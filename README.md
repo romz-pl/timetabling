@@ -36,4 +36,4 @@
 
 
 ### 2014
-+ Integer programming for the generalized high school timetabling problem [Journal of Scheduling](https://doi.org/10.1007/s10951-014-0405-x)
++ Integer programming for the generalized high school timetabling problem, [Journal of Scheduling](https://doi.org/10.1007/s10951-014-0405-x)
