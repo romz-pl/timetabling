@@ -11,10 +11,10 @@
 
 ### Assumptions
 
-+ If $t_1, t_2 \in T$ and $t_1 \neq t_2$ then $LT[t_1] \cap LT[t_2] = \varnothing$
-+ $\cup_{t \in T} LT[t] = L$
-+ If $r_1, r_2 \in R$ and $r_1 \neq r_2$ then $LR[r_1] \cap LR[r_2] = \varnothing$
-+ $\cup_{r \in R} LR[r] = L$
++ Any lesson can be taught by one teacher: If $t_1, t_2 \in T$ and $t_1 \neq t_2$ then $LT[t_1] \cap LT[t_2] = \varnothing$
++ All lessons are taught: $\cup_{t \in T} LT[t] = L$
++ The lesson can take place in one room only: If $r_1, r_2 \in R$ and $r_1 \neq r_2$ then $LR[r_1] \cap LR[r_2] = \varnothing$
++ Each lesson is assigned to a specific room: $\cup_{r \in R} LR[r] = L$
 
 ## Objective variables
 
