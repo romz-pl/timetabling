@@ -2,27 +2,36 @@
 
 ## Input parameters
 
+### Sets
 + $T$ - the set of teachers.
 + $L$ - the set of lectures.
 + $R$ - the set of rooms.
 + $S$ - the set of timeslots.
-+ $LT[t] \subseteq L$ - the set of lectures being taught by the teacher $t \in T$.
-+ $LR[r] \subseteq L$ - the set of lectures taking place in the room $r \in R$.
+
+### Sequence of sets LT
++ $\forall_{t \in T} \quad LT[t] \subseteq L$ - the set of lectures being taught by the teacher $t \in T$.
++ Any lesson can be taught by one teacher, hence: If $t_1, t_2 \in T$ and $t_1 \neq t_2$ then $LT[t_1] \cap LT[t_2] = \varnothing$
++ All lessons are taught, hence: $\cup_{t \in T} LT[t] = L$
+
+### Sequence of sets LR
++ $\forall_{r \in R} \quad LR[r] \subseteq L$ - the set of lectures taking place in the room $r \in R$.
++ The lesson can take place in one room only, hence: If $r_1, r_2 \in R$ and $r_1 \neq r_2$ then $LR[r_1] \cap LR[r_2] = \varnothing$
++ Each lesson is assigned to a specific room, hence: $\cup_{r \in R} LR[r] = L$
+
+### Availability matrix AL
 + $AL : L \times S \mapsto \{ 0, 1 \}$ - the availability matrix for lectures. See variable $X$.
++ In the availability matrix $AL[l][s]$ value $1$ means that the lecture $l \in L$ is available at slot $s \in S$.
+
+### Availability matrix AT
 + $AT : T \times S \mapsto \{ 0, 1 \}$ - the availability matrix for teachers. See variable $Y$.
-+ $AR : R \times S \mapsto \{ 0, 1 \}$ - the availability matrix for rooms. See variable $Z$.
-
-
-
-### Assumptions
-
-+ Any lesson can be taught by one teacher: If $t_1, t_2 \in T$ and $t_1 \neq t_2$ then $LT[t_1] \cap LT[t_2] = \varnothing$
-+ All lessons are taught: $\cup_{t \in T} LT[t] = L$
-+ The lesson can take place in one room only: If $r_1, r_2 \in R$ and $r_1 \neq r_2$ then $LR[r_1] \cap LR[r_2] = \varnothing$
-+ Each lesson is assigned to a specific room: $\cup_{r \in R} LR[r] = L$
-+ In the availability matrix $AL[l][s]$ value $1$ means that the lecure $l \in L$ is available at slot $s \in S$.
 + In the availability matrix $AT[t][s]$ value $1$ means that the teacher $t \in T$ is available at slot $s \in S$.
-+ In the availability matrix $AR[r][s]$ value $1$ means that the room $r \in R$ is available at slot $s \in S$. 
+
+### Availability matrix AR
++ $AR : R \times S \mapsto \{ 0, 1 \}$ - the availability matrix for rooms. See variable $Z$.
++ In the availability matrix $AR[r][s]$ value $1$ means that the room $r \in R$ is available at slot $s \in S$.
+
+
+
 
 ## Variables
 
