@@ -11,7 +11,7 @@
 
 ## Our Models based on MILP
 
-+ Event-Timeslot 2D model
++ [2D model Event-Timeslot](./2d-model-event-timeslot/README.md)
 
 
 ## Models based on MILP that have been published in the literature
