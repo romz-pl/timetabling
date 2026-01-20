@@ -30,5 +30,9 @@
 + MILP. Try. Repeat. Computing solutions to the ITC 2021 instances by repeated massive parallel MILP computations, [Proceedings of the 13th International Conference on the Practice and Theory of Automated Timetabling - PATAT 2021](https://www.patatconference.org/patat2020/proceedings/papers/35.ITC2021_paper1.pdf)
 
 
+### 2020
++ A MIP Formulation of the International Timetabling Competition 2019 Problem, [Management and Economics Report](https://backend.orbit.dtu.dk/ws/portalfiles/portal/221992887/A_MIP_Formulation_of_the_International_Timetabling_Competition_2019_Problem.pdf)
+
+
 ### 2014
 + Integer programming for the generalized high school timetabling problem [Journal of Scheduling](https://doi.org/10.1007/s10951-014-0405-x)
