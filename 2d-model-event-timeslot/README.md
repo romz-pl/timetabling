@@ -57,10 +57,10 @@ $$
 
 ### Only one teacher conducts the lesson
 $$
-\forall_{t \in T} \forall_{s \in S} \qquad \sum_{l \in LT[t]} X[l][s] <= AT[t][s]
+\forall_{t \in T} \forall_{s \in S} \qquad \sum_{l \in LT[t]} X[l][s] \leq AT[t][s]
 $$
 
 ### Only one lesson is allowed in the room
 $$
-\forall_{r \in R} \forall_{s \in S} \qquad \sum_{l \in LR[r]} X[l][s] <= AR[r][s]
+\forall_{r \in R} \forall_{s \in S} \qquad \sum_{l \in LR[r]} X[l][s] \leq AR[r][s]
 $$
