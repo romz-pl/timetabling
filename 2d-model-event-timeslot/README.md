@@ -25,9 +25,42 @@
 + In the availability matrix $AR[r][s]$ value $1$ means that the room $r \in R$ is available at slot $s \in S$. 
 
 ## Variables
-+ $X : L \times S \mapsto \{ 0, 1 \}$ - value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
-+ $Y : T \times S \mapsto \{ 0, 1 \}$ - value $Y[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
-+ $Z : R \times S \mapsto \{ 0, 1 \}$ - value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
+
+### Matrix X
+$X : L \times S \mapsto \{ 0, 1 \}$
+
+The value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
+
+### Matrix Y
+$Y : T \times S \mapsto \{ 0, 1 \}$ 
+
+The value $Y[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
+
+### Matrix Z
+$Z : R \times S \mapsto \{ 0, 1 \}$
+
+The value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
 
 
 ## Constrains
+
+
+### Enforce when lessons are unavailable
+$$
+\forall_{L \in L} \forall_{s \in S} \qquad if AL[l][s] = 0 then X[l][s] = 0
+$$
+
+### The lesson must be conducted
+$$
+\forall_{l \in L} \qquad \sum_{s \in S} X[l][s] = 1
+$$
+
+### Only one teacher conducts the lesson
+$$
+\forall_{t \in T} \forall_{s \in S} \qquad \sum_{l \in LT[t]} X[l][s] <= AT[t][s]
+$$
+
+### Only one lesson is allowed in the room
+$$
+\forall_{r \in R} \forall_{s \in S} \qquad \sum_{l \in LR[r]} X[l][s] <= AR[r][s]
+$$
