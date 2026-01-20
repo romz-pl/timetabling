@@ -1,6 +1,6 @@
 # Timetabling
 
-> [!NOTE]
+> [!IMPORTANT]
 > **Timetabling** is the allocation, subject to constraints, of given resources to objects being placed in space-time, in such way as to satisfy as nearly as possible a set of desirable objectives.
 > 
 > A. Wren. [Scheduling, timetabling and rostering - A special relationship?](https://doi.org/10.1007/3-540-61794-9_51) In Edmund Burke and Peter Ross, editors, Practice and Theory of Automated Timetabling, volume 1153 of Lecture Notes in Computer Science, pages 46-75. Springer Berlin / Heidelberg, 1996
