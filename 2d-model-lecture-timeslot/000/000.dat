@@ -32,4 +32,17 @@ R12
 R13
 ;
 
+set LT[Ala] :=
+4a_biolgy
+4b_biolgy
+;
 
+set LT[Pawel] :=
+4a_math
+4b_math
+;
+
+set LT[Zbigniew] :=
+4a_physics
+4b_physics
+;
