@@ -1,8 +1,8 @@
-# Model 2D: Event-Timeslot
+# Model 2D: Lecture-Timeslot
 
 ## Input parameters
 
-### Sets
+### Primary Sets
 + $T$ - the set of teachers.
 + $L$ - the set of lectures.
 + $R$ - the set of rooms.
