@@ -29,3 +29,7 @@ display AR;
 
 solve;
 
+display X;
+display Y;
+display Z;
+

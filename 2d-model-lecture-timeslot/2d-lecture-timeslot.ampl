@@ -74,3 +74,30 @@ param AT{T, S} binary, default 1;
 param AR{R, S} binary, default 1;
 
 
+# Matrix X
+# The value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
+var X{L, S} binary;
+
+
+# Matrix Y
+# The value $Y[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
+var Y{T, S} binary;
+
+
+# Matrix Z
+# The value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
+var Z{R, S} binary;
+
+
+#
+# The objective function is the linear function of matrices X, Y, Z
+#
+minimize objective_function:
+    sum{l in L, s in S} X[l, s] +
+    sum{t in T, s in S} Y[t, s] +
+    sum{r in R, s in S} Z[r, s];
+
+
+# The lesson must be conducted
+subject to lesson_must {l in L}:
+    sum{s in S} X[l, s] = 1;
