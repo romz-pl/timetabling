@@ -1,0 +1,35 @@
+set L :=
+4a_math
+4a_physics
+4a_biolgy
+4b_math
+4b_physics
+4b_biolgy
+;
+
+set S :=
+Mo8
+Mo9
+Tu8
+Tu9
+We8
+We9
+Th8
+Th9
+Fr8
+Fr9
+;
+
+set T :=
+Ala
+Pawel
+Zbigniew
+;
+
+set R :=
+R11
+R12
+R13
+;
+
+

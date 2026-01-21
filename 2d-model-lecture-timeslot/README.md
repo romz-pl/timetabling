@@ -3,10 +3,11 @@
 ## Input parameters
 
 ### Primary Sets
-+ $T$ - the set of teachers.
 + $L$ - the set of lectures.
-+ $R$ - the set of rooms.
 + $S$ - the set of timeslots.
++ $T$ - the set of teachers.
++ $R$ - the set of rooms.
+
 
 ### Sequence of sets LT
 + $\forall_{t \in T} \quad LT[t] \subseteq L$ - the set of lectures being taught by the teacher $t \in T$.

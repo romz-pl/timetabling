@@ -1,0 +1,17 @@
+# option;
+
+option presolve 10;
+option show_stats 2;
+# option times 1;
+# option gentimes 1;
+
+
+display L;
+display S;
+display T;
+display R;
+
+
+
+
+
