@@ -81,12 +81,12 @@ var X{L, S} binary;
 
 # Matrix Y
 # The value $Y[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
-var Y{T, S} binary;
+var Y{T, S} integer, >= 0;
 
 
 # Matrix Z
 # The value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
-var Z{R, S} binary;
+var Z{R, S} integer, >= 0;
 
 
 #
@@ -111,3 +111,14 @@ subject to x_to_y_relation {t in T, s in S}:
 # Relation between matrix X and matrix Z
 subject to x_to_z_relation {r in R, s in S}:
     Z[r, s] = sum{l in LR[r]} X[l, s];
+
+
+# Only one teacher conducts the lesson
+subject to one_teacher {t in T, s in S}:
+    sum{l in LT[t]} X[l, s] <= 1;
+
+
+# Only one lesson is allowed in the room
+subject to one_room {r in R, s in S}:
+    sum{l in LR[r]} X[l, s] <= 1;
+

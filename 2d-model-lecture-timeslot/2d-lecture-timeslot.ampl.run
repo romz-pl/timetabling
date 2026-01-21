@@ -36,3 +36,18 @@ display X;
 display Y;
 display Z;
 
+for {t in T}
+{
+    printf "%s\n", t;
+    for {s in S}
+    {
+        for {l in LT[t]}
+        {
+            if X[l, s] > 0 then {
+                printf "%s %s\n", s, l;
+            }
+        }
+    }
+    printf "\n";
+}
+

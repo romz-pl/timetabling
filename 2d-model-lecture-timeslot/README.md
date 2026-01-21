@@ -54,12 +54,12 @@ $X : L \times S \mapsto \{ 0, 1 \}$
 The value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
 
 ### Matrix Y
-$Y : T \times S \mapsto \{ 0, 1 \}$ 
+$Y : T \times S \mapsto \mathbb{N}^+$
 
 The value $Y[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
 
 ### Matrix Z
-$Z : R \times S \mapsto \{ 0, 1 \}$
+$Z : R \times S \mapsto \mathbb{N}^+$
 
 The value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
 
