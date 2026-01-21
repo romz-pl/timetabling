@@ -66,15 +66,14 @@ The value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted duri
 
 ## Constrains
 
-
-### Enforce when lessons are unavailable
-$$
-\forall_{L \in L} \forall_{s \in S} \qquad \text{if } AL[l][s] = 0 \text{ then } X[l][s] = 0
-$$
-
 ### The lesson must be conducted
 $$
 \forall_{l \in L} \qquad \sum_{s \in S} X[l][s] = 1
+$$
+
+### Enforce when lessons are unavailable
+$$
+\forall_{L \in L} \forall_{s \in S} \qquad X[l][s] \leq AL[l][s]
 $$
 
 ### Only one teacher conducts the lesson

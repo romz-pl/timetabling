@@ -58,3 +58,9 @@ for {t in T}
     printf "\n";
 }
 
+printf "Matrix Y\n";
+display{t in T, s in S} (sum{l in LT[t]} X[l, s]);
+
+printf "Matrix Z\n";
+display{r in R, s in S} (sum{l in LR[r]} X[l, s]);
+

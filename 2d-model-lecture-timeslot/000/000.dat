@@ -27,9 +27,9 @@ Fr10
 ;
 
 set T :=
-Ala
-Pawel
-Zbigniew
+Ana
+Pwl
+Zbg
 ;
 
 set R :=
@@ -38,18 +38,18 @@ R11
 R12
 ;
 
-set LT[Ala] :=
+set LT[Ana] :=
 4b1
 4b2
 ;
 
-set LT[Pawel] :=
+set LT[Pwl] :=
 4m1
 4m2
 4m3
 ;
 
-set LT[Zbigniew] :=
+set LT[Zbg] :=
 4p1
 4p2
 ;
@@ -68,6 +68,64 @@ set LR[R11] :=
 set LR[R12] :=
 4p1
 4p2
+;
+
+
+param AL [*,*] (tr)
+:     4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
+Mo8     1   1   1   1   1   1   1
+Mo9     1   1   1   1   1   1   1
+Mo10    1   1   1   1   1   1   1
+Tu8     1   1   1   1   1   1   1
+Tu9     1   1   1   1   1   1   1
+Tu10    1   1   1   1   1   1   1
+We8     1   1   1   1   1   1   1
+We9     1   1   1   1   1   1   1
+We10    1   1   1   1   1   1   1
+Th8     1   1   1   1   1   1   1
+Th9     1   1   1   1   1   1   1
+Th10    1   1   1   1   1   1   1
+Fr8     1   1   1   1   1   1   1
+Fr9     1   1   1   1   1   1   1
+Fr10    1   1   1   1   1   1   1
+;
+
+param AT [*,*] (tr)
+:     Ana Pwl Zbg    :=
+Mo8     0   1   1
+Mo9     0   1   1
+Mo10    0   1   1
+Tu8     0   1   0
+Tu9     0   1   0
+Tu10    0   1   0
+We8     0   0   0
+We9     0   0   0
+We10    0   0   0
+Th8     0   0   0
+Th9     0   0   0
+Th10    0   0   0
+Fr8     1   0   0
+Fr9     1   0   0
+Fr10    1   0   0
+;
+
+param AR [*,*] (tr)
+:     R10 R11 R12    :=
+Mo8     1   1   1
+Mo9     1   1   1
+Mo10    1   1   1
+Tu8     1   1   1
+Tu9     1   1   1
+Tu10    1   1   1
+We8     1   1   1
+We9     1   1   1
+We10    1   1   1
+Th8     1   1   1
+Th9     1   1   1
+Th10    1   1   1
+Fr8     1   1   1
+Fr9     1   1   1
+Fr10    1   1   1
 ;
 
 param WL [*,*] (tr)

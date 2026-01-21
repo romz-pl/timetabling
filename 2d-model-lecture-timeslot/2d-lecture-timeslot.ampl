@@ -125,6 +125,11 @@ subject to lesson_must {l in L}:
     sum{s in S} X[l, s] = 1;
 
 
+# Enforce when lessons are unavailable
+subject to available_lesson {l in L, s in S}:
+    X[l, s] <= AL[l, s];
+
+
 # Only one teacher conducts the lesson
 subject to one_teacher {t in T, s in S}:
     sum{l in LT[t]} X[l, s] <= AT[t, s];
