@@ -1,0 +1,275 @@
+*************************************************************
+
+   NEOS Server Version 6.0
+   Job#     : 18261826
+   Password : UtowhEuI
+   User     : 
+   Solver   : milp:Gurobi:AMPL
+   Start    : 2026-01-21 12:15:29
+   End      : 2026-01-21 12:15:51
+   Host     : prod-sub-1.neos-server.org
+
+   Disclaimer:
+
+   This information is provided without any express or
+   implied warranty. In particular, there is no warranty
+   of any kind concerning the fitness of this
+   information for any particular purpose.
+
+   Announcements:
+*************************************************************
+You are using the solver gurobi_ampl.
+Checking ampl.mod for gurobi_options...
+Checking ampl.com for gurobi_options...
+Executing AMPL.
+processing data.
+processing commands.
+Executing on prod-exec-1.neos-server.org
+set L := 4m1 4m2 4m3 4p1 4p2 4b1 4b2;
+
+set S := Mo0 Mo1 Mo2 Tu0 Tu1 Tu2 We0 We1 We2 Th0 Th1 Th2 Fr0 Fr1 Fr2;
+
+set T := Ana Pwl Zbg;
+
+set R := R10 R11 R12;
+
+t = Ana
+
+set  LT[t] := 4b1 4b2;
+
+t = Pwl
+
+set  LT[t] := 4m1 4m2 4m3;
+
+t = Zbg
+
+set  LT[t] := 4p1 4p2;
+
+r = R10
+
+set  LR[r] := 4b1 4b2;
+
+r = R11
+
+set  LR[r] := 4m1 4m2 4m3;
+
+r = R12
+
+set  LR[r] := 4p1 4p2;
+
+AL [*,*] (tr)
+:   4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
+Mo0   1   1   1   1   1   1   1
+Mo1   1   1   1   1   1   1   1
+Mo2   1   1   1   1   1   1   1
+Tu0   1   1   1   1   1   1   1
+Tu1   1   1   1   1   1   1   1
+Tu2   1   1   1   1   1   1   1
+We0   1   1   1   1   1   1   1
+We1   1   1   1   1   1   1   1
+We2   1   1   1   1   1   1   1
+Th0   1   1   1   1   1   1   1
+Th1   1   1   1   1   1   1   1
+Th2   1   1   1   1   1   1   1
+Fr0   1   1   1   1   1   1   1
+Fr1   1   1   1   1   1   1   1
+Fr2   1   1   1   1   1   1   1
+;
+
+AT [*,*] (tr)
+:   Ana Pwl Zbg    :=
+Mo0   0   1   1
+Mo1   0   1   1
+Mo2   0   1   1
+Tu0   0   1   0
+Tu1   0   1   0
+Tu2   0   1   0
+We0   0   0   0
+We1   0   0   0
+We2   0   0   0
+Th0   0   0   0
+Th1   0   0   0
+Th2   0   0   0
+Fr0   1   0   0
+Fr1   1   0   0
+Fr2   1   0   0
+;
+
+AR [*,*] (tr)
+:   R10 R11 R12    :=
+Mo0   1   1   1
+Mo1   1   1   1
+Mo2   1   1   1
+Tu0   1   1   1
+Tu1   1   1   1
+Tu2   1   1   1
+We0   1   1   1
+We1   1   1   1
+We2   1   1   1
+Th0   1   1   1
+Th1   1   1   1
+Th2   1   1   1
+Fr0   1   1   1
+Fr1   1   1   1
+Fr2   1   1   1
+;
+
+WL [*,*] (tr)
+:   4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
+Mo0   0   0   0   0   0   0   0
+Mo1   1   1   1   1   1   1   1
+Mo2   2   2   2   2   2   2   2
+Tu0   0   0   0   0   0   0   0
+Tu1   1   1   1   1   1   1   1
+Tu2   2   2   2   2   2   2   2
+We0   0   0   0   0   0   0   0
+We1   1   1   1   1   1   1   1
+We2   2   2   2   2   2   2   2
+Th0   0   0   0   0   0   0   0
+Th1   1   1   1   1   1   1   1
+Th2   2   2   2   2   2   2   2
+Fr0   0   0   0   0   0   0   0
+Fr1   1   1   1   1   1   1   1
+Fr2   2   2   2   2   2   2   2
+;
+
+
+"option presolve 0;" used, but "option presolve 10;" might work better.
+106 variables:
+	105 binary variables
+	1 linear variable
+203 constraints, all linear; 491 nonzeros
+	8 equality constraints
+	195 inequality constraints
+1 linear objective; 1 nonzero.
+
+Gurobi 12.0.3:   tech:threads = 4
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+
+AMPL MP initial flat model has 106 variables (0 integer, 105 binary);
+Objectives: 1 linear; 
+Constraints:  203 linear;
+
+AMPL MP final model has 106 variables (0 integer, 105 binary);
+Objectives: 1 linear; 
+Constraints:  203 linear;
+
+
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
+
+CPU model: Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 32 physical cores, 64 logical processors, using up to 4 threads
+
+Non-default parameters:
+InfUnbdInfo  1
+Threads  4
+
+Optimize a model with 203 rows, 106 columns and 491 nonzeros
+Model fingerprint: 0x12e0d5b5
+Variable types: 1 continuous, 105 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 4.0000000
+Presolve removed 194 rows and 88 columns
+Presolve time: 0.00s
+Presolved: 9 rows, 18 columns, 36 nonzeros
+Found heuristic solution: objective 3.0000000
+Variable types: 0 continuous, 18 integer (18 binary)
+
+Root relaxation: infeasible, 5 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0         3.00000    3.00000  0.00%     -    0s
+
+Explored 1 nodes (5 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 4 (of 64 available processors)
+
+Solution count 2: 3 4 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.000000000000e+00, best bound 3.000000000000e+00, gap 0.0000%
+Gurobi 12.0.3: optimal solution; objective 3
+5 simplex iterations
+1 branching node
+FL = 3
+
+X [*,*] (tr)
+:   4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
+Mo0   0   0   1   0   0   1   0
+Mo1   0   0   0   0   0   0   1
+Mo2   0   0   0   0   0   0   0
+Tu0   0   0   0   1   0   0   0
+Tu1   0   0   0   0   1   0   0
+Tu2   0   0   0   0   0   0   0
+We0   0   0   0   0   0   0   0
+We1   0   0   0   0   0   0   0
+We2   0   0   0   0   0   0   0
+Th0   0   0   0   0   0   0   0
+Th1   0   0   0   0   0   0   0
+Th2   0   0   0   0   0   0   0
+Fr0   1   0   0   0   0   0   0
+Fr1   0   1   0   0   0   0   0
+Fr2   0   0   0   0   0   0   0
+;
+
+Ana
+Fr0 4b1
+Fr1 4b2
+
+Pwl
+Mo0 4m1
+Tu0 4m2
+Tu1 4m3
+
+Zbg
+Mo0 4p1
+Mo1 4p2
+
+Matrix Y
+sum{l in  LT[t]} X[l,s] [*,*] (tr)
+:   Ana Pwl Zbg    :=
+Mo0   0   1   1
+Mo1   0   0   1
+Mo2   0   0   0
+Tu0   0   1   0
+Tu1   0   1   0
+Tu2   0   0   0
+We0   0   0   0
+We1   0   0   0
+We2   0   0   0
+Th0   0   0   0
+Th1   0   0   0
+Th2   0   0   0
+Fr0   1   0   0
+Fr1   1   0   0
+Fr2   0   0   0
+;
+
+Matrix Z
+sum{l in  LR[r]} X[l,s] [*,*] (tr)
+:   R10 R11 R12    :=
+Mo0   0   1   1
+Mo1   0   0   1
+Mo2   0   0   0
+Tu0   0   1   0
+Tu1   0   1   0
+Tu2   0   0   0
+We0   0   0   0
+We1   0   0   0
+We2   0   0   0
+Th0   0   0   0
+Th1   0   0   0
+Th2   0   0   0
+Fr0   1   0   0
+Fr1   1   0   0
+Fr2   0   0   0
+;
+
+
