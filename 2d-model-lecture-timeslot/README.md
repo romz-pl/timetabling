@@ -54,12 +54,12 @@ $X : L \times S \mapsto \{ 0, 1 \}$
 The value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
 
 ### Matrix Y
-$Y : T \times S \mapsto \mathbb{N}^+$
+$Y : T \times S \mapsto \{ 0, 1 \}$
 
 The value $Y[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
 
 ### Matrix Z
-$Z : R \times S \mapsto \mathbb{N}^+$
+$Z : R \times S \mapsto \{ 0, 1 \}$
 
 The value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
 
@@ -100,12 +100,44 @@ $$
 
 ## Objective function
 
+Let assume, there are three matrices:
+$WX : L \times S \mapsto \mathbb{R}^+$ and
+$WY : T \times S \mapsto \mathbb{R}^+$ and
+$WZ : R \times S \mapsto \mathbb{R}^+$.
+Then, the objective function is the weighted linear combination of the student's timetable, represented by the matrix $X$, and the teacher's timetable, represented by the matrix $Y$ and the room's timetable, represented by the matrix $Z$:
+$$
+\min_{X} \quad F_X + F_Y + F_Z
+$$
+where
+$$
+F_X = \sum_{l \in L} \sum_{s \in S} WX[l][s] X[l][s]
+$$
+and
+$$
+F_Y = \sum_{t \in T} \sum_{s \in S} WY[t][s] Y[t][s]
+$$
+and
+$$
+F_Z = \sum_{r \in R} \sum_{s \in S} WZ[r][s] Z[r][s]
+$$
+The position of 1 in the matrices is not affected when the values of the matrix elements WX, WY, and WZ are the same. However, adjusting these values affects the generated timetable. 
+
+
+## Objective function - specific version
+
+
 The objective function is the linear function of the student's timetable, represented by the matrix $X$, and the teacher's timetable, represented by the matrix $Y$:
 
 $$
-\min_{X} \quad 
-w_L  \sum_{l \in L} \sum_{s \in S} (1 + H[s])^{q_L} X[l][s] +
-w_T  \sum_{t \in T} \sum_{s \in S} (1 + H[s])^{q_T} Y[t][s]
+\min_{X} \quad F_X + F_Y
+$$
+where
+$$
+F_X = w_L \sum_{l \in L} \sum_{s \in S} (1 + H[s])^{q_L} X[l][s]
+$$
+and
+$$
+F_Y = w_T \sum_{t \in T} \sum_{s \in S} (1 + H[s])^{q_T} Y[t][s]
 $$
 
 where $q_L, q_t \in \mathbb{R}^+$ and coefficients $w_S, w_T \in \mathbb{R}^+$ fulfill the condition $w_S + w_T = 1$. 
