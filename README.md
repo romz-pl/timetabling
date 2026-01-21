@@ -12,7 +12,7 @@
 
 ## Our Models based on MILP
 
-+ [2D model Event-Timeslot](./2d-model-event-timeslot/README.md)
++ [2D model Lecture-Timeslot](./2d-model-lecture-timeslot/README.md)
 
 
 ## Models based on MILP that have been published in the literature
