@@ -23,5 +23,9 @@ for {r in R}
     display r, LR[r];
 }
 
+display AL;
+display AT;
+display AR;
+
 solve;
 

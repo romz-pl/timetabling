@@ -63,3 +63,14 @@ check: L within (union {r in R} LR[r]);
 check {r1 in R, r2 in R: r1 != r2}: card(LR[r1] inter LR[r2]) = 0;
 # ===== LR END =====
 
+
+# Availability matrix AL for lectures
+param AL{L, S} binary, default 1;
+
+# Availability matrix AT for teachers
+param AT{T, S} binary, default 1;
+
+# Availability matrix AR for rooms
+param AR{R, S} binary, default 1;
+
+
