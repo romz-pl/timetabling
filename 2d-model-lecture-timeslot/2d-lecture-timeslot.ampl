@@ -11,7 +11,7 @@ set L;
 check: card(L) > 0;
 
 # The set of timeslots.
-set S;
+set S ordered;
 check: card(S) > 0;
 
 # The set of teachers.
