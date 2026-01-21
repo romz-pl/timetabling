@@ -101,39 +101,39 @@ $$
 ## Objective function
 
 Let assume, there are three matrices:
-+ $WX : L \times S \mapsto \mathbb{R}^+$,
-+ $WY : T \times S \mapsto \mathbb{R}^+$,
-+ $WZ : R \times S \mapsto \mathbb{R}^+$.
++ $W_L : L \times S \mapsto \mathbb{R}^+$,
++ $W_T : T \times S \mapsto \mathbb{R}^+$,
++ $W_R : R \times S \mapsto \mathbb{R}^+$.
 
 Then, the objective function is the weighted linear combination of the student's timetable, represented by the matrix $X$, and the teacher's timetable, represented by the matrix $Y$ and the room's timetable, represented by the matrix $Z$:
 
 $$
-\min_{X} \quad F_X + F_Y + F_Z
+\min_{X} \quad F_L + F_T + F_R
 $$
 
 where
 
 $$
-F_X = \sum_{l \in L} \sum_{s \in S} WX[l][s] \cdot X[l][s]
+F_L = \sum_{l \in L} \sum_{s \in S} W_L[l][s] \cdot X[l][s]
 $$
 
 and
 
 $$
-F_Y = \sum_{t \in T} \sum_{s \in S} WY[t][s] \cdot Y[t][s]
+F_T = \sum_{t \in T} \sum_{s \in S} W_T[t][s] \cdot Y[t][s]
 $$
 
 and
 
 $$
-F_Z = \sum_{r \in R} \sum_{s \in S} WZ[r][s] \cdot Z[r][s]
+F_R = \sum_{r \in R} \sum_{s \in S} W_R[r][s] \cdot Z[r][s]
 $$
 
-The position of 1 in the matrices is not affected when the values of the matrix elements WX, WY, and WZ are the same. However, adjusting these values affects the generated timetable.
+The position of 1 in the matrices is not affected when the values of the matrix elements W_L, W_T, and W_R are the same. However, adjusting these values affects the generated timetable.
 
 ### Questions
-+ What are the optimal values for the matrix elements WX, WY, WZ?
-+ How can we formulate an evaluation of the matrices WX, WY, WZ as an optimization problem? 
++ What are the optimal values for the matrix elements W_L, W_T, W_R?
++ How can we formulate an evaluation of the matrices W_L, W_T, W_R as an optimization problem? 
 
 
 ## Objective function - specific version
@@ -142,19 +142,19 @@ The position of 1 in the matrices is not affected when the values of the matrix 
 The objective function is the linear function of the student's timetable, represented by the matrix $X$, and the teacher's timetable, represented by the matrix $Y$:
 
 $$
-\min_{X} \quad F_X + F_Y
+\min_{X} \quad F_L + F_T
 $$
 
 where
 
 $$
-F_X = w_L \sum_{l \in L} \sum_{s \in S} (1 + H[s])^{q_L} X[l][s]
+F_L = w_L \sum_{l \in L} \sum_{s \in S} (1 + H[s])^{q_L} X[l][s]
 $$
 
 and
 
 $$
-F_Y = w_T \sum_{t \in T} \sum_{s \in S} (1 + H[s])^{q_T} Y[t][s]
+F_T = w_T \sum_{t \in T} \sum_{s \in S} (1 + H[s])^{q_T} Y[t][s]
 $$
 
 where $q_L, q_t \in \mathbb{R}^+$ and coefficients $w_S, w_T \in \mathbb{R}^+$ fulfill the condition $w_S + w_T = 1$. 

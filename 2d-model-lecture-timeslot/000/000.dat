@@ -70,7 +70,7 @@ set LR[R12] :=
 4p2
 ;
 
-param WX [*,*] (tr)
+param WL [*,*] (tr)
 :     4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
 Mo8     0   0   0   0   0   0   0
 Mo9     1   1   1   1   1   1   1

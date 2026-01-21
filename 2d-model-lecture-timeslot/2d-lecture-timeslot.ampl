@@ -76,16 +76,16 @@ param AT{T, S} binary, default 1;
 # Availability matrix for rooms
 param AR{R, S} binary, default 1;
 
-# Matrix WX
-param WX{L, S} >= 0, default 0;
+# Weight matrix for Lectures
+param WL{L, S} >= 0, default 0;
 
 
-# Matrix WY
-# param WY{T, S} >= 0, default 0;
+# Weight matrix for Teachers
+# param WT{T, S} >= 0, default 0;
 
 
-# Matrix WZ
-# param WZ{R, S} >= 0, default 0;
+# Weight matrix for Rooms
+# param WR{R, S} >= 0, default 0;
 
 
 # Matrix X
@@ -93,31 +93,31 @@ param WX{L, S} >= 0, default 0;
 var X{L, S} binary;
 
 
-# Weighted sum of X matrix
-var FX;
+# Weighted sum of Lectures timetable
+var FL;
 
 
-# Weighted sum of Y matrix
-# var FY;
+# Weighted sum of Teachers timetable
+# var FR;
 
 
-# Weighted sum of Z matrix
-# var FZ;
+# Weighted sum of Room timetable
+# var FR;
 
 
-# FX value
+# Value of FL
 subject to fx_value:
-    FX = sum{l in L, s in S} WX[l, s] * X[l, s];
+    FL = sum{l in L, s in S} WL[l, s] * X[l, s];
 
 
-# FY value
+# Value of FT
 # subject to fy_value:
-#    FY = sum{t in T, s in S} WY[t, s] * (sum{l in LT[t]} X[l, s]);
+#    FT = sum{t in T, s in S} WT[t, s] * (sum{l in LT[t]} X[l, s]);
 
 
-# FZ value
+# Value of FR
 # subject to fz_value:
-#    FZ = sum{r in R, s in S} WZ[r, s] * (sum{l in LR[r]} X[l, s]); 
+#    FR = sum{r in R, s in S} WR[r, s] * (sum{l in LR[r]} X[l, s]); 
 
 
 # The lesson must be conducted
@@ -139,6 +139,6 @@ subject to one_room {r in R, s in S}:
 # The objective function is the linear function of matrices X, Y, Z
 #
 minimize objective_function:
-    FX;
-#     FX + FY + FZ;
+    FL;
+#     FL + FT + FR;
 

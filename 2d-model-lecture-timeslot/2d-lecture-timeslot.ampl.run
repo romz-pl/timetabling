@@ -30,15 +30,15 @@ display AL;
 display AT;
 display AR;
 
-display WX;
-# display WY;
-# display WZ;
+display WL;
+# display WT;
+# display WR;
 
 solve;
 
-display FX;
-# display FY;
-# display FZ;
+display FL;
+# display FT;
+# display FR;
 
 display X;
 
