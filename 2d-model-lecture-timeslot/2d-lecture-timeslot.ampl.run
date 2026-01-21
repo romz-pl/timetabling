@@ -18,5 +18,10 @@ for {t in T}
     display t, LT[t];
 }
 
+for {r in R}
+{
+    display r, LR[r];
+}
+
 solve;
 

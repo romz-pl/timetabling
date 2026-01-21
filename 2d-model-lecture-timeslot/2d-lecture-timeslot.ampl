@@ -23,14 +23,14 @@ check: card(T) > 0;
 set R;
 check: card(R) > 0;
 
-
+# ===== LT BEGIN =====
 # The set of lectures being taught by the teacher $t \in T$
 set LT{T} within L;
 
 # Every set LT must be not empty
 check {t in T}: card(LT[t]) > 0;
 
-# The union of all LT set must be equal to set of lectures L.
+# The union of all LT sets must be equal to set of lectures L.
 # However, the following check with equality sign (=)
 #     check: L = union {t in T} LT[t];
 # leads to syntax error: L  >>> =  <<< union {t in T} LT[t];
@@ -40,5 +40,26 @@ check: L within (union {t in T} LT[t]);
 # Every lecture must be assigned the the execty one teacher.
 # Therefore, the two different LT sets must not intersect.
 check {t1 in T, t2 in T: t1 != t2}: card(LT[t1] inter LT[t2]) = 0;
+# ===== LT END =====
 
+
+
+# ===== LR BEGIN =====
+# The set of lectures taking place in the room $r \in R$.
+set LR{R} within L;
+
+# Every set LR must be not empty
+check {r in R}: card(LR[r]) > 0;
+
+# The union of all LR sets must be equal to set of lectures L.
+# However, the following check with equality sign (=)
+#     check: L = union {r in R} LR[r];
+# leads to syntax error: L  >>> =  <<< union {r in R} LR[r];
+# Therefore, I used [within] keyword to define L must we the subset.
+check: L within (union {r in R} LR[r]);
+
+# Every lecture must be assigned the the execty one room.
+# Therefore, the two different LR sets must not intersect.
+check {r1 in R, r2 in R: r1 != r2}: card(LR[r1] inter LR[r2]) = 0;
+# ===== LR END =====
 
