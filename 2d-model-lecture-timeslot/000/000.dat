@@ -1,26 +1,11 @@
 set L :=
-4a_math_1
-4a_math_2
-4a_math_3
-4a_math_4
-4a_math_5
-4a_math_6
-4a_physics_1
-4a_physics_2
-4a_physics_3
-4a_biolgy_1
-4a_biolgy_2
-4b_math_1
-4b_math_2
-4b_math_3
-4b_math_4
-4b_math_5
-4b_math_6
-4b_physics_1
-4b_physics_2
-4b_physics_3
-4b_biolgy_1
-4b_biolgy_2
+4m1
+4m2
+4m3
+4p1
+4p2
+4b1
+4b2
 ;
 
 set S :=
@@ -49,63 +34,33 @@ R12
 ;
 
 set LT[Ala] :=
-4a_biolgy_1
-4a_biolgy_2
-4b_biolgy_1
-4b_biolgy_2
+4b1
+4b2
 ;
 
 set LT[Pawel] :=
-4a_math_1
-4a_math_2
-4a_math_3
-4a_math_4
-4a_math_5
-4a_math_6
-4b_math_1
-4b_math_2
-4b_math_3
-4b_math_4
-4b_math_5
-4b_math_6
+4m1
+4m2
+4m3
 ;
 
 set LT[Zbigniew] :=
-4a_physics_1
-4a_physics_2
-4a_physics_3
-4b_physics_1
-4b_physics_2
-4b_physics_3
+4p1
+4p2
 ;
 
 set LR[R10] :=
-4a_biolgy_1
-4a_biolgy_2
-4b_biolgy_1
-4b_biolgy_2
+4b1
+4b2
 ;
 
 set LR[R11] :=
-4a_math_1
-4a_math_2
-4a_math_3
-4a_math_4
-4a_math_5
-4a_math_6
-4b_math_1
-4b_math_2
-4b_math_3
-4b_math_4
-4b_math_5
-4b_math_6
+4m1
+4m2
+4m3
 ;
 
 set LR[R12] :=
-4a_physics_1
-4a_physics_2
-4a_physics_3
-4b_physics_1
-4b_physics_2
-4b_physics_3
+4p1
+4p2
 ;

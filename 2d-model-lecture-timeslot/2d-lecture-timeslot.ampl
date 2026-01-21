@@ -101,3 +101,13 @@ minimize objective_function:
 # The lesson must be conducted
 subject to lesson_must {l in L}:
     sum{s in S} X[l, s] = 1;
+
+
+# Relation between matrix X and matrix Y
+subject to x_to_y_relation {t in T, s in S}:
+    Y[t, s] = sum{l in LT[t]} X[l, s];
+
+
+# Relation between matrix X and matrix Z
+subject to x_to_z_relation {r in R, s in S}:
+    Z[r, s] = sum{l in LR[r]} X[l, s];

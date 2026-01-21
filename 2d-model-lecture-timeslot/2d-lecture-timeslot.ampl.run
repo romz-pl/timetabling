@@ -1,9 +1,12 @@
-# option;
+option gurobi_options 'presolve=2';
+option gurobi_options 'outlev=1';
 
-option presolve 10;
+# option;
+option presolve 0;
 option show_stats 2;
 # option times 1;
 # option gentimes 1;
+
 
 
 display L;
