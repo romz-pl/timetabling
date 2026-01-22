@@ -8,6 +8,7 @@
 + $T$ - the set of teachers.
 + $R$ - the set of rooms.
 + $G$ - the set names of grups of lectures.
++ $D$ - the set od days;
 
 
 ### Sequence of sets LT
@@ -20,10 +21,15 @@
 + The lecture can take place in one room only, hence: If $r_1, r_2 \in R$ and $r_1 \neq r_2$ then $LR[r_1] \cap LR[r_2] = \varnothing$
 + Each lecture is assigned to a specific room, hence: $\cup_{r \in R} LR[r] = L$
 
-### Sequence of set LG
+### Sequence of sets LG
 + $\forall_{g \in G} \quad LG[g] \subseteq L$ - the set of lectures belonging to group $g \in G$.
 + The lecture can belong to one grup only, hence: If $g_1, g_2 \in G$ and $g_1 \neq g_2$ then $LG[g_1] \cap LG[g_2] = \varnothing$
 + Each lecture belongs to a specific group, hence: $\cup_{g \in G} LG[g] = L$
+
+### Sequence of sets SD
++ $\forall_{d \in D} \quad SD[d] \subseteq S$ - the set of timeslots belonging to day $d \in D$.
++ The timeslot can belong to one day only, hence: If $d_1, d_2 \in D$ and $d_1 \neq d_2$ then $SD[d_1] \cap SD[d_2] = \varnothing$
++ Each timeslot belongs to a specific day, hence: $\cup_{d \in D} SD[d] = S$
 
 ### Availability matrix AL
 + $AL : L \times S \mapsto \{ 0, 1 \}$ - the availability matrix for lectures. See variable $X$.
