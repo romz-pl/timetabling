@@ -8,7 +8,7 @@
 + $T$ - the set of teachers.
 + $R$ - the set of rooms.
 + $G$ - the set names of grups of lectures.
-+ $D$ - the set od days;
++ $D$ - the set od days.
 
 
 ### Sequence of sets LT

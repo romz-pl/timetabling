@@ -45,6 +45,44 @@ set G :=
 5
 ;
 
+set D :=
+Mo
+Tu
+We
+Th
+Fr
+;
+
+set SD[Mo] :=
+Mo0
+Mo1
+Mo2
+;
+
+set SD[Tu] :=
+Tu0
+Tu1
+Tu2
+;
+
+set SD[We] :=
+We0
+We1
+We2
+;
+
+set SD[Th] :=
+Th0
+Th1
+Th2
+;
+
+set SD[Fr] :=
+Fr0
+Fr1
+Fr2
+;
+
 set LT[Ana] :=
 4b1
 4b2

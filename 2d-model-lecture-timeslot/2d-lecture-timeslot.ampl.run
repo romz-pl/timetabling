@@ -13,6 +13,7 @@ display S;
 display T;
 display R;
 display G;
+display D;
 
 
 for {t in T}
@@ -28,6 +29,11 @@ for {r in R}
 for {g in G}
 {
     display g, LG[g];
+}
+
+for {d in D}
+{
+    display d, SD[d];
 }
 
 display AL;

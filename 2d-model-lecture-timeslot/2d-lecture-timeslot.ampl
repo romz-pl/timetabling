@@ -27,6 +27,10 @@ check: card(R) > 0;
 set G;
 check: card(G) > 0;
 
+# The set od days.
+set D;
+check: card(D) > 0;
+
 
 # ===== LT BEGIN =====
 # The set of lectures being taught by the teacher $t \in T$
@@ -57,10 +61,6 @@ set LR{R} within L;
 check {r in R}: card(LR[r]) > 0;
 #
 # The union of all LR sets must be equal to set of lectures L.
-# However, the following check with equality sign (=)
-#     check: L = union {r in R} LR[r];
-# leads to syntax error: L  >>> =  <<< union {r in R} LR[r];
-# Therefore, I used [within] keyword to define L must we the subset.
 check: L within (union {r in R} LR[r]);
 #
 # Every lecture must be assigned the the execty one room.
@@ -78,16 +78,29 @@ set LG{G} within L;
 check {g in G}: card(LG[g]) > 0;
 #
 # The union of all LG sets must be equal to set of lectures L.
-# However, the following check with equality sign (=)
-#     check: L = union {g in G} LG[g];
-# leads to syntax error: L  >>> =  <<< union {g in G} LG[g];
-# Therefore, I used [within] keyword to define L must we the subset.
 check: L within (union {g in G} LG[g]);
 #
 # Every lecture must be assigned the the execty one group.
 # Therefore, the two different LG sets must not intersect.
 check {g1 in G, g2 in G: g1 != g2}: card(LG[g1] inter LG[g2]) = 0;
-# ===== LG BEGIN =====
+# ===== LG END =====
+
+
+
+# ===== SD BEGIN =====
+# The set of timeslots belonging to day $d \in D$
+set SD{D} within S;
+#
+# Every set SD must be not empty
+check {d in D}: card(SD[d]) > 0;
+#
+# The union of all SD sets must be equal to set of timeslots S.
+check: S within (union {d in D} SD[d]);
+#
+# Every lecture must be assigned the the execty one group.
+# Therefore, the two different LG sets must not intersect.
+check {d1 in D, d2 in D: d1 != d2}: card(SD[d1] inter SD[d2]) = 0;
+# ===== SD END =====
 
 
 # Availability matrix for lectures
