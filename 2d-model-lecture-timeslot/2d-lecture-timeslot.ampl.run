@@ -43,9 +43,21 @@ display FL;
 display X;
 
 
+
+
+printf "Matrix Y\n";
+display{t in T, s in S} (sum{l in LT[t]} X[l, s]);
+
+printf "Matrix Z\n";
+display{r in R, s in S} (sum{l in LR[r]} X[l, s]);
+
+
+printf "The final schedule\n";
+printf "==================\n";
 for {t in T}
 {
-    printf "%s\n", t;
+    printf "Teacher: %s\n", t;
+    printf "------------\n";
     for {s in S}
     {
         for {l in LT[t]}
@@ -57,10 +69,3 @@ for {t in T}
     }
     printf "\n";
 }
-
-printf "Matrix Y\n";
-display{t in T, s in S} (sum{l in LT[t]} X[l, s]);
-
-printf "Matrix Z\n";
-display{r in R, s in S} (sum{l in LR[r]} X[l, s]);
-

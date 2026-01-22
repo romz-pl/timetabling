@@ -1,12 +1,14 @@
+
+
 *************************************************************
 
    NEOS Server Version 6.0
-   Job#     : 18261826
-   Password : UtowhEuI
+   Job#     : 18265290
+   Password : jovVScsD
    User     : 
    Solver   : milp:Gurobi:AMPL
-   Start    : 2026-01-21 12:15:29
-   End      : 2026-01-21 12:15:51
+   Start    : 2026-01-22 00:41:55
+   End      : 2026-01-22 00:42:18
    Host     : prod-sub-1.neos-server.org
 
    Disclaimer:
@@ -24,7 +26,7 @@ Checking ampl.com for gurobi_options...
 Executing AMPL.
 processing data.
 processing commands.
-Executing on prod-exec-1.neos-server.org
+Executing on prod-exec-6.neos-server.org
 set L := 4m1 4m2 4m3 4p1 4p2 4b1 4b2;
 
 set S := Mo0 Mo1 Mo2 Tu0 Tu1 Tu2 We0 We1 We2 Th0 Th1 Th2 Fr0 Fr1 Fr2;
@@ -159,8 +161,8 @@ Constraints:  203 linear;
 Set parameter InfUnbdInfo to value 1
 Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
 
-CPU model: Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz, instruction set [SSE2|AVX|AVX2]
-Thread count: 32 physical cores, 64 logical processors, using up to 4 threads
+CPU model: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 36 physical cores, 72 logical processors, using up to 4 threads
 
 Non-default parameters:
 InfUnbdInfo  1
@@ -189,7 +191,7 @@ Root relaxation: infeasible, 5 iterations, 0.00 seconds (0.00 work units)
      0     0 infeasible    0         3.00000    3.00000  0.00%     -    0s
 
 Explored 1 nodes (5 simplex iterations) in 0.00 seconds (0.00 work units)
-Thread count was 4 (of 64 available processors)
+Thread count was 4 (of 72 available processors)
 
 Solution count 2: 3 4 
 
@@ -218,19 +220,6 @@ Fr0   1   0   0   0   0   0   0
 Fr1   0   1   0   0   0   0   0
 Fr2   0   0   0   0   0   0   0
 ;
-
-Ana
-Fr0 4b1
-Fr1 4b2
-
-Pwl
-Mo0 4m1
-Tu0 4m2
-Tu1 4m3
-
-Zbg
-Mo0 4p1
-Mo1 4p2
 
 Matrix Y
 sum{l in  LT[t]} X[l,s] [*,*] (tr)
@@ -272,4 +261,21 @@ Fr1   1   0   0
 Fr2   0   0   0
 ;
 
+The final schedule
+==================
+Teacher: Ana
+------------
+Fr0 4b1
+Fr1 4b2
+
+Teacher: Pwl
+------------
+Mo0 4m1
+Tu0 4m2
+Tu1 4m3
+
+Teacher: Zbg
+------------
+Mo0 4p1
+Mo1 4p2
 
