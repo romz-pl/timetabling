@@ -58,7 +58,12 @@ If $S$ is the set of consecutive natural numbers starting from zero and each day
 
 ## Variables of the model
 
-The variables of the model is the the binary matrix $X : L \times S \mapsto \{ 0, 1 \}$.
+The variables of the model is the the binary matrix
+
+$$
+X : L \times S \mapsto \{ 0, 1 \}
+$$
+
 The value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
 The value $X[l][s] = 0$ means the lecture $l \in L$ does not take place during the designated time slot $s \in S$.
 
