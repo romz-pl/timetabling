@@ -106,16 +106,16 @@ param AR{R, S} binary, default 1;
 param AG{G, S} binary, default 1;
 
 
-# Weight matrix for Lectures
-param WL{L, S} >= 0, default 0;
+# Weight matrix for Groups
+param WG{G, S} >= 0;
 
 
 # Weight matrix for Teachers
-# param WT{T, S} >= 0, default 0;
+# param WT{T, S} >= 0;
 
 
 # Weight matrix for Rooms
-# param WR{R, S} >= 0, default 0;
+# param WR{R, S} >= 0;
 
 
 # Matrix X
@@ -123,8 +123,8 @@ param WL{L, S} >= 0, default 0;
 var X{L, S} binary;
 
 
-# Weighted sum of Lectures timetable
-var FL;
+# Weighted sum of Group timetable
+var FG;
 
 
 # Weighted sum of Teachers timetable
@@ -135,9 +135,9 @@ var FL;
 # var FR;
 
 
-# Value of FL
-subject to fx_value:
-    FL = sum{l in L, s in S} WL[l, s] * X[l, s];
+# Value of FG
+subject to fg_value:
+    FG = sum{g in G, s in S} WG[g, s] * (sum{l in LG[g]} X[l, s]);
 
 
 # Value of FT
@@ -179,6 +179,6 @@ subject to one_group {g in G, s in S}:
 # The objective function is the linear function of matrices X, Y, Z
 #
 minimize objective_function:
-    FL;
-#     FL + FT + FR;
+    FG;
+#     FG + FT + FR;
 

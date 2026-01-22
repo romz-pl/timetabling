@@ -36,13 +36,13 @@ display AT;
 display AR;
 display AG;
 
-display WL;
+display WG;
 # display WT;
 # display WR;
 
 solve;
 
-display FL;
+display FG;
 # display FT;
 # display FR;
 
