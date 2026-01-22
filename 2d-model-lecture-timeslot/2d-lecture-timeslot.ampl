@@ -23,7 +23,7 @@ check: card(T) > 0;
 set R;
 check: card(R) > 0;
 
-# The set of grups of lectures.
+# The set names of grups of lectures.
 set G;
 check: card(G) > 0;
 

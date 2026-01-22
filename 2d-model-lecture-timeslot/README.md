@@ -7,7 +7,7 @@
 + $S$ - the set of timeslots.
 + $T$ - the set of teachers.
 + $R$ - the set of rooms.
-+ $G$ - the set of grups of lectures.
++ $G$ - the set names of grups of lectures.
 
 
 ### Sequence of sets LT
