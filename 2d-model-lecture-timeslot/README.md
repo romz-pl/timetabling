@@ -163,39 +163,42 @@ $$
 ## Objective function
 
 Let assume, there are three matrices:
-+ $W_L : L \times S \mapsto \mathbb{R}^+$,
++ $W_G : G \times S \mapsto \mathbb{R}^+$,
 + $W_T : T \times S \mapsto \mathbb{R}^+$,
 + $W_R : R \times S \mapsto \mathbb{R}^+$.
 
-Then, the objective function is the weighted linear combination of the student's timetable, represented by the matrix $X$, and the teacher's timetable, represented by the matrix $Y$ and the room's timetable, represented by the matrix $Z$:
+Then, the objective function is the weighted linear combination of
+the group's timetable, represented by the matrix $XG$, and
+the teacher's timetable, represented by the matrix $XT$ and
+the room's timetable, represented by the matrix $XR$:
 
 $$
-\min_{X} \quad F_L + F_T + F_R
+\min_{X} \quad F_G + F_T + F_R
 $$
 
 where
 
 $$
-F_L = \sum_{l \in L} \sum_{s \in S} W_L[l][s] \cdot X[l][s]
+F_L = \sum_{g \in G} \sum_{s \in S} W_G[g][s] \cdot XG[g][s]
 $$
 
 and
 
 $$
-F_T = \sum_{t \in T} \sum_{s \in S} W_T[t][s] \cdot Y[t][s]
+F_T = \sum_{t \in T} \sum_{s \in S} W_T[t][s] \cdot XT[t][s]
 $$
 
 and
 
 $$
-F_R = \sum_{r \in R} \sum_{s \in S} W_R[r][s] \cdot Z[r][s]
+F_R = \sum_{r \in R} \sum_{s \in S} W_R[r][s] \cdot XR[r][s]
 $$
 
-The position of 1 in the matrices is not affected when the values of the matrix elements W_L, W_T, and W_R are the same. However, adjusting these values affects the generated timetable.
+The position of 1 in the matrices is not affected when the values of the matrix elements $W_G$, $W_T$, and $W_R$ are the same. However, adjusting these values affects the generated timetable.
 
 ### Questions
-+ What are the optimal values for the matrix elements W_L, W_T, W_R?
-+ How can we formulate an evaluation of the matrices W_L, W_T, W_R as an optimization problem? 
++ What are the optimal values for the matrix elements $W_G$, $W_T$, $W_R$?
++ How can we formulate an evaluation of the matrices $W_G$, $W_T$, $W_R$ as an optimization problem? 
 
 
 ## Objective function - specific version
@@ -204,13 +207,13 @@ The position of 1 in the matrices is not affected when the values of the matrix 
 The objective function is the linear function of the student's timetable, represented by the matrix $X$, and the teacher's timetable, represented by the matrix $Y$:
 
 $$
-\min_{X} \quad F_L + F_T
+\min_{X} \quad F_G + F_T
 $$
 
 where
 
 $$
-F_L = w_L \sum_{l \in L} \sum_{s \in S} (1 + H[s])^{q_L} X[l][s]
+F_G = w_G \sum_{g \in G} \sum_{s \in S} (1 + H[s])^{q_G} XG[g][s]
 $$
 
 and
@@ -219,7 +222,7 @@ $$
 F_T = w_T \sum_{t \in T} \sum_{s \in S} (1 + H[s])^{q_T} Y[t][s]
 $$
 
-where $q_L, q_t \in \mathbb{R}^+$ and coefficients $w_S, w_T \in \mathbb{R}^+$ fulfill the condition $w_S + w_T = 1$. 
+where $q_G, q_t \in \mathbb{R}^+$ and coefficients $w_G, w_T \in \mathbb{R}^+$ fulfill the condition $w_G + w_T = 1$. 
 The recommended range for $q \in \mathbb{R}$ is $1/3 \leq q \leq 3$. However, the value of $q$ within this range has minimal impact on the speed of convergence.
 
 The coefficient $(1 + H[s])^q$ in the above equation enforces the timetable for small values of $H[s]$. Therefore, the consequences are as follows: 
@@ -228,8 +231,8 @@ The coefficient $(1 + H[s])^q$ in the above equation enforces the timetable for 
 + Free slots are penalized.
 
 ### Questions
-+ How to choose the values of $q_L, q_T, w_S, w_T$?
-+ What is the relationship between the values of $q_L, q_T, w_S, w_T$ and the quality of the requested timetable?
++ How to choose the values of $q_G, q_T, w_G, w_T$?
++ What is the relationship between the values of $q_G, q_T, w_G, w_T$ and the quality of the requested timetable?
 + Is the proposed objective function sufficient for generating high-quality timetables?
 + What are some other possible objective functions?
 
