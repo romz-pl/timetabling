@@ -179,7 +179,7 @@ $$
 where
 
 $$
-F_L = \sum_{g \in G} \sum_{s \in S} W_G[g][s] \cdot XG[g][s]
+F_G = \sum_{g \in G} \sum_{s \in S} W_G[g][s] \cdot XG[g][s]
 $$
 
 and
