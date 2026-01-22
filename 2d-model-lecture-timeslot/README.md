@@ -7,17 +7,23 @@
 + $S$ - the set of timeslots.
 + $T$ - the set of teachers.
 + $R$ - the set of rooms.
++ $G$ - the set of grups of lectures.
 
 
 ### Sequence of sets LT
 + $\forall_{t \in T} \quad LT[t] \subseteq L$ - the set of lectures being taught by the teacher $t \in T$.
-+ Any lesson can be taught by one teacher, hence: If $t_1, t_2 \in T$ and $t_1 \neq t_2$ then $LT[t_1] \cap LT[t_2] = \varnothing$
-+ All lessons are taught, hence: $\cup_{t \in T} LT[t] = L$
++ Any lecture can be taught by one teacher, hence: If $t_1, t_2 \in T$ and $t_1 \neq t_2$ then $LT[t_1] \cap LT[t_2] = \varnothing$
++ All lectures are taught, hence: $\cup_{t \in T} LT[t] = L$
 
 ### Sequence of sets LR
 + $\forall_{r \in R} \quad LR[r] \subseteq L$ - the set of lectures taking place in the room $r \in R$.
-+ The lesson can take place in one room only, hence: If $r_1, r_2 \in R$ and $r_1 \neq r_2$ then $LR[r_1] \cap LR[r_2] = \varnothing$
-+ Each lesson is assigned to a specific room, hence: $\cup_{r \in R} LR[r] = L$
++ The lecture can take place in one room only, hence: If $r_1, r_2 \in R$ and $r_1 \neq r_2$ then $LR[r_1] \cap LR[r_2] = \varnothing$
++ Each lecture is assigned to a specific room, hence: $\cup_{r \in R} LR[r] = L$
+
+### Sequence of set GL
++ $\forall_{g \in G} \quad GL[g] \subseteq L$ - the set of lectures belonging to group $g \in G$.
++ The lecture can belong to one grup only, hence: If $g_1, g_2 \in G$ and $g_1 \neq g_2$ then $GL[g_1] \cap GL[g_2] = \varnothing$
++ Each lecture belongs to a specific group, hence: $\cup_{g \in G} GL[g] = L$
 
 ### Availability matrix AL
 + $AL : L \times S \mapsto \{ 0, 1 \}$ - the availability matrix for lectures. See variable $X$.
