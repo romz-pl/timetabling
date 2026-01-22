@@ -84,21 +84,39 @@ The value $X[l][s] = 0$ means the lecture $l \in L$ does not take place during t
 
 The matrices $XG$, $XT$, and $XR$ help grasp the idea behind the 2D Lecture-Timeslot model. Therefore, they deserve their own definitions and explanations.
 
-### Matrix XG
-$XG : G \times S \mapsto \{ 0, 1 \}$
+### Relation between matrix X and matrix XG
 
 The value $XG[r][s] = 1$ means in group $g \in G$ the lesson is conducted during the designated time slot $s \in S$.
+The value of the elements of matrix $XG$ is the sum of the selected columns representing lectures belonging to group $g \in G$ at time slot $s \in S$:
 
-### Matrix XT
-$XT : T \times S \mapsto \{ 0, 1 \}$
+$$
+XG : G \times S \qquad
+\forall_{g \in G} \forall_{s \in S} \qquad
+XG[g][s] = \sum_{l \in LG[r]} X[l][s]
+$$
+
+### Relation between matrix X and matrix XT
 
 The value $XT[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
+The value of the elements of matrix $XT$ is the sum of the selected columns representing the lectures being taught by teacher $t \in T$ at time slot $s \in S$:
 
-### Matrix XR
-$XR : R \times S \mapsto \{ 0, 1 \}$
+$$
+XT : T \times S \qquad
+\forall_{t \in T} \forall_{s \in S} \qquad
+XT[t][s] = \sum_{l \in LT[t]} X[l][s]
+$$
+
+
+### Relation between matrix X and matrix XR
 
 The value $XR[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
+The value of the elements of matrix $XR$ is the sum of the selected columns representing lectures in room $r \in R$ at time slot $s \in S$:
 
+$$
+XR : R \times S \qquad
+\forall_{r \in R} \forall_{s \in S} \qquad
+XR[r][s] = \sum_{l \in LR[r]} X[l][s]
+$$
 
 
 
@@ -158,27 +176,6 @@ $$
 X[l_1][s] = X[l_2][\text{next}(s)]
 $$
 
-### Relation between matrix X and matrix XG
-The value of the elements of matrix $XG$ is the sum of the selected columns representing lectures belonging to group $g \in G$ at time slot $s \in S$:
-
-$$
-\forall_{g \in G} \forall_{s \in S} \qquad XG[g][s] = \sum_{l \in LG[r]} X[l][s]
-$$
-
-
-### Relation between matrix X and matrix XT
-The value of the elements of matrix $XT$ is the sum of the selected columns representing the lectures being taught by teacher $t \in T$ at time slot $s \in S$:
-
-$$
-\forall_{t \in T} \forall_{s \in S} \qquad XT[t][s] = \sum_{l \in LT[t]} X[l][s]
-$$
-
-### Relation between matrix X and matrix XR
-The value of the elements of matrix $XR$ is the sum of the selected columns representing lectures in room $r \in R$ at time slot $s \in S$:
-
-$$
-\forall_{r \in R} \forall_{s \in S} \qquad XR[r][s] = \sum_{l \in LR[r]} X[l][s]
-$$
 
 
 
