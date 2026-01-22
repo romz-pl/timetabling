@@ -128,7 +128,7 @@ The value of the elements of matrix $XC$ is the sum of the selected columns repr
 
 $$
 \forall_{c \in C} \forall_{d \in D} \qquad
-XC[c][d] = \sum_{l \in LC[c]} \sum{s \in SD[s]} X[l][s]
+XC[c][d] = \sum_{l \in LC[c]} \sum_{s \in SD[s]} X[l][s]
 $$
 
 
