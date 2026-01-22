@@ -64,6 +64,7 @@ $Z : R \times S \mapsto \{ 0, 1 \}$
 The value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
 
 
+
 ## Constrains
 
 ### The lesson must be conducted
@@ -125,6 +126,7 @@ The value of the elements of matrix $Z$ is the sum of the selected columns repre
 $$
 \forall_{r \in R} \forall_{s \in S} \qquad Z[r][s] = \sum_{l \in LR[r]} X[l][s]
 $$
+
 
 
 ## Objective function
