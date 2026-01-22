@@ -93,6 +93,13 @@ $$
 X[l_1][s] = X[l_2][s]
 $$
 
+### Two lectures one after another
+If lectures $l_1, l_2 \in L$ must take place one after another, then we have the constraint
+$$
+X[l_1][s] = X[l_2][next(s)],
+$$
+where the function $next(s)$ returns the timeslot that comes right after timeslot $s \in S$. 
+
 
 ### Relation between matrix X and matrix Y
 $$
