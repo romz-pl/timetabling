@@ -23,6 +23,10 @@ check: card(T) > 0;
 set R;
 check: card(R) > 0;
 
+# The set of grups of lectures.
+set G;
+check: card(G) > 0;
+
 
 # ===== LT BEGIN =====
 # The set of lectures being taught by the teacher $t \in T$
@@ -65,6 +69,27 @@ check {r1 in R, r2 in R: r1 != r2}: card(LR[r1] inter LR[r2]) = 0;
 # ===== LR END =====
 
 
+
+# ===== LG BEGIN =====
+# The set of lectures belonging to group $g \in G$.
+set LG{G} within L;
+#
+# Every set LG must be not empty
+check {g in G}: card(LG[g]) > 0;
+#
+# The union of all LG sets must be equal to set of lectures L.
+# However, the following check with equality sign (=)
+#     check: L = union {g in G} LG[g];
+# leads to syntax error: L  >>> =  <<< union {g in G} LG[g];
+# Therefore, I used [within] keyword to define L must we the subset.
+check: L within (union {g in G} LG[g]);
+#
+# Every lecture must be assigned the the execty one group.
+# Therefore, the two different LG sets must not intersect.
+check {g1 in G, g2 in G: g1 != g2}: card(LG[g1] inter LG[g2]) = 0;
+# ===== LG BEGIN =====
+
+
 # Availability matrix for lectures
 param AL{L, S} binary, default 1;
 
@@ -75,6 +100,11 @@ param AT{T, S} binary, default 1;
 
 # Availability matrix for rooms
 param AR{R, S} binary, default 1;
+
+
+# Availability matrix for groups
+param AG{G, S} binary, default 1;
+
 
 # Weight matrix for Lectures
 param WL{L, S} >= 0, default 0;
@@ -138,6 +168,11 @@ subject to one_teacher {t in T, s in S}:
 # Only one lesson is allowed in the room
 subject to one_room {r in R, s in S}:
     sum{l in LR[r]} X[l, s] <= AR[r, s];
+
+
+# Only one lesson is allowed to belong to the group
+subject to one_group {g in G, s in S}:
+    sum{l in LG[g]} X[l, s] <= AG[g, s];
 
 
 #

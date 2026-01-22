@@ -20,10 +20,10 @@
 + The lecture can take place in one room only, hence: If $r_1, r_2 \in R$ and $r_1 \neq r_2$ then $LR[r_1] \cap LR[r_2] = \varnothing$
 + Each lecture is assigned to a specific room, hence: $\cup_{r \in R} LR[r] = L$
 
-### Sequence of set GL
-+ $\forall_{g \in G} \quad GL[g] \subseteq L$ - the set of lectures belonging to group $g \in G$.
-+ The lecture can belong to one grup only, hence: If $g_1, g_2 \in G$ and $g_1 \neq g_2$ then $GL[g_1] \cap GL[g_2] = \varnothing$
-+ Each lecture belongs to a specific group, hence: $\cup_{g \in G} GL[g] = L$
+### Sequence of set LG
++ $\forall_{g \in G} \quad LG[g] \subseteq L$ - the set of lectures belonging to group $g \in G$.
++ The lecture can belong to one grup only, hence: If $g_1, g_2 \in G$ and $g_1 \neq g_2$ then $LG[g_1] \cap LG[g_2] = \varnothing$
++ Each lecture belongs to a specific group, hence: $\cup_{g \in G} LG[g] = L$
 
 ### Availability matrix AL
 + $AL : L \times S \mapsto \{ 0, 1 \}$ - the availability matrix for lectures. See variable $X$.
@@ -36,6 +36,10 @@
 ### Availability matrix AR
 + $AR : R \times S \mapsto \{ 0, 1 \}$ - the availability matrix for rooms. See variable $Z$.
 + In the availability matrix $AR[r][s]$ value $1$ means that the room $r \in R$ is available at slot $s \in S$.
+
+### Availability matrix AG
++ $AG : G \times S \mapsto \{ 0, 1 \}$ - the availability matrix for groupss. See variable $XG$.
++ In the availability matrix $AG[g][s]$ value $1$ means that the group $g \in G$ is available at slot $s \in S$.
 
 
 ### Day function, SD
@@ -59,15 +63,21 @@ $X : L \times S \mapsto \{ 0, 1 \}$
 
 The value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
 
-### Matrix Y
-$Y : T \times S \mapsto \{ 0, 1 \}$
+### Matrix XT
+$XT : T \times S \mapsto \{ 0, 1 \}$
 
-The value $Y[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
+The value $XT[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
 
-### Matrix Z
-$Z : R \times S \mapsto \{ 0, 1 \}$
+### Matrix XR
+$XR : R \times S \mapsto \{ 0, 1 \}$
 
-The value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
+The value $XR[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
+
+### Matrix XG
+$XG : G \times S \mapsto \{ 0, 1 \}$
+
+The value $XG[r][s] = 1$ means in group $g \in G$ the lesson is conducted during the designated time slot $s \in S$.
+
 
 
 
@@ -80,14 +90,14 @@ $$
 \forall_{l \in L} \qquad \sum_{s \in S} X[l][s] = 1
 $$
 
-### Enforce when lessons are unavailable
+### Enforce when lecture are unavailable
 If the element of the matrix, $AL[l][s]$ is zero, then lecture $l \in L$ cannot occur in timeslot $s \in S$:
 
 $$
 \forall_{L \in L} \forall_{s \in S} \qquad X[l][s] \leq AL[l][s]
 $$
 
-### Only one teacher conducts the lesson
+### Only one teacher conducts the lecture
 The second fundamental constraint is that any teacher $t \in T$ can teach exactly one lecture at a given time slot $s \in S$.
 If the element of the matrix $AT[t][s]$ is zero, then teacher $r \in R$ is unavailable in timeslot $s \in S$:
 
@@ -95,7 +105,7 @@ $$
 \forall_{t \in T} \forall_{s \in S} \qquad \sum_{l \in LT[t]} X[l][s] \leq AT[t][s]
 $$
 
-### Only one lesson is allowed in the room
+### Only one lecture is allowed in the room
 The third fundamental constraint is that only one lecture can be conducted in room $r \in R$ at time slot $s \in S$.
 If the element of the matrix $AR[r][s]$ is zero, then room $r \in R$ is unavailable in timeslot $s \in S$:
 
@@ -103,6 +113,14 @@ $$
 \forall_{r \in R} \forall_{s \in S} \qquad \sum_{l \in LR[r]} X[l][s] \leq AR[r][s]
 $$
 
+
+### Only one lecture is allowed in the group
+The fourth fundamental constraint is that only one lecture can belongs to group $g \in G$ at time slot $s \in S$.
+If the element of the matrix $AG[g][s]$ is zero, then group $g \in G$ is unavailable in timeslot $s \in S$:
+
+$$
+\forall_{g \in G} \forall_{s \in S} \qquad \sum_{l \in LG[g]} X[l][s] \leq AG[g][s]
+$$
 
 ### Two lectures at the same timeslot
 If lectures $l_1, l_2 \in L$ must take place in the same timeslot $s \in S$, then we have the constraint:
@@ -119,18 +137,25 @@ X[l_1][s] = X[l_2][\text{next}(s)]
 $$
 
 
-### Relation between matrix X and matrix Y
-The value of the elements of matrix $Y$ is the sum of the selected columns representing the lectures being taught by teacher $t \in T$ at time slot $s \in S$:
+### Relation between matrix X and matrix XT
+The value of the elements of matrix $XT$ is the sum of the selected columns representing the lectures being taught by teacher $t \in T$ at time slot $s \in S$:
 
 $$
-\forall_{t \in T} \forall_{s \in S} \qquad Y[t][s] = \sum_{l \in LT[t]} X[l][s]
+\forall_{t \in T} \forall_{s \in S} \qquad XT[t][s] = \sum_{l \in LT[t]} X[l][s]
 $$
 
-### Relation between matrix X and matrix Z
-The value of the elements of matrix $Z$ is the sum of the selected columns representing lectures in room $r \in R$ at time slot $s \in S$:
+### Relation between matrix X and matrix XR
+The value of the elements of matrix $XR$ is the sum of the selected columns representing lectures in room $r \in R$ at time slot $s \in S$:
 
 $$
-\forall_{r \in R} \forall_{s \in S} \qquad Z[r][s] = \sum_{l \in LR[r]} X[l][s]
+\forall_{r \in R} \forall_{s \in S} \qquad XR[r][s] = \sum_{l \in LR[r]} X[l][s]
+$$
+
+### Relation between matrix X and matrix XG
+The value of the elements of matrix $XG$ is the sum of the selected columns representing lectures belonging to group $g \in G$ at time slot $s \in S$:
+
+$$
+\forall_{g \in G} \forall_{s \in S} \qquad XG[g][s] = \sum_{l \in LG[r]} X[l][s]
 $$
 
 

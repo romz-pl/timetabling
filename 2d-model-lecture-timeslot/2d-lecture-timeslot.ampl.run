@@ -13,7 +13,7 @@ display L;
 display S;
 display T;
 display R;
-
+display G;
 
 
 for {t in T}
@@ -26,9 +26,15 @@ for {r in R}
     display r, LR[r];
 }
 
+for {g in G}
+{
+    display g, LG[g];
+}
+
 display AL;
 display AT;
 display AR;
+display AG;
 
 display WL;
 # display WT;
@@ -45,15 +51,21 @@ display X;
 
 
 
-printf "Matrix Y\n";
+printf "Matrix XT\n";
+printf "=========\n";
 display{t in T, s in S} (sum{l in LT[t]} X[l, s]);
 
-printf "Matrix Z\n";
+printf "Matrix XR\n";
+printf "=========\n";
 display{r in R, s in S} (sum{l in LR[r]} X[l, s]);
 
+printf "Matrix XG\n";
+printf "=========\n";
+display{g in G, s in S} (sum{l in LG[g]} X[l, s]);
 
-printf "The final schedule\n";
-printf "==================\n";
+
+printf "The final schedule for teachers\n";
+printf "===============================\n";
 for {t in T}
 {
     printf "Teacher: %s\n", t;
@@ -61,6 +73,44 @@ for {t in T}
     for {s in S}
     {
         for {l in LT[t]}
+        {
+            if X[l, s] > 0 then {
+                printf "%s %s\n", s, l;
+            }
+        }
+    }
+    printf "\n";
+}
+
+
+printf "The final schedule for rooms\n";
+printf "============================\n";
+for {r in R}
+{
+    printf "Room: %s\n", r;
+    printf "------------\n";
+    for {s in S}
+    {
+        for {l in LR[r]}
+        {
+            if X[l, s] > 0 then {
+                printf "%s %s\n", s, l;
+            }
+        }
+    }
+    printf "\n";
+}
+
+
+printf "The final schedule for groups\n";
+printf "=============================\n";
+for {g in G}
+{
+    printf "Group: %s\n", g;
+    printf "------------\n";
+    for {s in S}
+    {
+        for {l in LG[g]}
         {
             if X[l, s] > 0 then {
                 printf "%s %s\n", s, l;

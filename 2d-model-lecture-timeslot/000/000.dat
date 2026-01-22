@@ -6,6 +6,8 @@ set L :=
 4p2
 4b1
 4b2
+5m1
+5p1
 ;
 
 set S :=
@@ -38,6 +40,11 @@ R11
 R12
 ;
 
+set G :=
+4
+5
+;
+
 set LT[Ana] :=
 4b1
 4b2
@@ -47,11 +54,13 @@ set LT[Pwl] :=
 4m1
 4m2
 4m3
+5m1
 ;
 
 set LT[Zbg] :=
 4p1
 4p2
+5p1
 ;
 
 set LR[R10] :=
@@ -63,13 +72,29 @@ set LR[R11] :=
 4m1
 4m2
 4m3
+5m1
 ;
 
 set LR[R12] :=
 4p1
 4p2
+5p1
 ;
 
+set LG[4] :=
+4m1
+4m2
+4m3
+4p1
+4p2
+4b1
+4b2
+;
+
+set LG[5] :=
+5m1
+5p1
+;
 
 param AL [*,*] (tr)
 :     4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
@@ -98,12 +123,12 @@ Mo2     0   1   1
 Tu0     0   1   0
 Tu1     0   1   0
 Tu2     0   1   0
-We0     0   0   0
-We1     0   0   0
-We2     0   0   0
-Th0     0   0   0
-Th1     0   0   0
-Th2     0   0   0
+We0     0   1   1
+We1     0   1   1
+We2     0   1   1
+Th0     0   0   1
+Th1     0   0   1
+Th2     0   0   1
 Fr0     1   0   0
 Fr1     1   0   0
 Fr2     1   0   0
@@ -126,6 +151,25 @@ Th2     1   1   1
 Fr0     1   1   1
 Fr1     1   1   1
 Fr2     1   1   1
+;
+
+param AG [*,*] (tr)
+:       4   5   :=
+Mo0     1   1
+Mo1     1   1
+Mo2     1   1
+Tu0     1   1
+Tu1     1   1
+Tu2     1   1
+We0     1   1
+We1     1   1
+We2     1   1
+Th0     1   1
+Th1     1   1
+Th2     1   1
+Fr0     1   1
+Fr1     1   1
+Fr2     1   1
 ;
 
 param WL [*,*] (tr)
