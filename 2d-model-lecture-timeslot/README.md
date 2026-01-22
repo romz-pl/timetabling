@@ -177,7 +177,7 @@ $$
 ### Limit the number of courses per day
 
 $$
-\forall_{c \in C} \forall_{d \in D} \qquad \sum_{l \in LC[c]} \sum{s \in SD[d]} X[l][s] \leq AC[c][d]
+\forall_{c \in C} \forall_{d \in D} \qquad \sum_{l \in LC[c]} \sum_{s \in SD[d]} X[l][s] \leq AC[c][d]
 $$
 
 
