@@ -28,7 +28,7 @@
 + Each lecture belongs to a specific group, hence: $\cup_{g \in G} LG[g] = L$
 
 ### Sequence of sets LC
-$\forall_{c \in C} \quad LC[c] \subseteq L$ - the set of lectures belonging to course $c \in C$.
++ $\forall_{c \in C} \quad LC[c] \subseteq L$ - the set of lectures belonging to course $c \in C$.
 + The lecture can belong to one course only, hence: If $c_1, c_2 \in C$ and $c_1 \neq c_2$ then $LC[c_1] \cap LC[c_2] = \varnothing$
 + Each lecture belongs to a specific course, hence: $\cup_{c \in C} LC[g] = L$
 
