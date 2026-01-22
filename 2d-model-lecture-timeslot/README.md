@@ -42,16 +42,20 @@
 + In the availability matrix $AL[l][s]$ value $1$ means that the lecture $l \in L$ is available at slot $s \in S$.
 
 ### Availability matrix AT
-+ $AT : T \times S \mapsto \{ 0, 1 \}$ - the availability matrix for teachers. See variable $Y$.
++ $AT : T \times S \mapsto \{ 0, 1 \}$ - the availability matrix for teachers. See matrix $AT$.
 + In the availability matrix $AT[t][s]$ value $1$ means that the teacher $t \in T$ is available at slot $s \in S$.
 
 ### Availability matrix AR
-+ $AR : R \times S \mapsto \{ 0, 1 \}$ - the availability matrix for rooms. See variable $Z$.
++ $AR : R \times S \mapsto \{ 0, 1 \}$ - the availability matrix for rooms. See matrix $XR$.
 + In the availability matrix $AR[r][s]$ value $1$ means that the room $r \in R$ is available at slot $s \in S$.
 
 ### Availability matrix AG
-+ $AG : G \times S \mapsto \{ 0, 1 \}$ - the availability matrix for groupss. See variable $XG$.
++ $AG : G \times S \mapsto \{ 0, 1 \}$ - the availability matrix for groups. See matrix $XG$.
 + In the availability matrix $AG[g][s]$ value $1$ means that the group $g \in G$ is available at slot $s \in S$.
+
+### Availability matrix AC
++ $AC : C \times D \mapsto \mathbb{N}^+$ - the availability matrix for coursess. See matrix $XC$.
++ The value of the element of the matrix $AC[c][d]$ determines the maximum number of lectures from course $c \in C$ on day $d \in D$.
 
 
 ### Day function, SD
@@ -84,40 +88,48 @@ The value $X[l][s] = 0$ means the lecture $l \in L$ does not take place during t
 
 The matrices $XG$, $XT$, and $XR$ help grasp the idea behind the 2D Lecture-Timeslot model. Therefore, they deserve their own definitions and explanations.
 
-### Relation between matrix X and matrix XG
 
+### Relation between matrix X and matrix XG
+The matrix $XG : G \times S$.
 The value $XG[r][s] = 1$ means in group $g \in G$ the lesson is conducted during the designated time slot $s \in S$.
 The value of the elements of matrix $XG$ is the sum of the selected columns representing lectures belonging to group $g \in G$ at time slot $s \in S$:
 
 $$
-XG : G \times S \qquad
 \forall_{g \in G} \forall_{s \in S} \qquad
 XG[g][s] = \sum_{l \in LG[r]} X[l][s]
 $$
 
-### Relation between matrix X and matrix XT
 
+### Relation between matrix X and matrix XT
+The matrix $XT : T \times S$.
 The value $XT[t][s] = 1$ means the teacher $t \in T$ conducts the lesson during the designated time slot $s \in S$.
 The value of the elements of matrix $XT$ is the sum of the selected columns representing the lectures being taught by teacher $t \in T$ at time slot $s \in S$:
 
 $$
-XT : T \times S \qquad
 \forall_{t \in T} \forall_{s \in S} \qquad
 XT[t][s] = \sum_{l \in LT[t]} X[l][s]
 $$
 
 
 ### Relation between matrix X and matrix XR
-
+The matrix $XR : R \times S$.
 The value $XR[r][s] = 1$ means in the room $r \in R$ the lesson is conducted during the designated time slot $s \in S$.
 The value of the elements of matrix $XR$ is the sum of the selected columns representing lectures in room $r \in R$ at time slot $s \in S$:
 
 $$
-XR : R \times S \qquad
 \forall_{r \in R} \forall_{s \in S} \qquad
 XR[r][s] = \sum_{l \in LR[r]} X[l][s]
 $$
 
+
+### Relation between matrix X and matrix XC
+The matrix $XC : C \times D$.
+The value of the elements of matrix $XC$ is the sum of the selected columns representing course $c \in C$ on day $d \in D$:
+
+$$
+\forall_{c \in C} \forall_{d \in D} \qquad
+XC[c][d] = \sum_{l \in LC[c]} \sum{s \in SD[s]} X[l][s]
+$$
 
 
 
@@ -161,6 +173,13 @@ If the element of the matrix $AG[g][s]$ is zero, then group $g \in G$ is unavail
 $$
 \forall_{g \in G} \forall_{s \in S} \qquad \sum_{l \in LG[g]} X[l][s] \leq AG[g][s]
 $$
+
+### Limit the number of courses per day
+
+$$
+\forall_{c \in C} \forall_{d \in D} \qquad \sum_{l \in LC[c]} \sum{s \in SD[d]} X[l][s] \leq AC[c][d]
+$$
+
 
 ### Two lectures at the same timeslot
 If lectures $l_1, l_2 \in L$ must take place in the same timeslot $s \in S$, then we have the constraint:
