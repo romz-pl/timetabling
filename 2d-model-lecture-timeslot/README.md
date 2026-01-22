@@ -86,6 +86,14 @@ $$
 \forall_{r \in R} \forall_{s \in S} \qquad \sum_{l \in LR[r]} X[l][s] \leq AR[r][s]
 $$
 
+
+### Two lectures at the same timeslot
+If lectures $l_1, l_2 \in L$ must take place in the same timeslot $s \in S$, then we have the constraint
+$$
+X[l_1][s] = X[l_2][s]
+$$
+
+
 ### Relation between matrix X and matrix Y
 $$
 \forall_{t \in T} \forall_{s \in S} \qquad Y[t][s] = \sum_{l \in LT[t]} X[l][s]
