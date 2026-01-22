@@ -117,21 +117,21 @@ Fr2     1   1   1   1   1   1   1
 
 param AT [*,*] (tr)
 :     Ana Pwl Zbg    :=
-Mo0     0   1   1
-Mo1     0   1   1
-Mo2     0   1   1
-Tu0     0   1   0
-Tu1     0   1   0
-Tu2     0   1   0
-We0     0   1   1
-We1     0   1   1
-We2     0   1   1
-Th0     0   0   1
-Th1     0   0   1
-Th2     0   0   1
-Fr0     1   0   0
-Fr1     1   0   0
-Fr2     1   0   0
+Mo0     1   1   1
+Mo1     1   1   1
+Mo2     1   1   1
+Tu0     1   1   1
+Tu1     1   1   1
+Tu2     1   1   1
+We0     1   1   1
+We1     1   1   1
+We2     1   1   1
+Th0     1   1   1
+Th1     1   1   1
+Th2     1   1   1
+Fr0     1   1   1
+Fr1     1   1   1
+Fr2     1   1   1
 ;
 
 param AR [*,*] (tr)
