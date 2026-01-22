@@ -8,7 +8,6 @@ option show_stats 2;
 # option gentimes 1;
 
 
-
 display L;
 display S;
 display T;

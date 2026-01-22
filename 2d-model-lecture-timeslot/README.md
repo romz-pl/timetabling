@@ -64,6 +64,7 @@ $$
 X : L \times S \mapsto \{ 0, 1 \}
 $$
 
+Therefore, the number of variables in the model is equal to the product of the cardinality sets: $|L| \cdot |S|$.
 The value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
 The value $X[l][s] = 0$ means the lecture $l \in L$ does not take place during the designated time slot $s \in S$.
 
