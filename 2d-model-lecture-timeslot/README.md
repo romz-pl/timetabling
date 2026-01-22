@@ -67,46 +67,61 @@ The value $Z[r][s] = 1$ means in the room $r \in R$ the lesson is conducted duri
 ## Constrains
 
 ### The lesson must be conducted
+The most fundamental constraint is that any lecture must be conducted exactly once:
+
 $$
 \forall_{l \in L} \qquad \sum_{s \in S} X[l][s] = 1
 $$
 
 ### Enforce when lessons are unavailable
+If the element of the matrix, $AL[l][s]$ is zero, then lecture $l \in L$ cannot occur in timeslot $s \in S$:
+
 $$
 \forall_{L \in L} \forall_{s \in S} \qquad X[l][s] \leq AL[l][s]
 $$
 
 ### Only one teacher conducts the lesson
+The second fundamental constraint is that any teacher $t \in T$ can teach exactly one lecture at a given time slot $s \in S$.
+If the element of the matrix $AT[t][s]$ is zero, then teacher $r \in R$ is unavailable in timeslot $s \in S$:
+
 $$
 \forall_{t \in T} \forall_{s \in S} \qquad \sum_{l \in LT[t]} X[l][s] \leq AT[t][s]
 $$
 
 ### Only one lesson is allowed in the room
+The third fundamental constraint is that only one lecture can be conducted in room $r \in R$ at time slot $s \in S$.
+If the element of the matrix $AR[r][s]$ is zero, then room $r \in R$ is unavailable in timeslot $s \in S$:
+
 $$
 \forall_{r \in R} \forall_{s \in S} \qquad \sum_{l \in LR[r]} X[l][s] \leq AR[r][s]
 $$
 
 
 ### Two lectures at the same timeslot
-If lectures $l_1, l_2 \in L$ must take place in the same timeslot $s \in S$, then we have the constraint
+If lectures $l_1, l_2 \in L$ must take place in the same timeslot $s \in S$, then we have the constraint:
+
 $$
 X[l_1][s] = X[l_2][s]
 $$
 
 ### Two lectures one after another
-If lectures $l_1, l_2 \in L$ must take place one after another, then we have the constraint
+Let the function $\text{next}(s)$ returns the timeslot that comes right after timeslot $s \in S$. Then, if lectures $l_1, l_2 \in L$ must take place one after another, then we have the constraint:
+
 $$
-X[l_1][s] = X[l_2][next(s)],
+X[l_1][s] = X[l_2][\text{next}(s)]
 $$
-where the function $next(s)$ returns the timeslot that comes right after timeslot $s \in S$. 
 
 
 ### Relation between matrix X and matrix Y
+The value of the elements of matrix $Y$ is the sum of the selected columns representing the lectures being taught by teacher $t \in T$ at time slot $s \in S$:
+
 $$
 \forall_{t \in T} \forall_{s \in S} \qquad Y[t][s] = \sum_{l \in LT[t]} X[l][s]
 $$
 
 ### Relation between matrix X and matrix Z
+The value of the elements of matrix $Z$ is the sum of the selected columns representing lectures in room $r \in R$ at time slot $s \in S$:
+
 $$
 \forall_{r \in R} \forall_{s \in S} \qquad Z[r][s] = \sum_{l \in LR[r]} X[l][s]
 $$
