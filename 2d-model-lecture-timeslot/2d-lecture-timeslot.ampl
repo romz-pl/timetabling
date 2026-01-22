@@ -27,9 +27,13 @@ check: card(R) > 0;
 set G;
 check: card(G) > 0;
 
-# The set od days.
+# The set of days.
 set D;
 check: card(D) > 0;
+
+# The set of courses.
+set C;
+check: card(C) > 0;
 
 
 # ===== LT BEGIN =====
@@ -88,7 +92,7 @@ check {g1 in G, g2 in G: g1 != g2}: card(LG[g1] inter LG[g2]) = 0;
 
 
 # ===== SD BEGIN =====
-# The set of timeslots belonging to day $d \in D$
+# The set of timeslots belonging to day $d \in D$.
 set SD{D} within S;
 #
 # Every set SD must be not empty
@@ -101,6 +105,23 @@ check: S within (union {d in D} SD[d]);
 # Therefore, the two different LG sets must not intersect.
 check {d1 in D, d2 in D: d1 != d2}: card(SD[d1] inter SD[d2]) = 0;
 # ===== SD END =====
+
+
+
+# ===== LC BEGIN =====
+# The set of lectures belonging to course $c \in C$.
+set LC{C} within L;
+#
+# Every set LC must be not empty
+check {c in C}: card(LC[c]) > 0;
+#
+# The union of all LC sets must be equal to set of lectures L.
+check: L within (union {c in C} LC[c]);
+#
+# Every lecture must be assigned the the execty one course.
+# Therefore, the two different LC sets must not intersect.
+check {c1 in C, c2 in C: c1 != c2}: card(LC[c1] inter LC[c2]) = 0;
+# ===== SC END =====
 
 
 # Availability matrix for lectures

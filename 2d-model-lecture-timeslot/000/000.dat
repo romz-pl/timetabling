@@ -53,6 +53,38 @@ Th
 Fr
 ;
 
+set C :=
+4m
+4p
+4b
+5m
+5p
+;
+
+set LC[4m] :=
+4m1
+4m2
+4m3
+;
+
+set LC[4p] :=
+4p1
+4p2
+;
+
+set LC[4b] :=
+4b1
+4b2
+;
+
+set LC[5m] :=
+5m1
+;
+
+set LC[5p] :=
+5p1
+;
+
 set SD[Mo] :=
 Mo0
 Mo1

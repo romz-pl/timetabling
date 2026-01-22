@@ -8,7 +8,8 @@
 + $T$ - the set of teachers.
 + $R$ - the set of rooms.
 + $G$ - the set names of grups of lectures.
-+ $D$ - the set od days.
++ $D$ - the set of days.
++ $C$ - the set of courses;
 
 
 ### Sequence of sets LT
@@ -25,6 +26,11 @@
 + $\forall_{g \in G} \quad LG[g] \subseteq L$ - the set of lectures belonging to group $g \in G$.
 + The lecture can belong to one grup only, hence: If $g_1, g_2 \in G$ and $g_1 \neq g_2$ then $LG[g_1] \cap LG[g_2] = \varnothing$
 + Each lecture belongs to a specific group, hence: $\cup_{g \in G} LG[g] = L$
+
+### Sequence of sets LC
+$\forall_{c \in C} \quad LC[c] \subseteq L$ - the set of lectures belonging to course $c \in C$.
++ The lecture can belong to one course only, hence: If $c_1, c_2 \in C$ and $c_1 \neq c_2$ then $LC[c_1] \cap LC[c_2] = \varnothing$
++ Each lecture belongs to a specific course, hence: $\cup_{c \in C} LC[g] = L$
 
 ### Sequence of sets SD
 + $\forall_{d \in D} \quad SD[d] \subseteq S$ - the set of timeslots belonging to day $d \in D$.
