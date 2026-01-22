@@ -8,30 +8,68 @@ set L :=
 4b2
 5m1
 5p1
+5p2
+5p3
+5p4
+5p5
+5p6
+5b1
+5b2
+5b3
+5b4
+5b5
+5b6
+5a1
+5a2
+5a3
+5a4
+5a5
+5a6
 ;
 
 set S :=
 Mo0
 Mo1
 Mo2
+Mo3
+Mo4
+Mo5
+Mo6
 Tu0
 Tu1
 Tu2
+Tu3
+Tu4
+Tu5
+Tu6
 We0
 We1
 We2
+We3
+We4
+We5
+We6
 Th0
 Th1
 Th2
+Th3
+Th4
+Th5
+Th6
 Fr0
 Fr1
 Fr2
+Fr3
+Fr4
+Fr5
+Fr6
 ;
 
 set T :=
 Ana
 Pwl
 Zbg
+Eva
 ;
 
 set R :=
@@ -41,8 +79,8 @@ R12
 ;
 
 set G :=
-4
-5
+G4
+G5
 ;
 
 set D :=
@@ -57,6 +95,8 @@ set C :=
 4m
 4p
 4b
+5a
+5b
 5m
 5p
 ;
@@ -83,41 +123,90 @@ set LC[5m] :=
 
 set LC[5p] :=
 5p1
+5p2
+5p3
+5p4
+5p5
+5p6
+;
+
+set LC[5b] :=
+5b1
+5b2
+5b3
+5b4
+5b5
+5b6
+;
+
+set LC[5a] :=
+5a1
+5a2
+5a3
+5a4
+5a5
+5a6
 ;
 
 set SD[Mo] :=
 Mo0
 Mo1
 Mo2
+Mo3
+Mo4
+Mo5
+Mo6
 ;
 
 set SD[Tu] :=
 Tu0
 Tu1
 Tu2
+Tu3
+Tu4
+Tu5
+Tu6
 ;
 
 set SD[We] :=
 We0
 We1
 We2
+We3
+We4
+We5
+We6
 ;
 
 set SD[Th] :=
 Th0
 Th1
 Th2
+Th3
+Th4
+Th5
+Th6
 ;
 
 set SD[Fr] :=
 Fr0
 Fr1
 Fr2
+Fr3
+Fr4
+Fr5
+Fr6
 ;
 
 set LT[Ana] :=
 4b1
 4b2
+5b1
+5b2
+5b3
+5b4
+5b5
+5b6
 ;
 
 set LT[Pwl] :=
@@ -131,17 +220,43 @@ set LT[Zbg] :=
 4p1
 4p2
 5p1
+5p2
+5p3
+5p4
+5p5
+5p6
+;
+
+set LT[Eva] :=
+5a1
+5a2
+5a3
+5a4
+5a5
+5a6
 ;
 
 set LR[R10] :=
 4b1
 4b2
+5b1
+5b2
+5b3
+5b4
+5b5
+5b6
 ;
 
 set LR[R11] :=
 4m1
 4m2
 4m3
+5a1
+5a2
+5a3
+5a4
+5a5
+5a6
 5m1
 ;
 
@@ -149,9 +264,14 @@ set LR[R12] :=
 4p1
 4p2
 5p1
+5p2
+5p3
+5p4
+5p5
+5p6
 ;
 
-set LG[4] :=
+set LG[G4] :=
 4m1
 4m2
 4m3
@@ -161,102 +281,95 @@ set LG[4] :=
 4b2
 ;
 
-set LG[5] :=
+set LG[G5] :=
 5m1
 5p1
+5p2
+5p3
+5p4
+5p5
+5p6
+5b1
+5b2
+5b3
+5b4
+5b5
+5b6
+5a1
+5a2
+5a3
+5a4
+5a5
+5a6
 ;
 
-param AL [*,*] (tr)
-:     4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
-Mo0     1   1   1   1   1   1   1
-Mo1     1   1   1   1   1   1   1
-Mo2     1   1   1   1   1   1   1
-Tu0     1   1   1   1   1   1   1
-Tu1     1   1   1   1   1   1   1
-Tu2     1   1   1   1   1   1   1
-We0     1   1   1   1   1   1   1
-We1     1   1   1   1   1   1   1
-We2     1   1   1   1   1   1   1
-Th0     1   1   1   1   1   1   1
-Th1     1   1   1   1   1   1   1
-Th2     1   1   1   1   1   1   1
-Fr0     1   1   1   1   1   1   1
-Fr1     1   1   1   1   1   1   1
-Fr2     1   1   1   1   1   1   1
+# param AL :=
+# 4b1 Mo0 1
+# ;
+
+
+# param FL :=
+# 4b1 Mo0 0
+# ;
+
+
+# param AT :=
+# Ana Mo0 1
+# ;
+
+
+# param AR :=
+# R10 Mo0 1
+# ;
+
+
+# param AG :=
+# G4 Mo0 1
+# ;
+
+
+param AC :=
+5a We 2
+5b Mo 2
+5p Mo 2
 ;
 
-param AT [*,*] (tr)
-:     Ana Pwl Zbg    :=
-Mo0     1   1   1
-Mo1     1   1   1
-Mo2     1   1   1
-Tu0     1   1   1
-Tu1     1   1   1
-Tu2     1   1   1
-We0     1   1   1
-We1     1   1   1
-We2     1   1   1
-Th0     1   1   1
-Th1     1   1   1
-Th2     1   1   1
-Fr0     1   1   1
-Fr1     1   1   1
-Fr2     1   1   1
-;
-
-param AR [*,*] (tr)
-:     R10 R11 R12    :=
-Mo0     1   1   1
-Mo1     1   1   1
-Mo2     1   1   1
-Tu0     1   1   1
-Tu1     1   1   1
-Tu2     1   1   1
-We0     1   1   1
-We1     1   1   1
-We2     1   1   1
-Th0     1   1   1
-Th1     1   1   1
-Th2     1   1   1
-Fr0     1   1   1
-Fr1     1   1   1
-Fr2     1   1   1
-;
-
-param AG [*,*] (tr)
-:       4   5   :=
-Mo0     1   1
-Mo1     1   1
-Mo2     1   1
-Tu0     1   1
-Tu1     1   1
-Tu2     1   1
-We0     1   1
-We1     1   1
-We2     1   1
-Th0     1   1
-Th1     1   1
-Th2     1   1
-Fr0     1   1
-Fr1     1   1
-Fr2     1   1
-;
 
 param WG [*,*] (tr)
-:       4   5     :=
+:      G4  G5     :=
 Mo0     0   0
 Mo1     1   1
 Mo2     2   2
+Mo3     3   3
+Mo4     4   4
+Mo5     5   5
+Mo6     6   6
 Tu0     0   0
 Tu1     1   1
 Tu2     2   2
+Tu3     3   3
+Tu4     4   4
+Tu5     5   5
+Tu6     6   6
 We0     0   0
 We1     1   1
 We2     2   2
+We3     3   3
+We4     4   4
+We5     5   5
+We6     6   6
 Th0     0   0
 Th1     1   1
 Th2     2   2
+Th3     3   3
+Th4     4   4
+Th5     5   5
+Th6     6   6
 Fr0     0   0
 Fr1     1   1
 Fr2     2   2
+Fr3     3   3
+Fr4     4   4
+Fr5     5   5
+Fr6     6   6
 ;

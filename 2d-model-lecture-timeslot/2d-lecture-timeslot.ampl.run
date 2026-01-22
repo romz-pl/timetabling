@@ -1,5 +1,4 @@
-option gurobi_options 'presolve=2';
-option gurobi_options 'outlev=1';
+option gurobi_options 'presolve=2 iis=1 outlev=1';
 
 # option;
 option presolve 0;
@@ -43,9 +42,12 @@ for {c in C}
 }
 
 display AL;
+display FL;
 display AT;
 display AR;
 display AG;
+display AC;
+
 
 display WG;
 # display WT;
@@ -73,6 +75,10 @@ display{r in R, s in S} (sum{l in LR[r]} X[l, s]);
 printf "Matrix XG\n";
 printf "=========\n";
 display{g in G, s in S} (sum{l in LG[g]} X[l, s]);
+
+printf "Matrix XC\n";
+printf "=========\n";
+display{c in C, d in D} (sum{l in LC[c], s in SD[d]} X[l, s]);
 
 
 printf "The final schedule for teachers\n";

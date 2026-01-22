@@ -37,25 +37,29 @@
 + The timeslot can belong to one day only, hence: If $d_1, d_2 \in D$ and $d_1 \neq d_2$ then $SD[d_1] \cap SD[d_2] = \varnothing$
 + Each timeslot belongs to a specific day, hence: $\cup_{d \in D} SD[d] = S$
 
-### Availability matrix AL
+### Availability matrix for lectures
 + $AL : L \times S \mapsto \{ 0, 1 \}$ - the availability matrix for lectures. See variable $X$.
-+ In the availability matrix $AL[l][s]$ value $1$ means that the lecture $l \in L$ is available at slot $s \in S$.
++ In the availability matrix $AL[l][s]$ value $1$ means that the lecture $l \in L$ is available at timeslot $s \in S$.
 
-### Availability matrix AT
+### Availability matrix for teachers
 + $AT : T \times S \mapsto \{ 0, 1 \}$ - the availability matrix for teachers. See matrix $AT$.
 + In the availability matrix $AT[t][s]$ value $1$ means that the teacher $t \in T$ is available at slot $s \in S$.
 
-### Availability matrix AR
+### Availability matrix for rooms
 + $AR : R \times S \mapsto \{ 0, 1 \}$ - the availability matrix for rooms. See matrix $XR$.
 + In the availability matrix $AR[r][s]$ value $1$ means that the room $r \in R$ is available at slot $s \in S$.
 
-### Availability matrix AG
+### Availability matrix for groups
 + $AG : G \times S \mapsto \{ 0, 1 \}$ - the availability matrix for groups. See matrix $XG$.
 + In the availability matrix $AG[g][s]$ value $1$ means that the group $g \in G$ is available at slot $s \in S$.
 
-### Availability matrix AC
-+ $AC : C \times D \mapsto \mathbb{N}^+$ - the availability matrix for coursess. See matrix $XC$.
+### Availability matrix for courses
++ $AC : C \times D \mapsto \mathbb{N}^+$ - the availability matrix for courses. See matrix $XC$.
 + The value of the element of the matrix $AC[c][d]$ determines the maximum number of lectures from course $c \in C$ on day $d \in D$.
+
+### Matrix of fixed lectures
++ $FL : L \times S \mapsto \{ 0, 1 \}$ - the matrix of fixed lectures.
++ The value of the element of the matrix $FL[l][s] =1$ means that the lecture $l \in L$ is fixed at timeslot $s \in S$ and it is excluded from the optimization process.
 
 
 ### Day function, SD
@@ -174,7 +178,7 @@ $$
 \forall_{g \in G} \forall_{s \in S} \qquad \sum_{l \in LG[g]} X[l][s] \leq AG[g][s]
 $$
 
-### Limit the number of courses per day
+### Limit the number of lectures in the course per day
 
 $$
 \forall_{c \in C} \forall_{d \in D} \qquad \sum_{l \in LC[c]} \sum_{s \in SD[d]} X[l][s] \leq AC[c][d]

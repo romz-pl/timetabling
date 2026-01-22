@@ -23,13 +23,16 @@ check: card(T) > 0;
 set R;
 check: card(R) > 0;
 
+
 # The set names of grups of lectures.
 set G;
 check: card(G) > 0;
 
+
 # The set of days.
-set D;
+set D ordered;
 check: card(D) > 0;
+
 
 # The set of courses.
 set C;
@@ -93,7 +96,7 @@ check {g1 in G, g2 in G: g1 != g2}: card(LG[g1] inter LG[g2]) = 0;
 
 # ===== SD BEGIN =====
 # The set of timeslots belonging to day $d \in D$.
-set SD{D} within S;
+set SD{D} ordered, within S;
 #
 # Every set SD must be not empty
 check {d in D}: card(SD[d]) > 0;
@@ -140,6 +143,14 @@ param AR{R, S} binary, default 1;
 param AG{G, S} binary, default 1;
 
 
+# Availability matrix for courses
+param AC{C, D} integer, default 1, >=0;
+
+
+# Matrix of fixed lectures
+param FL{L, S} binary, default 0;
+
+
 # Weight matrix for Groups
 param WG{G, S} >= 0;
 
@@ -184,29 +195,39 @@ subject to fg_value:
 #    FR = sum{r in R, s in S} WR[r, s] * (sum{l in LR[r]} X[l, s]); 
 
 
-# The lesson must be conducted
-subject to lesson_must {l in L}:
+# The lecture must be conducted
+subject to lecture_must {l in L}:
     sum{s in S} X[l, s] = 1;
 
 
-# Enforce when lessons are unavailable
-subject to available_lesson {l in L, s in S}:
+# Enforce when lectures are unavailable
+subject to available_lecture {l in L, s in S}:
     X[l, s] <= AL[l, s];
 
 
-# Only one teacher conducts the lesson
+# Matrix of fixed lectures
+subject to fixed_lectures {l in L, s in S}:
+    X[l, s] >= FL[l, s];
+
+
+# Only one teacher conducts the lecture
 subject to one_teacher {t in T, s in S}:
     sum{l in LT[t]} X[l, s] <= AT[t, s];
 
 
-# Only one lesson is allowed in the room
+# Only one lecture is allowed in the room
 subject to one_room {r in R, s in S}:
     sum{l in LR[r]} X[l, s] <= AR[r, s];
 
 
-# Only one lesson is allowed to belong to the group
+# Only one lecture is allowed to belong to the group
 subject to one_group {g in G, s in S}:
     sum{l in LG[g]} X[l, s] <= AG[g, s];
+
+
+# Limit the number of lectures in the course per day
+subject to lectures_day {c in C, d in D}:
+    sum{l in LC[c], s in SD[d]} X[l, s] <= AC[c, d];
 
 
 #
