@@ -56,13 +56,11 @@ In the most general way, the value of the function $SI$ can be provided for each
 If $S$ is the set of consecutive natural numbers starting from zero and each day consists of the same number of time slots, then $SI[s] = s \text{ mod } N_h$, where $N_h$ is th enumber of hours per day.
 
 
-## Variables
+## Variables of the model
 
-### Matrix X
-$X : L \times S \mapsto \{ 0, 1 \}$
-
+The variables of the model is the the binary matrix $X : L \times S \mapsto \{ 0, 1 \}$.
 The value $X[l][s] = 1$ means the lecture $l \in L$ takes place during the designated time slot $s \in S$.
-
+The value $X[l][s] = 0$ means the lecture $l \in L$ does not take place during the designated time slot $s \in S$.
 
 ## Auxiliary matrices
 
