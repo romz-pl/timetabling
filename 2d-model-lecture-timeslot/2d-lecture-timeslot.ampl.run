@@ -124,13 +124,28 @@ printf "=============================\n";
 for {g in G}
 {
     printf "Group: %s\n", g;
-    printf "------------\n";
+    printf "----------------------------\n";
     for {s in S}
     {
         for {l in LG[g]}
         {
-            if X[l, s] > 0 then {
-                printf "%s %s\n", s, l;
+            if X[l, s] > 0 then
+            {
+                printf "%s   %s", s, l;
+                for {r in R}
+                {
+                    if l in LR[r] then
+                    {
+                        printf "   %s", r;
+                    }
+                }
+                for {t in T}
+                {
+                    if l in LT[t] then
+                    {
+                        printf "   %s\n", t;
+                    }
+                }
             }
         }
     }
