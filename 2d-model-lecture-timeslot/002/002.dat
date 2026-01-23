@@ -222,115 +222,225 @@ set L :=
 4Bwyf3
 4Bwyf4
 #
-5jpl1
-5jpl2
-5jpl3
-5jpl4
-5jpl5
-5jan1
-5jan2
-5jan3
-5mat1
-5mat2
-5mat3
-5mat4
-5inf1
-5tch1
-5geo1
-5bio1
-5hst1
-5hst2
-5muz1
-5pla1
-5wyf1
-5wyf2
-5wyf3
-5wyf4
+5Ajpl1
+5Ajpl2
+5Ajpl3
+5Ajpl4
+5Ajpl5
+5Ajan1
+5Ajan2
+5Ajan3
+5Amat1
+5Amat2
+5Amat3
+5Amat4
+5Ainf1
+5Atch1
+5Ageo1
+5Abio1
+5Ahst1
+5Ahst2
+5Amuz1
+5Apla1
+5Awyf1
+5Awyf2
+5Awyf3
+5Awyf4
 #
-6jpl1
-6jpl2
-6jpl3
-6jpl4
-6jpl5
-6jan1
-6jan2
-6jan3
-6mat1
-6mat2
-6mat3
-6mat4
-6inf1
-6tch1
-6geo1
-6bio1
-6hst1
-6hst2
-6muz1
-6pla1
-6wyf1
-6wyf2
-6wyf3
-6wyf4
+5Bjpl1
+5Bjpl2
+5Bjpl3
+5Bjpl4
+5Bjpl5
+5Bjan1
+5Bjan2
+5Bjan3
+5Bmat1
+5Bmat2
+5Bmat3
+5Bmat4
+5Binf1
+5Btch1
+5Bgeo1
+5Bbio1
+5Bhst1
+5Bhst2
+5Bmuz1
+5Bpla1
+5Bwyf1
+5Bwyf2
+5Bwyf3
+5Bwyf4
 #
-7jpl1
-7jpl2
-7jpl3
-7jpl4
-7jpl5
-7jan1
-7jan2
-7jan3
-7mat1
-7mat2
-7mat3
-7mat4
-7inf1
-7geo1
-7geo2
-7bio1
-7bio2
-7che1
-7che2
-7fiz1
-7fiz2
-7hst1
-7hst2
-7muz1
-7pla1
-7wyf1
-7wyf2
-7wyf3
-7wyf4
-7jnm1
-7jnm2
+6Ajpl1
+6Ajpl2
+6Ajpl3
+6Ajpl4
+6Ajpl5
+6Ajan1
+6Ajan2
+6Ajan3
+6Amat1
+6Amat2
+6Amat3
+6Amat4
+6Ainf1
+6Atch1
+6Ageo1
+6Abio1
+6Ahst1
+6Ahst2
+6Amuz1
+6Apla1
+6Awyf1
+6Awyf2
+6Awyf3
+6Awyf4
 #
-8jpl1
-8jpl2
-8jpl3
-8jpl4
-8jpl5
-8jan1
-8jan2
-8jan3
-8mat1
-8mat2
-8mat3
-8mat4
-8inf1
-8geo1
-8bio1
-8che1
-8che2
-8fiz1
-8fiz2
-8hst1
-8hst2
-8wyf1
-8wyf2
-8wyf3
-8wyf4
-8jnm1
-8jnm2
+6Bjpl1
+6Bjpl2
+6Bjpl3
+6Bjpl4
+6Bjpl5
+6Bjan1
+6Bjan2
+6Bjan3
+6Bmat1
+6Bmat2
+6Bmat3
+6Bmat4
+6Binf1
+6Btch1
+6Bgeo1
+6Bbio1
+6Bhst1
+6Bhst2
+6Bmuz1
+6Bpla1
+6Bwyf1
+6Bwyf2
+6Bwyf3
+6Bwyf4
+#
+7Ajpl1
+7Ajpl2
+7Ajpl3
+7Ajpl4
+7Ajpl5
+7Ajan1
+7Ajan2
+7Ajan3
+7Amat1
+7Amat2
+7Amat3
+7Amat4
+7Ainf1
+7Ageo1
+7Ageo2
+7Abio1
+7Abio2
+7Ache1
+7Ache2
+7Afiz1
+7Afiz2
+7Ahst1
+7Ahst2
+7Amuz1
+7Apla1
+7Awyf1
+7Awyf2
+7Awyf3
+7Awyf4
+7Ajnm1
+7Ajnm2
+#
+7Bjpl1
+7Bjpl2
+7Bjpl3
+7Bjpl4
+7Bjpl5
+7Bjan1
+7Bjan2
+7Bjan3
+7Bmat1
+7Bmat2
+7Bmat3
+7Bmat4
+7Binf1
+7Bgeo1
+7Bgeo2
+7Bbio1
+7Bbio2
+7Bche1
+7Bche2
+7Bfiz1
+7Bfiz2
+7Bhst1
+7Bhst2
+7Bmuz1
+7Bpla1
+7Bwyf1
+7Bwyf2
+7Bwyf3
+7Bwyf4
+7Bjnm1
+7Bjnm2
+#
+8Ajpl1
+8Ajpl2
+8Ajpl3
+8Ajpl4
+8Ajpl5
+8Ajan1
+8Ajan2
+8Ajan3
+8Amat1
+8Amat2
+8Amat3
+8Amat4
+8Ainf1
+8Ageo1
+8Abio1
+8Ache1
+8Ache2
+8Afiz1
+8Afiz2
+8Ahst1
+8Ahst2
+8Awyf1
+8Awyf2
+8Awyf3
+8Awyf4
+8Ajnm1
+8Ajnm2
+#
+8Bjpl1
+8Bjpl2
+8Bjpl3
+8Bjpl4
+8Bjpl5
+8Bjan1
+8Bjan2
+8Bjan3
+8Bmat1
+8Bmat2
+8Bmat3
+8Bmat4
+8Binf1
+8Bgeo1
+8Bbio1
+8Bche1
+8Bche2
+8Bfiz1
+8Bfiz2
+8Bhst1
+8Bhst2
+8Bwyf1
+8Bwyf2
+8Bwyf3
+8Bwyf4
+8Bjnm1
+8Bjnm2
 ;
 
 
@@ -367,7 +477,7 @@ RB2
 RA3
 RB3
 RA4
-# RB4
+RB4
 RA5
 RB5
 RA6
@@ -377,10 +487,14 @@ RB6
 set G :=
 G4A
 G4B
-G5
-G6
-G7
-G8
+G5A
+G5B
+G6A
+G6B
+G7A
+G7B
+G8A
+G8B
 ;
 
 
@@ -408,55 +522,105 @@ C4Bmuz
 C4Bpla
 C4Bwyf
 #
-C5jpl
-C5jan
-C5mat
-C5inf
-C5tch
-C5geo
-C5bio
-C5hst
-C5muz
-C5pla
-C5wyf
+C5Ajpl
+C5Ajan
+C5Amat
+C5Ainf
+C5Atch
+C5Ageo
+C5Abio
+C5Ahst
+C5Amuz
+C5Apla
+C5Awyf
 #
-C6jpl
-C6jan
-C6mat
-C6inf
-C6tch
-C6geo
-C6bio
-C6hst
-C6muz
-C6pla
-C6wyf
+C5Bjpl
+C5Bjan
+C5Bmat
+C5Binf
+C5Btch
+C5Bgeo
+C5Bbio
+C5Bhst
+C5Bmuz
+C5Bpla
+C5Bwyf
 #
-C7jpl
-C7jan
-C7mat
-C7inf
-C7geo
-C7bio
-C7che
-C7fiz
-C7hst
-C7muz
-C7pla
-C7wyf
-C7jnm
+C6Ajpl
+C6Ajan
+C6Amat
+C6Ainf
+C6Atch
+C6Ageo
+C6Abio
+C6Ahst
+C6Amuz
+C6Apla
+C6Awyf
 #
-C8jpl
-C8jan
-C8mat
-C8inf
-C8geo
-C8bio
-C8che
-C8fiz
-C8hst
-C8wyf
-C8jnm
+C6Bjpl
+C6Bjan
+C6Bmat
+C6Binf
+C6Btch
+C6Bgeo
+C6Bbio
+C6Bhst
+C6Bmuz
+C6Bpla
+C6Bwyf
+#
+C7Ajpl
+C7Ajan
+C7Amat
+C7Ainf
+C7Ageo
+C7Abio
+C7Ache
+C7Afiz
+C7Ahst
+C7Amuz
+C7Apla
+C7Awyf
+C7Ajnm
+#
+C7Bjpl
+C7Bjan
+C7Bmat
+C7Binf
+C7Bgeo
+C7Bbio
+C7Bche
+C7Bfiz
+C7Bhst
+C7Bmuz
+C7Bpla
+C7Bwyf
+C7Bjnm
+#
+C8Ajpl
+C8Ajan
+C8Amat
+C8Ainf
+C8Ageo
+C8Abio
+C8Ache
+C8Afiz
+C8Ahst
+C8Awyf
+C8Ajnm
+#
+C8Bjpl
+C8Bjan
+C8Bmat
+C8Binf
+C8Bgeo
+C8Bbio
+C8Bche
+C8Bfiz
+C8Bhst
+C8Bwyf
+C8Bjnm
 ;
 
 set LC[C4Ajpl] :=
@@ -563,248 +727,492 @@ set LC[C4Bwyf] :=
 4Bwyf4
 ;
 
-set LC[C5jpl] :=
-5jpl1
-5jpl2
-5jpl3
-5jpl4
-5jpl5
+set LC[C5Ajpl] :=
+5Ajpl1
+5Ajpl2
+5Ajpl3
+5Ajpl4
+5Ajpl5
 ;
 
-set LC[C5jan] :=
-5jan1
-5jan2
-5jan3
+set LC[C5Bjpl] :=
+5Bjpl1
+5Bjpl2
+5Bjpl3
+5Bjpl4
+5Bjpl5
 ;
 
-set LC[C5mat] :=
-5mat1
-5mat2
-5mat3
-5mat4
+set LC[C5Ajan] :=
+5Ajan1
+5Ajan2
+5Ajan3
 ;
 
-set LC[C5inf] :=
-5inf1
+set LC[C5Bjan] :=
+5Bjan1
+5Bjan2
+5Bjan3
 ;
 
-set LC[C5tch] :=
-5tch1
+set LC[C5Amat] :=
+5Amat1
+5Amat2
+5Amat3
+5Amat4
 ;
 
-set LC[C5geo] :=
-5geo1
+set LC[C5Bmat] :=
+5Bmat1
+5Bmat2
+5Bmat3
+5Bmat4
 ;
 
-set LC[C5bio] :=
-5bio1
+set LC[C5Ainf] :=
+5Ainf1
 ;
 
-set LC[C5hst] :=
-5hst1
-5hst2
+set LC[C5Binf] :=
+5Binf1
 ;
 
-set LC[C5muz] :=
-5muz1
+set LC[C5Atch] :=
+5Atch1
 ;
 
-set LC[C5pla] :=
-5pla1
+set LC[C5Btch] :=
+5Btch1
 ;
 
-set LC[C5wyf] :=
-5wyf1
-5wyf2
-5wyf3
-5wyf4
+set LC[C5Ageo] :=
+5Ageo1
 ;
 
-set LC[C6jpl] :=
-6jpl1
-6jpl2
-6jpl3
-6jpl4
-6jpl5
+set LC[C5Bgeo] :=
+5Bgeo1
 ;
 
-set LC[C6jan] :=
-6jan1
-6jan2
-6jan3
+set LC[C5Abio] :=
+5Abio1
 ;
 
-set LC[C6mat] :=
-6mat1
-6mat2
-6mat3
-6mat4
+set LC[C5Bbio] :=
+5Bbio1
 ;
 
-set LC[C6inf] :=
-6inf1
+set LC[C5Ahst] :=
+5Ahst1
+5Ahst2
 ;
 
-set LC[C6tch] :=
-6tch1
+set LC[C5Bhst] :=
+5Bhst1
+5Bhst2
 ;
 
-set LC[C6geo] :=
-6geo1
+set LC[C5Amuz] :=
+5Amuz1
 ;
 
-set LC[C6bio] :=
-6bio1
+set LC[C5Bmuz] :=
+5Bmuz1
 ;
 
-set LC[C6hst] :=
-6hst1
-6hst2
+set LC[C5Apla] :=
+5Apla1
 ;
 
-set LC[C6muz] :=
-6muz1
+set LC[C5Bpla] :=
+5Bpla1
 ;
 
-set LC[C6pla] :=
-6pla1
+set LC[C5Awyf] :=
+5Awyf1
+5Awyf2
+5Awyf3
+5Awyf4
 ;
 
-set LC[C6wyf] :=
-6wyf1
-6wyf2
-6wyf3
-6wyf4
+set LC[C5Bwyf] :=
+5Bwyf1
+5Bwyf2
+5Bwyf3
+5Bwyf4
 ;
 
-set LC[C7jpl] :=
-7jpl1
-7jpl2
-7jpl3
-7jpl4
-7jpl5
+set LC[C6Ajpl] :=
+6Ajpl1
+6Ajpl2
+6Ajpl3
+6Ajpl4
+6Ajpl5
 ;
 
-set LC[C7jan] :=
-7jan1
-7jan2
-7jan3
+set LC[C6Bjpl] :=
+6Bjpl1
+6Bjpl2
+6Bjpl3
+6Bjpl4
+6Bjpl5
 ;
 
-set LC[C7mat] :=
-7mat1
-7mat2
-7mat3
-7mat4
+set LC[C6Ajan] :=
+6Ajan1
+6Ajan2
+6Ajan3
 ;
 
-set LC[C7inf] :=
-7inf1
+set LC[C6Bjan] :=
+6Bjan1
+6Bjan2
+6Bjan3
 ;
 
-set LC[C7geo] :=
-7geo1
-7geo2
+set LC[C6Amat] :=
+6Amat1
+6Amat2
+6Amat3
+6Amat4
 ;
 
-set LC[C7bio] :=
-7bio1
-7bio2
+set LC[C6Bmat] :=
+6Bmat1
+6Bmat2
+6Bmat3
+6Bmat4
 ;
 
-set LC[C7che] :=
-7che1
-7che2
+set LC[C6Ainf] :=
+6Ainf1
 ;
 
-set LC[C7fiz] :=
-7fiz1
-7fiz2
+set LC[C6Binf] :=
+6Binf1
 ;
 
-set LC[C7hst] :=
-7hst1
-7hst2
+set LC[C6Atch] :=
+6Atch1
 ;
 
-set LC[C7muz] :=
-7muz1
+set LC[C6Btch] :=
+6Btch1
 ;
 
-set LC[C7pla] :=
-7pla1
+set LC[C6Ageo] :=
+6Ageo1
 ;
 
-set LC[C7wyf] :=
-7wyf1
-7wyf2
-7wyf3
-7wyf4
+set LC[C6Bgeo] :=
+6Bgeo1
 ;
 
-set LC[C7jnm] :=
-7jnm1
-7jnm2
+set LC[C6Abio] :=
+6Abio1
 ;
 
-set LC[C8jpl] :=
-8jpl1
-8jpl2
-8jpl3
-8jpl4
-8jpl5
+set LC[C6Bbio] :=
+6Bbio1
 ;
 
-set LC[C8jan] :=
-8jan1
-8jan2
-8jan3
+set LC[C6Ahst] :=
+6Ahst1
+6Ahst2
 ;
 
-set LC[C8mat] :=
-8mat1
-8mat2
-8mat3
-8mat4
+set LC[C6Bhst] :=
+6Bhst1
+6Bhst2
 ;
 
-set LC[C8inf] :=
-8inf1
+set LC[C6Amuz] :=
+6Amuz1
 ;
 
-set LC[C8geo] :=
-8geo1
+set LC[C6Bmuz] :=
+6Bmuz1
 ;
 
-set LC[C8bio] :=
-8bio1
+set LC[C6Apla] :=
+6Apla1
 ;
 
-set LC[C8che] :=
-8che1
-8che2
+set LC[C6Bpla] :=
+6Bpla1
 ;
 
-set LC[C8fiz] :=
-8fiz1
-8fiz2
+set LC[C6Awyf] :=
+6Awyf1
+6Awyf2
+6Awyf3
+6Awyf4
 ;
 
-set LC[C8hst] :=
-8hst1
-8hst2
+set LC[C6Bwyf] :=
+6Bwyf1
+6Bwyf2
+6Bwyf3
+6Bwyf4
 ;
 
-set LC[C8wyf] :=
-8wyf1
-8wyf2
-8wyf3
-8wyf4
+set LC[C7Ajpl] :=
+7Ajpl1
+7Ajpl2
+7Ajpl3
+7Ajpl4
+7Ajpl5
 ;
 
-set LC[C8jnm] :=
-8jnm1
-8jnm2
+set LC[C7Bjpl] :=
+7Bjpl1
+7Bjpl2
+7Bjpl3
+7Bjpl4
+7Bjpl5
+;
+
+set LC[C7Ajan] :=
+7Ajan1
+7Ajan2
+7Ajan3
+;
+
+set LC[C7Bjan] :=
+7Bjan1
+7Bjan2
+7Bjan3
+;
+
+set LC[C7Amat] :=
+7Amat1
+7Amat2
+7Amat3
+7Amat4
+;
+
+set LC[C7Bmat] :=
+7Bmat1
+7Bmat2
+7Bmat3
+7Bmat4
+;
+
+set LC[C7Ainf] :=
+7Ainf1
+;
+
+set LC[C7Binf] :=
+7Binf1
+;
+
+set LC[C7Ageo] :=
+7Ageo1
+7Ageo2
+;
+
+set LC[C7Bgeo] :=
+7Bgeo1
+7Bgeo2
+;
+
+set LC[C7Abio] :=
+7Abio1
+7Abio2
+;
+
+set LC[C7Bbio] :=
+7Bbio1
+7Bbio2
+;
+
+set LC[C7Ache] :=
+7Ache1
+7Ache2
+;
+
+set LC[C7Bche] :=
+7Bche1
+7Bche2
+;
+
+set LC[C7Afiz] :=
+7Afiz1
+7Afiz2
+;
+
+set LC[C7Bfiz] :=
+7Bfiz1
+7Bfiz2
+;
+
+set LC[C7Ahst] :=
+7Ahst1
+7Ahst2
+;
+
+set LC[C7Bhst] :=
+7Bhst1
+7Bhst2
+;
+
+set LC[C7Amuz] :=
+7Amuz1
+;
+
+set LC[C7Bmuz] :=
+7Bmuz1
+;
+
+set LC[C7Apla] :=
+7Apla1
+;
+
+set LC[C7Bpla] :=
+7Bpla1
+;
+
+set LC[C7Awyf] :=
+7Awyf1
+7Awyf2
+7Awyf3
+7Awyf4
+;
+
+set LC[C7Bwyf] :=
+7Bwyf1
+7Bwyf2
+7Bwyf3
+7Bwyf4
+;
+
+set LC[C7Ajnm] :=
+7Ajnm1
+7Ajnm2
+;
+
+set LC[C7Bjnm] :=
+7Bjnm1
+7Bjnm2
+;
+
+set LC[C8Ajpl] :=
+8Ajpl1
+8Ajpl2
+8Ajpl3
+8Ajpl4
+8Ajpl5
+;
+
+set LC[C8Bjpl] :=
+8Bjpl1
+8Bjpl2
+8Bjpl3
+8Bjpl4
+8Bjpl5
+;
+
+set LC[C8Ajan] :=
+8Ajan1
+8Ajan2
+8Ajan3
+;
+
+set LC[C8Bjan] :=
+8Bjan1
+8Bjan2
+8Bjan3
+;
+
+set LC[C8Amat] :=
+8Amat1
+8Amat2
+8Amat3
+8Amat4
+;
+
+set LC[C8Bmat] :=
+8Bmat1
+8Bmat2
+8Bmat3
+8Bmat4
+;
+
+set LC[C8Ainf] :=
+8Ainf1
+;
+
+set LC[C8Binf] :=
+8Binf1
+;
+
+set LC[C8Ageo] :=
+8Ageo1
+;
+
+set LC[C8Bgeo] :=
+8Bgeo1
+;
+
+set LC[C8Abio] :=
+8Abio1
+;
+
+set LC[C8Bbio] :=
+8Bbio1
+;
+
+set LC[C8Ache] :=
+8Ache1
+8Ache2
+;
+
+set LC[C8Bche] :=
+8Bche1
+8Bche2
+;
+
+set LC[C8Afiz] :=
+8Afiz1
+8Afiz2
+;
+
+set LC[C8Bfiz] :=
+8Bfiz1
+8Bfiz2
+;
+
+set LC[C8Ahst] :=
+8Ahst1
+8Ahst2
+;
+
+set LC[C8Bhst] :=
+8Bhst1
+8Bhst2
+;
+
+set LC[C8Awyf] :=
+8Awyf1
+8Awyf2
+8Awyf3
+8Awyf4
+;
+
+set LC[C8Bwyf] :=
+8Bwyf1
+8Bwyf2
+8Bwyf3
+8Bwyf4
+;
+
+set LC[C8Ajnm] :=
+8Ajnm1
+8Ajnm2
+;
+
+set LC[C8Bjnm] :=
+8Bjnm1
+8Bjnm2
 ;
 
 set LT[TAjpl] :=
@@ -814,29 +1222,29 @@ set LT[TAjpl] :=
 4Ajpl4
 4Ajpl5
 #
-5jpl1
-5jpl2
-5jpl3
-5jpl4
-5jpl5
+5Ajpl1
+5Ajpl2
+5Ajpl3
+5Ajpl4
+5Ajpl5
 #
-6jpl1
-6jpl2
-6jpl3
-6jpl4
-6jpl5
+6Ajpl1
+6Ajpl2
+6Ajpl3
+6Ajpl4
+6Ajpl5
 #
-7jpl1
-7jpl2
-7jpl3
-7jpl4
-7jpl5
+7Ajpl1
+7Ajpl2
+7Ajpl3
+7Ajpl4
+7Ajpl5
 #
-8jpl1
-8jpl2
-8jpl3
-8jpl4
-8jpl5
+8Ajpl1
+8Ajpl2
+8Ajpl3
+8Ajpl4
+8Ajpl5
 ;
 
 set LT[TBjpl] :=
@@ -845,6 +1253,30 @@ set LT[TBjpl] :=
 4Bjpl3
 4Bjpl4
 4Bjpl5
+#
+5Bjpl1
+5Bjpl2
+5Bjpl3
+5Bjpl4
+5Bjpl5
+#
+6Bjpl1
+6Bjpl2
+6Bjpl3
+6Bjpl4
+6Bjpl5
+#
+7Bjpl1
+7Bjpl2
+7Bjpl3
+7Bjpl4
+7Bjpl5
+#
+8Bjpl1
+8Bjpl2
+8Bjpl3
+8Bjpl4
+8Bjpl5
 ;
 
 set LT[TAjan] :=
@@ -852,27 +1284,43 @@ set LT[TAjan] :=
 4Ajan2
 4Ajan3
 #
-5jan1
-5jan2
-5jan3
+5Ajan1
+5Ajan2
+5Ajan3
 #
-6jan1
-6jan2
-6jan3
+6Ajan1
+6Ajan2
+6Ajan3
 #
-7jan1
-7jan2
-7jan3
+7Ajan1
+7Ajan2
+7Ajan3
 #
-8jan1
-8jan2
-8jan3
+8Ajan1
+8Ajan2
+8Ajan3
 ;
 
 set LT[TBjan] :=
 4Bjan1
 4Bjan2
 4Bjan3
+#
+5Bjan1
+5Bjan2
+5Bjan3
+#
+6Bjan1
+6Bjan2
+6Bjan3
+#
+7Bjan1
+7Bjan2
+7Bjan3
+#
+8Bjan1
+8Bjan2
+8Bjan3
 ;
 
 set LT[TAmat] :=
@@ -881,25 +1329,25 @@ set LT[TAmat] :=
 4Amat3
 4Amat4
 #
-5mat1
-5mat2
-5mat3
-5mat4
+5Amat1
+5Amat2
+5Amat3
+5Amat4
 #
-6mat1
-6mat2
-6mat3
-6mat4
+6Amat1
+6Amat2
+6Amat3
+6Amat4
 #
-7mat1
-7mat2
-7mat3
-7mat4
+7Amat1
+7Amat2
+7Amat3
+7Amat4
 #
-8mat1
-8mat2
-8mat3
-8mat4
+8Amat1
+8Amat2
+8Amat3
+8Amat4
 ;
 
 set LT[TBmat] :=
@@ -907,65 +1355,117 @@ set LT[TBmat] :=
 4Bmat2
 4Bmat3
 4Bmat4
+#
+5Bmat1
+5Bmat2
+5Bmat3
+5Bmat4
+#
+6Bmat1
+6Bmat2
+6Bmat3
+6Bmat4
+#
+7Bmat1
+7Bmat2
+7Bmat3
+7Bmat4
+#
+8Bmat1
+8Bmat2
+8Bmat3
+8Bmat4
 ;
 
 set LT[Tinf] :=
 4Ainf1
 4Binf1
-5inf1
-6inf1
-7inf1
-8inf1
+5Ainf1
+5Binf1
+6Ainf1
+6Binf1
+7Ainf1
+7Binf1
+8Ainf1
+8Binf1
 ;
 
 set LT[Ttch] :=
 4Atch1
 4Btch1
-5tch1
-6tch1
+5Atch1
+5Btch1
+6Atch1
+6Btch1
 ;
 
 set LT[Tgeo] :=
-5geo1
-6geo1
-7geo1
-7geo2
-8geo1
+5Ageo1
+5Bgeo1
+6Ageo1
+6Bgeo1
+7Ageo1
+7Ageo2
+7Bgeo1
+7Bgeo2
+8Ageo1
+8Bgeo1
 ;
 
 set LT[Tbio] :=
-5bio1
-6bio1
-7bio1
-7bio2
-8bio1
+5Abio1
+5Bbio1
+6Abio1
+6Bbio1
+7Abio1
+7Abio2
+7Bbio1
+7Bbio2
+8Abio1
+8Bbio1
 ;
 
 set LT[Tche] :=
-7che1
-7che2
-8che1
-8che2
+7Ache1
+7Ache2
+7Bche1
+7Bche2
+8Ache1
+8Ache2
+8Bche1
+8Bche2
 ;
 
 set LT[Tfiz] :=
-7fiz1
-7fiz2
-8fiz1
-8fiz2
+7Afiz1
+7Afiz2
+7Bfiz1
+7Bfiz2
+8Afiz1
+8Afiz2
+8Bfiz1
+8Bfiz2
 ;
 
 set LT[Thst] :=
 4Ahst1
 4Bhst1
-5hst1
-5hst2
-6hst1
-6hst2
-7hst1
-7hst2
-8hst1
-8hst2
+5Ahst1
+5Ahst2
+5Bhst1
+5Bhst2
+6Ahst1
+6Ahst2
+6Bhst1
+6Bhst2
+7Ahst1
+7Ahst2
+7Bhst1
+7Bhst2
+8Ahst1
+8Ahst2
+8Bhst1
+8Bhst2
 ;
 
 set LT[Tprz] :=
@@ -976,17 +1476,23 @@ set LT[Tprz] :=
 set LT[Tmuz] :=
 4Amuz1
 4Bmuz1
-5muz1
-6muz1
-7muz1
+5Amuz1
+5Bmuz1
+6Amuz1
+6Bmuz1
+7Amuz1
+7Bmuz1
 ;
 
 set LT[Tpla] :=
 4Apla1
 4Bpla1
-5pla1
-6pla1
-7pla1
+5Apla1
+5Bpla1
+6Apla1
+6Bpla1
+7Apla1
+7Bpla1
 ;
 
 set LT[TAwyf] :=
@@ -995,25 +1501,25 @@ set LT[TAwyf] :=
 4Awyf3
 4Awyf4
 #
-5wyf1
-5wyf2
-5wyf3
-5wyf4
+5Awyf1
+5Awyf2
+5Awyf3
+5Awyf4
 #
-6wyf1
-6wyf2
-6wyf3
-6wyf4
+6Awyf1
+6Awyf2
+6Awyf3
+6Awyf4
 #
-7wyf1
-7wyf2
-7wyf3
-7wyf4
+7Awyf1
+7Awyf2
+7Awyf3
+7Awyf4
 #
-8wyf1
-8wyf2
-8wyf3
-8wyf4
+8Awyf1
+8Awyf2
+8Awyf3
+8Awyf4
 ;
 
 set LT[TBwyf] :=
@@ -1021,14 +1527,38 @@ set LT[TBwyf] :=
 4Bwyf2
 4Bwyf3
 4Bwyf4
+#
+5Bwyf1
+5Bwyf2
+5Bwyf3
+5Bwyf4
+#
+6Bwyf1
+6Bwyf2
+6Bwyf3
+6Bwyf4
+#
+7Bwyf1
+7Bwyf2
+7Bwyf3
+7Bwyf4
+#
+8Bwyf1
+8Bwyf2
+8Bwyf3
+8Bwyf4
 ;
 
 set LT[Tjnm] :=
-7jnm1
-7jnm2
+7Ajnm1
+7Ajnm2
+7Bjnm1
+7Bjnm2
 #
-8jnm1
-8jnm2
+8Ajnm1
+8Ajnm2
+8Bjnm1
+8Bjnm2
 ;
 
 set LR[RA0] :=
@@ -1038,29 +1568,29 @@ set LR[RA0] :=
 4Ajpl4
 4Ajpl5
 #
-5jpl1
-5jpl2
-5jpl3
-5jpl4
-5jpl5
+5Ajpl1
+5Ajpl2
+5Ajpl3
+5Ajpl4
+5Ajpl5
 #
-6jpl1
-6jpl2
-6jpl3
-6jpl4
-6jpl5
+6Ajpl1
+6Ajpl2
+6Ajpl3
+6Ajpl4
+6Ajpl5
 #
-7jpl1
-7jpl2
-7jpl3
-7jpl4
-7jpl5
+7Ajpl1
+7Ajpl2
+7Ajpl3
+7Ajpl4
+7Ajpl5
 #
-8jpl1
-8jpl2
-8jpl3
-8jpl4
-8jpl5
+8Ajpl1
+8Ajpl2
+8Ajpl3
+8Ajpl4
+8Ajpl5
 ;
 
 set LR[RB0] :=
@@ -1069,6 +1599,30 @@ set LR[RB0] :=
 4Bjpl3
 4Bjpl4
 4Bjpl5
+#
+5Bjpl1
+5Bjpl2
+5Bjpl3
+5Bjpl4
+5Bjpl5
+#
+6Bjpl1
+6Bjpl2
+6Bjpl3
+6Bjpl4
+6Bjpl5
+#
+7Bjpl1
+7Bjpl2
+7Bjpl3
+7Bjpl4
+7Bjpl5
+#
+8Bjpl1
+8Bjpl2
+8Bjpl3
+8Bjpl4
+8Bjpl5
 ;
 
 set LR[RA1] :=
@@ -1077,25 +1631,25 @@ set LR[RA1] :=
 4Amat3
 4Amat4
 #
-5mat1
-5mat2
-5mat3
-5mat4
+5Amat1
+5Amat2
+5Amat3
+5Amat4
 #
-6mat1
-6mat2
-6mat3
-6mat4
+6Amat1
+6Amat2
+6Amat3
+6Amat4
 #
-7mat1
-7mat2
-7mat3
-7mat4
+7Amat1
+7Amat2
+7Amat3
+7Amat4
 #
-8mat1
-8mat2
-8mat3
-8mat4
+8Amat1
+8Amat2
+8Amat3
+8Amat4
 ;
 
 set LR[RB1] :=
@@ -1103,6 +1657,26 @@ set LR[RB1] :=
 4Bmat2
 4Bmat3
 4Bmat4
+#
+5Bmat1
+5Bmat2
+5Bmat3
+5Bmat4
+#
+6Bmat1
+6Bmat2
+6Bmat3
+6Bmat4
+#
+7Bmat1
+7Bmat2
+7Bmat3
+7Bmat4
+#
+8Bmat1
+8Bmat2
+8Bmat3
+8Bmat4
 ;
 
 set LR[RA2] :=
@@ -1111,23 +1685,23 @@ set LR[RA2] :=
 4Amuz1
 4Apla1
 #
-5hst1
-5hst2
-5muz1
-5pla1
+5Ahst1
+5Ahst2
+5Amuz1
+5Apla1
 #
-6hst1
-6hst2
-6muz1
-6pla1
+6Ahst1
+6Ahst2
+6Amuz1
+6Apla1
 #
-7hst1
-7hst2
-7muz1
-7pla1
+7Ahst1
+7Ahst2
+7Amuz1
+7Apla1
 #
-8hst1
-8hst2
+8Ahst1
+8Ahst2
 ;
 
 set LR[RB2] :=
@@ -1135,6 +1709,24 @@ set LR[RB2] :=
 4Bprz1
 4Bmuz1
 4Bpla1
+#
+5Bhst1
+5Bhst2
+5Bmuz1
+5Bpla1
+#
+6Bhst1
+6Bhst2
+6Bmuz1
+6Bpla1
+#
+7Bhst1
+7Bhst2
+7Bmuz1
+7Bpla1
+#
+8Bhst1
+8Bhst2
 ;
 
 set LR[RA3] :=
@@ -1143,25 +1735,25 @@ set LR[RA3] :=
 4Awyf3
 4Awyf4
 #
-5wyf1
-5wyf2
-5wyf3
-5wyf4
+5Awyf1
+5Awyf2
+5Awyf3
+5Awyf4
 #
-6wyf1
-6wyf2
-6wyf3
-6wyf4
+6Awyf1
+6Awyf2
+6Awyf3
+6Awyf4
 #
-7wyf1
-7wyf2
-7wyf3
-7wyf4
+7Awyf1
+7Awyf2
+7Awyf3
+7Awyf4
 #
-8wyf1
-8wyf2
-8wyf3
-8wyf4
+8Awyf1
+8Awyf2
+8Awyf3
+8Awyf4
 ;
 
 set LR[RB3] :=
@@ -1169,28 +1761,66 @@ set LR[RB3] :=
 4Bwyf2
 4Bwyf3
 4Bwyf4
+#
+5Bwyf1
+5Bwyf2
+5Bwyf3
+5Bwyf4
+#
+6Bwyf1
+6Bwyf2
+6Bwyf3
+6Bwyf4
+#
+7Bwyf1
+7Bwyf2
+7Bwyf3
+7Bwyf4
+#
+8Bwyf1
+8Bwyf2
+8Bwyf3
+8Bwyf4
 ;
 
 set LR[RA4] :=
-7jnm1
-7jnm2
+5Ageo1
+5Abio1
 #
-8jnm1
-8jnm2
+6Ageo1
+6Abio1
 #
-5geo1
-5bio1
+7Ajnm1
+7Ajnm2
+7Ageo1
+7Ageo2
+7Abio1
+7Abio2
 #
-6geo1
-6bio1
+8Ajnm1
+8Ajnm2
+8Ageo1
+8Abio1
+;
+
+set LR[RB4] :=
+5Bgeo1
+5Bbio1
 #
-7geo1
-7geo2
-7bio1
-7bio2
+6Bgeo1
+6Bbio1
 #
-8geo1
-8bio1
+7Bjnm1
+7Bjnm2
+7Bgeo1
+7Bgeo2
+7Bbio1
+7Bbio2
+#
+8Bjnm1
+8Bjnm2
+8Bgeo1
+8Bbio1
 ;
 
 set LR[RA5] :=
@@ -1198,55 +1828,87 @@ set LR[RA5] :=
 4Ajan2
 4Ajan3
 #
-5jan1
-5jan2
-5jan3
+5Ajan1
+5Ajan2
+5Ajan3
 #
-6jan1
-6jan2
-6jan3
+6Ajan1
+6Ajan2
+6Ajan3
 #
-7jan1
-7jan2
-7jan3
+7Ajan1
+7Ajan2
+7Ajan3
 #
-8jan1
-8jan2
-8jan3
+8Ajan1
+8Ajan2
+8Ajan3
 ;
 
 set LR[RB5] :=
 4Bjan1
 4Bjan2
 4Bjan3
+#
+5Bjan1
+5Bjan2
+5Bjan3
+#
+6Bjan1
+6Bjan2
+6Bjan3
+#
+7Bjan1
+7Bjan2
+7Bjan3
+#
+8Bjan1
+8Bjan2
+8Bjan3
 ;
 
 set LR[RA6] :=
 4Ainf1
-5inf1
-6inf1
-7inf1
-8inf1
+5Ainf1
+6Ainf1
+7Ainf1
+8Ainf1
 #
 4Atch1
-5tch1
-6tch1
+5Atch1
+6Atch1
 #
-7che1
-7che2
-8che1
-8che2
+7Ache1
+7Ache2
+8Ache1
+8Ache2
 #
-7fiz1
-7fiz2
-8fiz1
-8fiz2
+7Afiz1
+7Afiz2
+8Afiz1
+8Afiz2
 ;
 
 set LR[RB6] :=
 4Binf1
+5Binf1
+6Binf1
+7Binf1
+8Binf1
 #
 4Btch1
+5Btch1
+6Btch1
+#
+7Bche1
+7Bche2
+8Bche1
+8Bche2
+#
+7Bfiz1
+7Bfiz2
+8Bfiz1
+8Bfiz2
 ;
 
 
@@ -1300,159 +1962,277 @@ set LG[G4B] :=
 4Bwyf4
 ;
 
-set LG[G5] :=
-5jpl1
-5jpl2
-5jpl3
-5jpl4
-5jpl5
-5jan1
-5jan2
-5jan3
-5mat1
-5mat2
-5mat3
-5mat4
-5inf1
-5tch1
-5geo1
-5bio1
-5hst1
-5hst2
-5muz1
-5pla1
-5wyf1
-5wyf2
-5wyf3
-5wyf4
+set LG[G5A] :=
+5Ajpl1
+5Ajpl2
+5Ajpl3
+5Ajpl4
+5Ajpl5
+5Ajan1
+5Ajan2
+5Ajan3
+5Amat1
+5Amat2
+5Amat3
+5Amat4
+5Ainf1
+5Atch1
+5Ageo1
+5Abio1
+5Ahst1
+5Ahst2
+5Amuz1
+5Apla1
+5Awyf1
+5Awyf2
+5Awyf3
+5Awyf4
 ;
 
-set LG[G6] :=
-6jpl1
-6jpl2
-6jpl3
-6jpl4
-6jpl5
-6jan1
-6jan2
-6jan3
-6mat1
-6mat2
-6mat3
-6mat4
-6inf1
-6tch1
-6geo1
-6bio1
-6hst1
-6hst2
-6muz1
-6pla1
-6wyf1
-6wyf2
-6wyf3
-6wyf4
+set LG[G5B] :=
+5Bjpl1
+5Bjpl2
+5Bjpl3
+5Bjpl4
+5Bjpl5
+5Bjan1
+5Bjan2
+5Bjan3
+5Bmat1
+5Bmat2
+5Bmat3
+5Bmat4
+5Binf1
+5Btch1
+5Bgeo1
+5Bbio1
+5Bhst1
+5Bhst2
+5Bmuz1
+5Bpla1
+5Bwyf1
+5Bwyf2
+5Bwyf3
+5Bwyf4
 ;
 
-set LG[G7] :=
-7jpl1
-7jpl2
-7jpl3
-7jpl4
-7jpl5
-7jan1
-7jan2
-7jan3
-7mat1
-7mat2
-7mat3
-7mat4
-7inf1
-7geo1
-7geo2
-7bio1
-7bio2
-7che1
-7che2
-7fiz1
-7fiz2
-7hst1
-7hst2
-7muz1
-7pla1
-7wyf1
-7wyf2
-7wyf3
-7wyf4
-7jnm1
-7jnm2
+set LG[G6A] :=
+6Ajpl1
+6Ajpl2
+6Ajpl3
+6Ajpl4
+6Ajpl5
+6Ajan1
+6Ajan2
+6Ajan3
+6Amat1
+6Amat2
+6Amat3
+6Amat4
+6Ainf1
+6Atch1
+6Ageo1
+6Abio1
+6Ahst1
+6Ahst2
+6Amuz1
+6Apla1
+6Awyf1
+6Awyf2
+6Awyf3
+6Awyf4
 ;
 
-set LG[G8] :=
-8jpl1
-8jpl2
-8jpl3
-8jpl4
-8jpl5
-8jan1
-8jan2
-8jan3
-8mat1
-8mat2
-8mat3
-8mat4
-8inf1
-8geo1
-8bio1
-8che1
-8che2
-8fiz1
-8fiz2
-8hst1
-8hst2
-8wyf1
-8wyf2
-8wyf3
-8wyf4
-8jnm1
-8jnm2
+set LG[G6B] :=
+6Bjpl1
+6Bjpl2
+6Bjpl3
+6Bjpl4
+6Bjpl5
+6Bjan1
+6Bjan2
+6Bjan3
+6Bmat1
+6Bmat2
+6Bmat3
+6Bmat4
+6Binf1
+6Btch1
+6Bgeo1
+6Bbio1
+6Bhst1
+6Bhst2
+6Bmuz1
+6Bpla1
+6Bwyf1
+6Bwyf2
+6Bwyf3
+6Bwyf4
+;
+
+set LG[G7A] :=
+7Ajpl1
+7Ajpl2
+7Ajpl3
+7Ajpl4
+7Ajpl5
+7Ajan1
+7Ajan2
+7Ajan3
+7Amat1
+7Amat2
+7Amat3
+7Amat4
+7Ainf1
+7Ageo1
+7Ageo2
+7Abio1
+7Abio2
+7Ache1
+7Ache2
+7Afiz1
+7Afiz2
+7Ahst1
+7Ahst2
+7Amuz1
+7Apla1
+7Awyf1
+7Awyf2
+7Awyf3
+7Awyf4
+7Ajnm1
+7Ajnm2
+;
+
+set LG[G7B] :=
+7Bjpl1
+7Bjpl2
+7Bjpl3
+7Bjpl4
+7Bjpl5
+7Bjan1
+7Bjan2
+7Bjan3
+7Bmat1
+7Bmat2
+7Bmat3
+7Bmat4
+7Binf1
+7Bgeo1
+7Bgeo2
+7Bbio1
+7Bbio2
+7Bche1
+7Bche2
+7Bfiz1
+7Bfiz2
+7Bhst1
+7Bhst2
+7Bmuz1
+7Bpla1
+7Bwyf1
+7Bwyf2
+7Bwyf3
+7Bwyf4
+7Bjnm1
+7Bjnm2
+;
+
+set LG[G8A] :=
+8Ajpl1
+8Ajpl2
+8Ajpl3
+8Ajpl4
+8Ajpl5
+8Ajan1
+8Ajan2
+8Ajan3
+8Amat1
+8Amat2
+8Amat3
+8Amat4
+8Ainf1
+8Ageo1
+8Abio1
+8Ache1
+8Ache2
+8Afiz1
+8Afiz2
+8Ahst1
+8Ahst2
+8Awyf1
+8Awyf2
+8Awyf3
+8Awyf4
+8Ajnm1
+8Ajnm2
+;
+
+set LG[G8B] :=
+8Bjpl1
+8Bjpl2
+8Bjpl3
+8Bjpl4
+8Bjpl5
+8Bjan1
+8Bjan2
+8Bjan3
+8Bmat1
+8Bmat2
+8Bmat3
+8Bmat4
+8Binf1
+8Bgeo1
+8Bbio1
+8Bche1
+8Bche2
+8Bfiz1
+8Bfiz2
+8Bhst1
+8Bhst2
+8Bwyf1
+8Bwyf2
+8Bwyf3
+8Bwyf4
+8Bjnm1
+8Bjnm2
 ;
 
 param WG [*,*] (tr)
-:     G4A   G5   G6   G7   G8  G4B   :=
-Mo0     0    0    0    0    0    1
-Mo1     1    1    1    1    1    1
-Mo2     2    2    2    2    2    2
-Mo3     3    3    3    3    3    3
-Mo4     4    4    4    4    4    4
-Mo5     5    5    5    5    5    5
-Mo6     6    6    6    6    6    6
-Tu0     0    0    0    0    0    0
-Tu1     1    1    1    1    1    1
-Tu2     2    2    2    2    2    2
-Tu3     3    3    3    3    3    3
-Tu4     4    4    4    4    4    4
-Tu5     5    5    5    5    5    5
-Tu6     6    6    6    6    6    6
-We0     0    0    0    0    0    0
-We1     1    1    1    1    1    1
-We2     2    2    2    2    2    2
-We3     3    3    3    3    3    3
-We4     4    4    4    4    4    4
-We5     5    5    5    5    5    5
-We6     6    6    6    6    6    6
-Th0     0    0    0    0    0    0
-Th1     1    1    1    1    1    1
-Th2     2    2    2    2    2    2
-Th3     3    3    3    3    3    3
-Th4     4    4    4    4    4    4
-Th5     5    5    5    5    5    5
-Th6     6    6    6    6    6    6
-Fr0     0    0    0    0    0    0
-Fr1     1    1    1    1    1    1
-Fr2     2    2    2    2    2    2
-Fr3     3    3    3    3    3    3
-Fr4     4    4    4    4    4    4
-Fr5     5    5    5    5    5    5
-Fr6     6    6    6    6    6    6
+:     G4A  G5A  G6A  G7A  G8A  G4B  G5B  G6B  G7B  G8B  :=
+Mo0     0    0    0    0    0    0    0    0    0    0
+Mo1     1    1    1    1    1    1    1    1    1    1
+Mo2     2    2    2    2    2    2    2    2    2    2
+Mo3     3    3    3    3    3    3    3    3    3    3
+Mo4     4    4    4    4    4    4    4    4    4    4
+Mo5     5    5    5    5    5    5    5    5    5    5
+Mo6     6    6    6    6    6    6    6    6    6    6
+Tu0     0    0    0    0    0    0    0    0    0    0
+Tu1     1    1    1    1    1    1    1    1    1    1
+Tu2     2    2    2    2    2    2    2    2    2    2
+Tu3     3    3    3    3    3    3    3    3    3    3
+Tu4     4    4    4    4    4    4    4    4    4    4
+Tu5     5    5    5    5    5    5    5    5    5    5
+Tu6     6    6    6    6    6    6    6    6    6    6
+We0     0    0    0    0    0    0    0    0    0    0
+We1     1    1    1    1    1    1    1    1    1    1
+We2     2    2    2    2    2    2    2    2    2    2
+We3     3    3    3    3    3    3    3    3    3    3
+We4     4    4    4    4    4    4    4    4    4    4
+We5     5    5    5    5    5    5    5    5    5    5
+We6     6    6    6    6    6    6    6    6    6    6
+Th0     0    0    0    0    0    0    0    0    0    0
+Th1     1    1    1    1    1    1    1    1    1    1
+Th2     2    2    2    2    2    2    2    2    2    2
+Th3     3    3    3    3    3    3    3    3    3    3
+Th4     4    4    4    4    4    4    4    4    4    4
+Th5     5    5    5    5    5    5    5    5    5    5
+Th6     6    6    6    6    6    6    6    6    6    6
+Fr0     0    0    0    0    0    0    0    0    0    0
+Fr1     1    1    1    1    1    1    1    1    1    1
+Fr2     2    2    2    2    2    2    2    2    2    2
+Fr3     3    3    3    3    3    3    3    3    3    3
+Fr4     4    4    4    4    4    4    4    4    4    4
+Fr5     5    5    5    5    5    5    5    5    5    5
+Fr6     6    6    6    6    6    6    6    6    6    6
 ;
