@@ -1,0 +1,1504 @@
+
+
+*************************************************************
+
+   NEOS Server Version 6.0
+   Job#     : 18270623
+   Password : vqAsJalg
+   User     : 
+   Solver   : milp:Gurobi:AMPL
+   Start    : 2026-01-23 05:08:28
+   End      : 2026-01-23 05:08:34
+   Host     : prod-sub-1.neos-server.org
+
+   Disclaimer:
+
+   This information is provided without any express or
+   implied warranty. In particular, there is no warranty
+   of any kind concerning the fitness of this
+   information for any particular purpose.
+
+   Announcements:
+*************************************************************
+You are using the solver gurobi_ampl.
+Checking ampl.mod for gurobi_options...
+Checking ampl.com for gurobi_options...
+Executing AMPL.
+processing data.
+processing commands.
+Executing on prod-exec-7.neos-server.org
+set L :=
+4jpl1   4tch1   5jpl5   5hst2   6jan2   6pla1   7mat1   7hst1   8jpl4   8che2
+4jpl2   4hst1   5jan1   5muz1   6jan3   6wyf1   7mat2   7hst2   8jpl5   8fiz1
+4jpl3   4prz1   5jan2   5pla1   6mat1   6wyf2   7mat3   7muz1   8jan1   8fiz2
+4jpl4   4muz1   5jan3   5wyf1   6mat2   6wyf3   7mat4   7pla1   8jan2   8hst1
+4jpl5   4pla1   5mat1   5wyf2   6mat3   6wyf4   7inf1   7wyf1   8jan3   8hst2
+4jan1   4wyf1   5mat2   5wyf3   6mat4   7jpl1   7geo1   7wyf2   8mat1   8wyf1
+4jan2   4wyf2   5mat3   5wyf4   6inf1   7jpl2   7geo2   7wyf3   8mat2   8wyf2
+4jan3   4wyf3   5mat4   6jpl1   6tch1   7jpl3   7bio1   7wyf4   8mat3   8wyf3
+4mat1   4wyf4   5inf1   6jpl2   6geo1   7jpl4   7bio2   7jnm1   8mat4   8wyf4
+4mat2   5jpl1   5tch1   6jpl3   6bio1   7jpl5   7che1   7jnm2   8inf1   8jnm1
+4mat3   5jpl2   5geo1   6jpl4   6hst1   7jan1   7che2   8jpl1   8geo1   8jnm2
+4mat4   5jpl3   5bio1   6jpl5   6hst2   7jan2   7fiz1   8jpl2   8bio1
+4inf1   5jpl4   5hst1   6jan1   6muz1   7jan3   7fiz2   8jpl3   8che1;
+
+set S :=
+Mo0   Mo3   Mo6   Tu2   Tu5   We1   We4   Th0   Th3   Th6   Fr2   Fr5
+Mo1   Mo4   Tu0   Tu3   Tu6   We2   We5   Th1   Th4   Fr0   Fr3   Fr6
+Mo2   Mo5   Tu1   Tu4   We0   We3   We6   Th2   Th5   Fr1   Fr4;
+
+set T :=
+Tjpl   Tmat   Ttch   Tprz   Tpla   Tgeo   Tfiz   Tjnm
+Tjan   Tinf   Thst   Tmuz   Twyf   Tbio   Tche;
+
+set R := R00 R01 R02 R03 R04 R05 R06;
+
+set G := G4 G5 G6 G7 G8;
+
+set D := Mo Tu We Th Fr;
+
+set C :=
+C4jpl   C4prz   C5mat   C5muz   C6inf   C6pla   C7geo   C7pla   C8inf   C8wyf
+C4jan   C4muz   C5inf   C5pla   C6tch   C6wyf   C7bio   C7wyf   C8geo   C8jnm
+C4mat   C4pla   C5tch   C5wyf   C6geo   C7jpl   C7che   C7jnm   C8bio
+C4inf   C4wyf   C5geo   C6jpl   C6bio   C7jan   C7fiz   C8jpl   C8che
+C4tch   C5jpl   C5bio   C6jan   C6hst   C7mat   C7hst   C8jan   C8fiz
+C4hst   C5jan   C5hst   C6mat   C6muz   C7inf   C7muz   C8mat   C8hst;
+
+t = Tjpl
+
+set  LT[t] :=
+4jpl1   4jpl4   5jpl2   5jpl5   6jpl3   7jpl1   7jpl4   8jpl2   8jpl5
+4jpl2   4jpl5   5jpl3   6jpl1   6jpl4   7jpl2   7jpl5   8jpl3
+4jpl3   5jpl1   5jpl4   6jpl2   6jpl5   7jpl3   8jpl1   8jpl4;
+
+t = Tjan
+
+set  LT[t] :=
+4jan1   4jan3   5jan2   6jan1   6jan3   7jan2   8jan1   8jan3
+4jan2   5jan1   5jan3   6jan2   7jan1   7jan3   8jan2;
+
+t = Tmat
+
+set  LT[t] :=
+4mat1   4mat3   5mat1   5mat3   6mat1   6mat3   7mat1   7mat3   8mat1   8mat3
+4mat2   4mat4   5mat2   5mat4   6mat2   6mat4   7mat2   7mat4   8mat2   8mat4;
+
+t = Tinf
+
+set  LT[t] := 4inf1 5inf1 6inf1 7inf1 8inf1;
+
+t = Ttch
+
+set  LT[t] := 4tch1 5tch1 6tch1;
+
+t = Thst
+
+set  LT[t] := 4hst1 5hst1 5hst2 6hst1 6hst2 7hst1 7hst2 8hst1 8hst2;
+
+t = Tprz
+
+set  LT[t] := 4prz1;
+
+t = Tmuz
+
+set  LT[t] := 4muz1 5muz1 6muz1 7muz1;
+
+t = Tpla
+
+set  LT[t] := 4pla1 5pla1 6pla1 7pla1;
+
+t = Twyf
+
+set  LT[t] :=
+4wyf1   4wyf3   5wyf1   5wyf3   6wyf1   6wyf3   7wyf1   7wyf3   8wyf1   8wyf3
+4wyf2   4wyf4   5wyf2   5wyf4   6wyf2   6wyf4   7wyf2   7wyf4   8wyf2   8wyf4;
+
+t = Tgeo
+
+set  LT[t] := 5geo1 6geo1 7geo1 7geo2 8geo1;
+
+t = Tbio
+
+set  LT[t] := 5bio1 6bio1 7bio1 7bio2 8bio1;
+
+t = Tfiz
+
+set  LT[t] := 7fiz1 7fiz2 8fiz1 8fiz2;
+
+t = Tche
+
+set  LT[t] := 7che1 7che2 8che1 8che2;
+
+t = Tjnm
+
+set  LT[t] := 7jnm1 7jnm2 8jnm1 8jnm2;
+
+r = R00
+
+set  LR[r] :=
+4jpl1   4jpl4   5jpl2   5jpl5   6jpl3   7jpl1   7jpl4   8jpl2   8jpl5
+4jpl2   4jpl5   5jpl3   6jpl1   6jpl4   7jpl2   7jpl5   8jpl3
+4jpl3   5jpl1   5jpl4   6jpl2   6jpl5   7jpl3   8jpl1   8jpl4;
+
+r = R01
+
+set  LR[r] :=
+4mat1   4mat3   5mat1   5mat3   6mat1   6mat3   7mat1   7mat3   8mat1   8mat3
+4mat2   4mat4   5mat2   5mat4   6mat2   6mat4   7mat2   7mat4   8mat2   8mat4;
+
+r = R02
+
+set  LR[r] :=
+4hst1   4muz1   5hst1   5muz1   6hst1   6muz1   7hst1   7muz1   8hst1
+4prz1   4pla1   5hst2   5pla1   6hst2   6pla1   7hst2   7pla1   8hst2;
+
+r = R03
+
+set  LR[r] :=
+4wyf1   4wyf3   5wyf1   5wyf3   6wyf1   6wyf3   7wyf1   7wyf3   8wyf1   8wyf3
+4wyf2   4wyf4   5wyf2   5wyf4   6wyf2   6wyf4   7wyf2   7wyf4   8wyf2   8wyf4;
+
+r = R04
+
+set  LR[r] :=
+7jnm1   8jnm1   5geo1   6geo1   7geo1   7bio1   8geo1
+7jnm2   8jnm2   5bio1   6bio1   7geo2   7bio2   8bio1;
+
+r = R05
+
+set  LR[r] :=
+4jan1   4jan3   5jan2   6jan1   6jan3   7jan2   8jan1   8jan3
+4jan2   5jan1   5jan3   6jan2   7jan1   7jan3   8jan2;
+
+r = R06
+
+set  LR[r] :=
+4inf1   6inf1   8inf1   5tch1   7che1   8che1   7fiz1   8fiz1
+5inf1   7inf1   4tch1   6tch1   7che2   8che2   7fiz2   8fiz2;
+
+g = G4
+
+set  LG[g] :=
+4jpl1   4jpl4   4jan2   4mat2   4inf1   4prz1   4wyf1   4wyf4
+4jpl2   4jpl5   4jan3   4mat3   4tch1   4muz1   4wyf2
+4jpl3   4jan1   4mat1   4mat4   4hst1   4pla1   4wyf3;
+
+g = G5
+
+set  LG[g] :=
+5jpl1   5jpl4   5jan2   5mat2   5inf1   5bio1   5muz1   5wyf2
+5jpl2   5jpl5   5jan3   5mat3   5tch1   5hst1   5pla1   5wyf3
+5jpl3   5jan1   5mat1   5mat4   5geo1   5hst2   5wyf1   5wyf4;
+
+g = G6
+
+set  LG[g] :=
+6jpl1   6jpl4   6jan2   6mat2   6inf1   6bio1   6muz1   6wyf2
+6jpl2   6jpl5   6jan3   6mat3   6tch1   6hst1   6pla1   6wyf3
+6jpl3   6jan1   6mat1   6mat4   6geo1   6hst2   6wyf1   6wyf4;
+
+g = G7
+
+set  LG[g] :=
+7jpl1   7jpl5   7mat1   7inf1   7bio2   7fiz2   7pla1   7wyf4
+7jpl2   7jan1   7mat2   7geo1   7che1   7hst1   7wyf1   7jnm1
+7jpl3   7jan2   7mat3   7geo2   7che2   7hst2   7wyf2   7jnm2
+7jpl4   7jan3   7mat4   7bio1   7fiz1   7muz1   7wyf3;
+
+g = G8
+
+set  LG[g] :=
+8jpl1   8jpl4   8jan2   8mat2   8inf1   8che1   8fiz2   8wyf1   8wyf4
+8jpl2   8jpl5   8jan3   8mat3   8geo1   8che2   8hst1   8wyf2   8jnm1
+8jpl3   8jan1   8mat1   8mat4   8bio1   8fiz1   8hst2   8wyf3   8jnm2;
+
+d = Mo
+
+set  SD[d] := Mo0 Mo1 Mo2 Mo3 Mo4 Mo5 Mo6;
+
+d = Tu
+
+set  SD[d] := Tu0 Tu1 Tu2 Tu3 Tu4 Tu5 Tu6;
+
+d = We
+
+set  SD[d] := We0 We1 We2 We3 We4 We5 We6;
+
+d = Th
+
+set  SD[d] := Th0 Th1 Th2 Th3 Th4 Th5 Th6;
+
+d = Fr
+
+set  SD[d] := Fr0 Fr1 Fr2 Fr3 Fr4 Fr5 Fr6;
+
+c = C4jpl
+
+set  LC[c] := 4jpl1 4jpl2 4jpl3 4jpl4 4jpl5;
+
+c = C4jan
+
+set  LC[c] := 4jan1 4jan2 4jan3;
+
+c = C4mat
+
+set  LC[c] := 4mat1 4mat2 4mat3 4mat4;
+
+c = C4inf
+
+set  LC[c] := 4inf1;
+
+c = C4tch
+
+set  LC[c] := 4tch1;
+
+c = C4hst
+
+set  LC[c] := 4hst1;
+
+c = C4prz
+
+set  LC[c] := 4prz1;
+
+c = C4muz
+
+set  LC[c] := 4muz1;
+
+c = C4pla
+
+set  LC[c] := 4pla1;
+
+c = C4wyf
+
+set  LC[c] := 4wyf1 4wyf2 4wyf3 4wyf4;
+
+c = C5jpl
+
+set  LC[c] := 5jpl1 5jpl2 5jpl3 5jpl4 5jpl5;
+
+c = C5jan
+
+set  LC[c] := 5jan1 5jan2 5jan3;
+
+c = C5mat
+
+set  LC[c] := 5mat1 5mat2 5mat3 5mat4;
+
+c = C5inf
+
+set  LC[c] := 5inf1;
+
+c = C5tch
+
+set  LC[c] := 5tch1;
+
+c = C5geo
+
+set  LC[c] := 5geo1;
+
+c = C5bio
+
+set  LC[c] := 5bio1;
+
+c = C5hst
+
+set  LC[c] := 5hst1 5hst2;
+
+c = C5muz
+
+set  LC[c] := 5muz1;
+
+c = C5pla
+
+set  LC[c] := 5pla1;
+
+c = C5wyf
+
+set  LC[c] := 5wyf1 5wyf2 5wyf3 5wyf4;
+
+c = C6jpl
+
+set  LC[c] := 6jpl1 6jpl2 6jpl3 6jpl4 6jpl5;
+
+c = C6jan
+
+set  LC[c] := 6jan1 6jan2 6jan3;
+
+c = C6mat
+
+set  LC[c] := 6mat1 6mat2 6mat3 6mat4;
+
+c = C6inf
+
+set  LC[c] := 6inf1;
+
+c = C6tch
+
+set  LC[c] := 6tch1;
+
+c = C6geo
+
+set  LC[c] := 6geo1;
+
+c = C6bio
+
+set  LC[c] := 6bio1;
+
+c = C6hst
+
+set  LC[c] := 6hst1 6hst2;
+
+c = C6muz
+
+set  LC[c] := 6muz1;
+
+c = C6pla
+
+set  LC[c] := 6pla1;
+
+c = C6wyf
+
+set  LC[c] := 6wyf1 6wyf2 6wyf3 6wyf4;
+
+c = C7jpl
+
+set  LC[c] := 7jpl1 7jpl2 7jpl3 7jpl4 7jpl5;
+
+c = C7jan
+
+set  LC[c] := 7jan1 7jan2 7jan3;
+
+c = C7mat
+
+set  LC[c] := 7mat1 7mat2 7mat3 7mat4;
+
+c = C7inf
+
+set  LC[c] := 7inf1;
+
+c = C7geo
+
+set  LC[c] := 7geo1 7geo2;
+
+c = C7bio
+
+set  LC[c] := 7bio1 7bio2;
+
+c = C7che
+
+set  LC[c] := 7che1 7che2;
+
+c = C7fiz
+
+set  LC[c] := 7fiz1 7fiz2;
+
+c = C7hst
+
+set  LC[c] := 7hst1 7hst2;
+
+c = C7muz
+
+set  LC[c] := 7muz1;
+
+c = C7pla
+
+set  LC[c] := 7pla1;
+
+c = C7wyf
+
+set  LC[c] := 7wyf1 7wyf2 7wyf3 7wyf4;
+
+c = C7jnm
+
+set  LC[c] := 7jnm1 7jnm2;
+
+c = C8jpl
+
+set  LC[c] := 8jpl1 8jpl2 8jpl3 8jpl4 8jpl5;
+
+c = C8jan
+
+set  LC[c] := 8jan1 8jan2 8jan3;
+
+c = C8mat
+
+set  LC[c] := 8mat1 8mat2 8mat3 8mat4;
+
+c = C8inf
+
+set  LC[c] := 8inf1;
+
+c = C8geo
+
+set  LC[c] := 8geo1;
+
+c = C8bio
+
+set  LC[c] := 8bio1;
+
+c = C8che
+
+set  LC[c] := 8che1 8che2;
+
+c = C8fiz
+
+set  LC[c] := 8fiz1 8fiz2;
+
+c = C8hst
+
+set  LC[c] := 8hst1 8hst2;
+
+c = C8wyf
+
+set  LC[c] := 8wyf1 8wyf2 8wyf3 8wyf4;
+
+c = C8jnm
+
+set  LC[c] := 8jnm1 8jnm2;
+
+AL; #empty
+
+FL; #empty
+
+AT; #empty
+
+AR; #empty
+
+AG; #empty
+
+AC; #empty
+
+WG [*,*] (tr)
+:    G4  G5  G6  G7  G8    :=
+Mo0   0   0   0   0   0
+Mo1   1   1   1   1   1
+Mo2   2   2   2   2   2
+Mo3   3   3   3   3   3
+Mo4   4   4   4   4   4
+Mo5   5   5   5   5   5
+Mo6   6   6   6   6   6
+Tu0   0   0   0   0   0
+Tu1   1   1   1   1   1
+Tu2   2   2   2   2   2
+Tu3   3   3   3   3   3
+Tu4   4   4   4   4   4
+Tu5   5   5   5   5   5
+Tu6   6   6   6   6   6
+We0   0   0   0   0   0
+We1   1   1   1   1   1
+We2   2   2   2   2   2
+We3   3   3   3   3   3
+We4   4   4   4   4   4
+We5   5   5   5   5   5
+We6   6   6   6   6   6
+Th0   0   0   0   0   0
+Th1   1   1   1   1   1
+Th2   2   2   2   2   2
+Th3   3   3   3   3   3
+Th4   4   4   4   4   4
+Th5   5   5   5   5   5
+Th6   6   6   6   6   6
+Fr0   0   0   0   0   0
+Fr1   1   1   1   1   1
+Fr2   2   2   2   2   2
+Fr3   3   3   3   3   3
+Fr4   4   4   4   4   4
+Fr5   5   5   5   5   5
+Fr6   6   6   6   6   6
+;
+
+
+"option presolve 0;" used, but "option presolve 10;" might work better.
+4481 variables:
+	4480 binary variables
+	1 linear variable
+10314 constraints, all linear; 35201 nonzeros
+	129 equality constraints
+	10185 inequality constraints
+1 linear objective; 1 nonzero.
+
+Gurobi 12.0.3:   tech:threads = 4
+  pre:solve = 2
+  alg:iisfind = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+
+AMPL MP initial flat model has 4481 variables (0 integer, 4480 binary);
+Objectives: 1 linear; 
+Constraints:  10314 linear;
+
+AMPL MP final model has 4481 variables (0 integer, 4480 binary);
+Objectives: 1 linear; 
+Constraints:  10314 linear;
+
+
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
+
+CPU model: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 4 threads
+
+Non-default parameters:
+InfUnbdInfo  1
+Presolve  2
+Threads  4
+
+Optimize a model with 10314 rows, 4481 columns and 35201 nonzeros
+Model fingerprint: 0x8ee87e49
+Variable types: 1 continuous, 4480 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 360.0000000
+Presolve removed 9606 rows and 1 columns
+Presolve time: 0.10s
+Presolved: 708 rows, 4480 columns, 17080 nonzeros
+Variable types: 0 continuous, 4480 integer (4480 binary)
+Root relaxation presolved: 708 rows, 4480 columns, 17080 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 2.710000e+02, 1391 iterations, 0.02 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                     271.0000000  271.00000  0.00%     -    0s
+     0     0  271.00000    0  324  271.00000  271.00000  0.00%     -    0s
+
+Explored 1 nodes (1391 simplex iterations) in 0.12 seconds (0.13 work units)
+Thread count was 4 (of 64 available processors)
+
+Solution count 2: 271 360 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.710000000000e+02, best bound 2.710000000000e+02, gap 0.0000%
+Gurobi 12.0.3: optimal solution; objective 271
+1391 simplex iterations
+1 branching node
+FG = 271
+
+X [*,*]
+:     Mo0 Mo1 Mo2 Mo3 Mo4 Mo5 Mo6 Tu0 Tu1 Tu2 Tu3 Tu4 Tu5 Tu6 We0 We1 We2 We3 :=
+4hst1   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
+4inf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4jan1   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+4jan2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
+4jan3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4jpl1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+4jpl2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4jpl3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4jpl4   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4jpl5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+4mat1   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4mat2   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+4mat3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+4mat4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4muz1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+4pla1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4prz1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4tch1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4wyf1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4wyf2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4wyf3   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
+4wyf4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5bio1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+5geo1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5hst1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5hst2   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+5inf1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jan1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+5jan2   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jan3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jpl1   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+5jpl2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jpl3   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jpl4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+5jpl5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5mat1   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+5mat2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5mat3   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5mat4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5muz1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5pla1   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
+5tch1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5wyf1   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
+5wyf2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
+5wyf3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5wyf4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6bio1   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
+6geo1   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6hst1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6hst2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6inf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+6jan1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+6jan2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6jan3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6jpl1   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+6jpl2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6jpl3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
+6jpl4   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+6jpl5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6mat1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6mat2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6mat3   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+6mat4   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6muz1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6pla1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6tch1   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
+6wyf1   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+6wyf2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6wyf3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+6wyf4   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7bio1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7bio2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7che1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
+7che2   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+7fiz1   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+7fiz2   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
+7geo1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7geo2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+7hst1   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+7hst2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7inf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+7jan1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jan2   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+7jan3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jnm1   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
+7jnm2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jpl1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jpl2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jpl3   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0
+7jpl4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jpl5   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
+7mat1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7mat2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7mat3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7mat4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7muz1   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7pla1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7wyf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+7wyf2   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+7wyf3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7wyf4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8bio1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8che1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8che2   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8fiz1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8fiz2   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8geo1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
+8hst1   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+8hst2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+8inf1   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+8jan1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jan2   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
+8jan3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jnm1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jnm2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+8jpl1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jpl2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+8jpl3   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
+8jpl4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jpl5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8mat1   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+8mat2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8mat3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8mat4   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+8wyf1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+8wyf2   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8wyf3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8wyf4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+
+:     We4 We5 We6 Th0 Th1 Th2 Th3 Th4 Th5 Th6 Fr0 Fr1 Fr2 Fr3 Fr4 Fr5 Fr6    :=
+4hst1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4inf1   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+4jan1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4jan2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4jan3   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
+4jpl1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4jpl2   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+4jpl3   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+4jpl4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4jpl5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4mat1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4mat2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4mat3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4mat4   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+4muz1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4pla1   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0
+4prz1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4tch1   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+4wyf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4wyf2   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+4wyf3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+4wyf4   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0
+5bio1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5geo1   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+5hst1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+5hst2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5inf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jan1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jan2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jan3   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0
+5jpl1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jpl2   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+5jpl3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jpl4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5jpl5   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0
+5mat1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5mat2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+5mat3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5mat4   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+5muz1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5pla1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5tch1   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
+5wyf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5wyf2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5wyf3   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+5wyf4   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+6bio1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6geo1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6hst1   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+6hst2   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+6inf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6jan1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6jan2   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0
+6jan3   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+6jpl1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6jpl2   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
+6jpl3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6jpl4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6jpl5   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0
+6mat1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+6mat2   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+6mat3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6mat4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6muz1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+6pla1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6tch1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6wyf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6wyf2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+6wyf3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+6wyf4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7bio1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
+7bio2   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
+7che1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7che2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7fiz1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7fiz2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7geo1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+7geo2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7hst1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7hst2   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
+7inf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jan1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jan2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jan3   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+7jnm1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jnm2   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+7jpl1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jpl2   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jpl3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7jpl4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+7jpl5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7mat1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7mat2   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0
+7mat3   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0
+7mat4   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7muz1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7pla1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7wyf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7wyf2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+7wyf3   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+7wyf4   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+8bio1   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+8che1   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0
+8che2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8fiz1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+8fiz2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8geo1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8hst1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8hst2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8inf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jan1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+8jan2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jan3   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+8jnm1   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+8jnm2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jpl1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jpl2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jpl3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8jpl4   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0
+8jpl5   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
+8mat1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8mat2   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+8mat3   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8mat4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8wyf1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8wyf2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+8wyf3   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
+8wyf4   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0
+;
+
+Matrix XT
+=========
+sum{l in  LT[t]} X[l,s] [*,*] (tr)
+:   Tbio Tche Tfiz Tgeo Thst Tinf Tjan Tjnm Tjpl Tmat Tmuz Tpla Tprz Ttch Twyf :=
+Mo0   0    0    0    0    0    0    1    0    1    1    0    1    0    0    1
+Mo1   0    0    1    1    0    0    0    0    1    1    1    0    0    0    0
+Mo2   0    1    0    0    0    0    1    0    0    1    0    1    0    0    1
+Mo3   0    0    0    0    0    1    0    0    1    1    0    0    1    0    1
+Mo4   0    0    1    0    0    0    0    0    1    1    0    0    0    0    0
+Mo5   0    0    0    0    0    0    0    0    1    0    0    0    0    0    0
+Mo6   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+Tu0   0    1    0    0    1    0    0    0    1    1    0    0    0    0    1
+Tu1   0    0    0    0    1    1    1    0    1    1    0    0    0    0    0
+Tu2   0    0    0    0    1    0    1    1    0    0    0    0    0    1    1
+Tu3   1    0    1    0    0    0    0    0    1    0    0    1    0    0    1
+Tu4   0    0    0    0    1    0    1    0    1    1    0    0    0    0    1
+Tu5   0    0    0    0    0    0    0    0    0    1    0    0    0    0    1
+Tu6   0    0    0    0    0    0    0    0    1    0    0    0    0    0    0
+We0   0    0    0    0    0    0    1    1    1    1    0    0    0    0    1
+We1   0    0    0    1    1    1    1    0    1    0    0    0    0    0    0
+We2   0    1    0    1    0    0    1    0    1    0    0    0    0    0    1
+We3   1    0    0    0    0    1    0    0    1    0    1    0    0    0    1
+We4   0    0    0    0    0    0    0    0    1    1    1    0    0    0    0
+We5   0    0    0    0    0    0    0    0    0    1    0    0    0    0    0
+We6   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+Th0   1    0    0    0    0    0    0    0    1    1    1    0    0    0    1
+Th1   1    0    0    0    0    0    1    0    1    0    0    0    0    1    1
+Th2   0    1    0    0    0    0    1    0    1    1    0    0    0    0    1
+Th3   0    0    0    0    1    0    1    0    0    1    0    0    0    1    1
+Th4   0    0    1    1    1    0    0    0    1    1    0    0    0    0    0
+Th5   0    0    0    0    1    0    0    0    1    0    0    0    0    0    0
+Th6   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+Fr0   0    0    0    0    0    0    1    1    1    1    0    0    0    0    1
+Fr1   0    0    0    0    1    0    0    1    1    1    0    0    0    0    1
+Fr2   0    0    0    0    0    0    1    0    1    1    0    1    0    0    1
+Fr3   0    0    0    1    0    1    1    0    1    0    0    0    0    0    1
+Fr4   0    0    0    0    0    0    1    0    1    1    0    0    0    0    1
+Fr5   1    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+Fr6   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+;
+
+Matrix XR
+=========
+sum{l in  LR[r]} X[l,s] [*,*] (tr)
+:   R00 R01 R02 R03 R04 R05 R06    :=
+Mo0   1   1   1   1   0   1   0
+Mo1   1   1   1   0   1   0   1
+Mo2   0   1   1   1   0   1   1
+Mo3   1   1   1   1   0   0   1
+Mo4   1   1   0   0   0   0   1
+Mo5   1   0   0   0   0   0   0
+Mo6   0   0   0   0   0   0   0
+Tu0   1   1   1   1   0   0   1
+Tu1   1   1   1   0   0   1   1
+Tu2   0   0   1   1   1   1   1
+Tu3   1   0   1   1   1   0   1
+Tu4   1   1   1   1   0   1   0
+Tu5   0   1   0   1   0   0   0
+Tu6   1   0   0   0   0   0   0
+We0   1   1   0   1   1   1   0
+We1   1   0   1   0   1   1   1
+We2   1   0   0   1   1   1   1
+We3   1   0   1   1   1   0   1
+We4   1   1   1   0   0   0   0
+We5   0   1   0   0   0   0   0
+We6   0   0   0   0   0   0   0
+Th0   1   1   1   1   1   0   0
+Th1   1   0   0   1   1   1   1
+Th2   1   1   0   1   0   1   1
+Th3   0   1   1   1   0   1   1
+Th4   1   1   1   0   1   0   1
+Th5   1   0   1   0   0   0   0
+Th6   0   0   0   0   0   0   0
+Fr0   1   1   0   1   1   1   0
+Fr1   1   1   1   1   1   0   0
+Fr2   1   1   1   1   0   1   0
+Fr3   1   0   0   1   1   1   1
+Fr4   1   1   0   1   0   1   0
+Fr5   0   0   0   0   1   0   0
+Fr6   0   0   0   0   0   0   0
+;
+
+Matrix XG
+=========
+sum{l in  LG[g]} X[l,s] [*,*] (tr)
+:    G4  G5  G6  G7  G8    :=
+Mo0   1   1   1   1   1
+Mo1   1   1   1   1   1
+Mo2   1   1   1   1   1
+Mo3   1   1   1   1   1
+Mo4   0   0   1   1   1
+Mo5   0   0   0   1   0
+Mo6   0   0   0   0   0
+Tu0   1   1   1   1   1
+Tu1   1   1   1   1   1
+Tu2   1   1   1   1   1
+Tu3   1   1   1   1   1
+Tu4   1   1   1   1   1
+Tu5   0   0   0   1   1
+Tu6   0   0   0   1   0
+We0   1   1   1   1   1
+We1   1   1   1   1   1
+We2   1   1   1   1   1
+We3   1   1   1   1   1
+We4   0   1   0   1   1
+We5   0   0   0   1   0
+We6   0   0   0   0   0
+Th0   1   1   1   1   1
+Th1   1   1   1   1   1
+Th2   1   1   1   1   1
+Th3   1   1   1   1   1
+Th4   1   1   1   1   1
+Th5   0   0   0   1   1
+Th6   0   0   0   0   0
+Fr0   1   1   1   1   1
+Fr1   1   1   1   1   1
+Fr2   1   1   1   1   1
+Fr3   1   1   1   1   1
+Fr4   0   1   1   1   1
+Fr5   0   0   0   1   0
+Fr6   0   0   0   0   0
+;
+
+Matrix XC
+=========
+sum{l in  LC[c], s in  SD[d]} X[l,s] [*,*]
+:      Mo  Tu  We  Th  Fr    :=
+C4hst   0   1   0   0   0
+C4inf   0   0   0   0   1
+C4jan   0   1   1   1   0
+C4jpl   1   1   1   1   1
+C4mat   1   1   1   1   0
+C4muz   0   0   1   0   0
+C4pla   0   0   0   0   1
+C4prz   1   0   0   0   0
+C4tch   0   0   0   1   0
+C4wyf   1   1   0   1   1
+C5bio   0   0   1   0   0
+C5geo   0   0   0   0   1
+C5hst   0   1   0   1   0
+C5inf   1   0   0   0   0
+C5jan   1   0   1   0   1
+C5jpl   1   1   1   1   1
+C5mat   1   1   0   1   1
+C5muz   0   0   1   0   0
+C5pla   0   1   0   0   0
+C5tch   0   0   0   1   0
+C5wyf   0   1   1   1   1
+C6bio   0   1   0   0   0
+C6geo   1   0   0   0   0
+C6hst   0   0   0   1   1
+C6inf   0   0   1   0   0
+C6jan   0   0   1   1   1
+C6jpl   1   1   1   1   1
+C6mat   1   1   0   1   1
+C6muz   0   0   0   1   0
+C6pla   1   0   0   0   0
+C6tch   0   1   0   0   0
+C6wyf   1   1   1   0   1
+C7bio   0   0   0   1   1
+C7che   0   1   1   0   0
+C7fiz   1   1   0   0   0
+C7geo   0   0   1   1   0
+C7hst   0   1   0   1   0
+C7inf   0   0   1   0   0
+C7jan   1   1   0   0   1
+C7jnm   0   1   0   0   1
+C7jpl   1   1   1   1   1
+C7mat   1   0   1   1   1
+C7muz   1   0   0   0   0
+C7pla   1   0   0   0   0
+C7wyf   0   1   1   1   1
+C8bio   0   0   0   1   0
+C8che   1   0   0   1   0
+C8fiz   1   0   0   1   0
+C8geo   0   0   1   0   0
+C8hst   0   1   1   0   0
+C8inf   0   1   0   0   0
+C8jan   0   1   0   1   1
+C8jnm   0   0   1   0   1
+C8jpl   1   1   1   1   1
+C8mat   1   1   1   0   1
+C8wyf   1   1   0   1   1
+;
+
+The final schedule for teachers
+===============================
+Teacher: Tjpl
+------------
+Mo0 4jpl4
+Mo1 5jpl3
+Mo3 8jpl1
+Mo4 6jpl1
+Mo5 7jpl5
+Tu0 4jpl1
+Tu1 6jpl4
+Tu3 8jpl3
+Tu4 5jpl1
+Tu6 7jpl3
+We0 5jpl4
+We1 4jpl5
+We2 6jpl3
+We3 8jpl2
+We4 7jpl1
+Th0 7jpl2
+Th1 6jpl2
+Th2 5jpl5
+Th4 4jpl2
+Th5 8jpl5
+Fr0 4jpl3
+Fr1 5jpl2
+Fr2 6jpl5
+Fr3 8jpl4
+Fr4 7jpl4
+
+Teacher: Tjan
+------------
+Mo0 7jan1
+Mo2 5jan2
+Tu1 4jan1
+Tu2 8jan2
+Tu4 7jan2
+We0 6jan1
+We1 5jan1
+We2 4jan2
+Th1 4jan3
+Th2 6jan2
+Th3 8jan3
+Fr0 7jan3
+Fr2 5jan3
+Fr3 6jan3
+Fr4 8jan1
+
+Teacher: Tmat
+------------
+Mo0 5mat3
+Mo1 4mat1
+Mo2 6mat4
+Mo3 7mat1
+Mo4 8mat4
+Tu0 6mat3
+Tu1 5mat1
+Tu4 4mat2
+Tu5 8mat1
+We0 4mat3
+We4 8mat3
+We5 7mat4
+Th0 4mat4
+Th2 7mat2
+Th3 5mat4
+Th4 6mat1
+Fr0 6mat2
+Fr1 8mat2
+Fr2 7mat3
+Fr4 5mat2
+
+Teacher: Tinf
+------------
+Mo3 5inf1
+Tu1 8inf1
+We1 6inf1
+We3 7inf1
+Fr3 4inf1
+
+Teacher: Ttch
+------------
+Tu2 6tch1
+Th1 5tch1
+Th3 4tch1
+
+Teacher: Thst
+------------
+Tu0 5hst2
+Tu1 7hst1
+Tu2 4hst1
+Tu4 8hst1
+We1 8hst2
+Th3 6hst2
+Th4 5hst1
+Th5 7hst2
+Fr1 6hst1
+
+Teacher: Tprz
+------------
+Mo3 4prz1
+
+Teacher: Tmuz
+------------
+Mo1 7muz1
+We3 4muz1
+We4 5muz1
+Th0 6muz1
+
+Teacher: Tpla
+------------
+Mo0 6pla1
+Mo2 7pla1
+Tu3 5pla1
+Fr2 4pla1
+
+Teacher: Twyf
+------------
+Mo0 8wyf2
+Mo2 4wyf1
+Mo3 6wyf4
+Tu0 8wyf1
+Tu2 5wyf1
+Tu3 4wyf3
+Tu4 6wyf1
+Tu5 7wyf2
+We0 7wyf1
+We2 5wyf2
+We3 6wyf3
+Th0 5wyf3
+Th1 8wyf3
+Th2 4wyf4
+Th3 7wyf4
+Fr0 5wyf4
+Fr1 4wyf2
+Fr2 8wyf4
+Fr3 7wyf3
+Fr4 6wyf2
+
+Teacher: Tgeo
+------------
+Mo1 6geo1
+We1 7geo2
+We2 8geo1
+Th4 7geo1
+Fr3 5geo1
+
+Teacher: Tbio
+------------
+Tu3 6bio1
+We3 5bio1
+Th0 8bio1
+Th1 7bio2
+Fr5 7bio1
+
+Teacher: Tfiz
+------------
+Mo1 8fiz2
+Mo4 7fiz1
+Tu3 7fiz2
+Th4 8fiz1
+
+Teacher: Tche
+------------
+Mo2 8che2
+Tu0 7che2
+We2 7che1
+Th2 8che1
+
+Teacher: Tjnm
+------------
+Tu2 7jnm1
+We0 8jnm2
+Fr0 8jnm1
+Fr1 7jnm2
+
+The final schedule for rooms
+============================
+Room: R00
+------------
+Mo0 4jpl4
+Mo1 5jpl3
+Mo3 8jpl1
+Mo4 6jpl1
+Mo5 7jpl5
+Tu0 4jpl1
+Tu1 6jpl4
+Tu3 8jpl3
+Tu4 5jpl1
+Tu6 7jpl3
+We0 5jpl4
+We1 4jpl5
+We2 6jpl3
+We3 8jpl2
+We4 7jpl1
+Th0 7jpl2
+Th1 6jpl2
+Th2 5jpl5
+Th4 4jpl2
+Th5 8jpl5
+Fr0 4jpl3
+Fr1 5jpl2
+Fr2 6jpl5
+Fr3 8jpl4
+Fr4 7jpl4
+
+Room: R01
+------------
+Mo0 5mat3
+Mo1 4mat1
+Mo2 6mat4
+Mo3 7mat1
+Mo4 8mat4
+Tu0 6mat3
+Tu1 5mat1
+Tu4 4mat2
+Tu5 8mat1
+We0 4mat3
+We4 8mat3
+We5 7mat4
+Th0 4mat4
+Th2 7mat2
+Th3 5mat4
+Th4 6mat1
+Fr0 6mat2
+Fr1 8mat2
+Fr2 7mat3
+Fr4 5mat2
+
+Room: R02
+------------
+Mo0 6pla1
+Mo1 7muz1
+Mo2 7pla1
+Mo3 4prz1
+Tu0 5hst2
+Tu1 7hst1
+Tu2 4hst1
+Tu3 5pla1
+Tu4 8hst1
+We1 8hst2
+We3 4muz1
+We4 5muz1
+Th0 6muz1
+Th3 6hst2
+Th4 5hst1
+Th5 7hst2
+Fr1 6hst1
+Fr2 4pla1
+
+Room: R03
+------------
+Mo0 8wyf2
+Mo2 4wyf1
+Mo3 6wyf4
+Tu0 8wyf1
+Tu2 5wyf1
+Tu3 4wyf3
+Tu4 6wyf1
+Tu5 7wyf2
+We0 7wyf1
+We2 5wyf2
+We3 6wyf3
+Th0 5wyf3
+Th1 8wyf3
+Th2 4wyf4
+Th3 7wyf4
+Fr0 5wyf4
+Fr1 4wyf2
+Fr2 8wyf4
+Fr3 7wyf3
+Fr4 6wyf2
+
+Room: R04
+------------
+Mo1 6geo1
+Tu2 7jnm1
+Tu3 6bio1
+We0 8jnm2
+We1 7geo2
+We2 8geo1
+We3 5bio1
+Th0 8bio1
+Th1 7bio2
+Th4 7geo1
+Fr0 8jnm1
+Fr1 7jnm2
+Fr3 5geo1
+Fr5 7bio1
+
+Room: R05
+------------
+Mo0 7jan1
+Mo2 5jan2
+Tu1 4jan1
+Tu2 8jan2
+Tu4 7jan2
+We0 6jan1
+We1 5jan1
+We2 4jan2
+Th1 4jan3
+Th2 6jan2
+Th3 8jan3
+Fr0 7jan3
+Fr2 5jan3
+Fr3 6jan3
+Fr4 8jan1
+
+Room: R06
+------------
+Mo1 8fiz2
+Mo2 8che2
+Mo3 5inf1
+Mo4 7fiz1
+Tu0 7che2
+Tu1 8inf1
+Tu2 6tch1
+Tu3 7fiz2
+We1 6inf1
+We2 7che1
+We3 7inf1
+Th1 5tch1
+Th2 8che1
+Th3 4tch1
+Th4 8fiz1
+Fr3 4inf1
+
+The final schedule for groups
+=============================
+Group: G4
+----------------------------
+Mo0   4jpl4   R00   Tjpl
+Mo1   4mat1   R01   Tmat
+Mo2   4wyf1   R03   Twyf
+Mo3   4prz1   R02   Tprz
+Tu0   4jpl1   R00   Tjpl
+Tu1   4jan1   R05   Tjan
+Tu2   4hst1   R02   Thst
+Tu3   4wyf3   R03   Twyf
+Tu4   4mat2   R01   Tmat
+We0   4mat3   R01   Tmat
+We1   4jpl5   R00   Tjpl
+We2   4jan2   R05   Tjan
+We3   4muz1   R02   Tmuz
+Th0   4mat4   R01   Tmat
+Th1   4jan3   R05   Tjan
+Th2   4wyf4   R03   Twyf
+Th3   4tch1   R06   Ttch
+Th4   4jpl2   R00   Tjpl
+Fr0   4jpl3   R00   Tjpl
+Fr1   4wyf2   R03   Twyf
+Fr2   4pla1   R02   Tpla
+Fr3   4inf1   R06   Tinf
+
+Group: G5
+----------------------------
+Mo0   5mat3   R01   Tmat
+Mo1   5jpl3   R00   Tjpl
+Mo2   5jan2   R05   Tjan
+Mo3   5inf1   R06   Tinf
+Tu0   5hst2   R02   Thst
+Tu1   5mat1   R01   Tmat
+Tu2   5wyf1   R03   Twyf
+Tu3   5pla1   R02   Tpla
+Tu4   5jpl1   R00   Tjpl
+We0   5jpl4   R00   Tjpl
+We1   5jan1   R05   Tjan
+We2   5wyf2   R03   Twyf
+We3   5bio1   R04   Tbio
+We4   5muz1   R02   Tmuz
+Th0   5wyf3   R03   Twyf
+Th1   5tch1   R06   Ttch
+Th2   5jpl5   R00   Tjpl
+Th3   5mat4   R01   Tmat
+Th4   5hst1   R02   Thst
+Fr0   5wyf4   R03   Twyf
+Fr1   5jpl2   R00   Tjpl
+Fr2   5jan3   R05   Tjan
+Fr3   5geo1   R04   Tgeo
+Fr4   5mat2   R01   Tmat
+
+Group: G6
+----------------------------
+Mo0   6pla1   R02   Tpla
+Mo1   6geo1   R04   Tgeo
+Mo2   6mat4   R01   Tmat
+Mo3   6wyf4   R03   Twyf
+Mo4   6jpl1   R00   Tjpl
+Tu0   6mat3   R01   Tmat
+Tu1   6jpl4   R00   Tjpl
+Tu2   6tch1   R06   Ttch
+Tu3   6bio1   R04   Tbio
+Tu4   6wyf1   R03   Twyf
+We0   6jan1   R05   Tjan
+We1   6inf1   R06   Tinf
+We2   6jpl3   R00   Tjpl
+We3   6wyf3   R03   Twyf
+Th0   6muz1   R02   Tmuz
+Th1   6jpl2   R00   Tjpl
+Th2   6jan2   R05   Tjan
+Th3   6hst2   R02   Thst
+Th4   6mat1   R01   Tmat
+Fr0   6mat2   R01   Tmat
+Fr1   6hst1   R02   Thst
+Fr2   6jpl5   R00   Tjpl
+Fr3   6jan3   R05   Tjan
+Fr4   6wyf2   R03   Twyf
+
+Group: G7
+----------------------------
+Mo0   7jan1   R05   Tjan
+Mo1   7muz1   R02   Tmuz
+Mo2   7pla1   R02   Tpla
+Mo3   7mat1   R01   Tmat
+Mo4   7fiz1   R06   Tfiz
+Mo5   7jpl5   R00   Tjpl
+Tu0   7che2   R06   Tche
+Tu1   7hst1   R02   Thst
+Tu2   7jnm1   R04   Tjnm
+Tu3   7fiz2   R06   Tfiz
+Tu4   7jan2   R05   Tjan
+Tu5   7wyf2   R03   Twyf
+Tu6   7jpl3   R00   Tjpl
+We0   7wyf1   R03   Twyf
+We1   7geo2   R04   Tgeo
+We2   7che1   R06   Tche
+We3   7inf1   R06   Tinf
+We4   7jpl1   R00   Tjpl
+We5   7mat4   R01   Tmat
+Th0   7jpl2   R00   Tjpl
+Th1   7bio2   R04   Tbio
+Th2   7mat2   R01   Tmat
+Th3   7wyf4   R03   Twyf
+Th4   7geo1   R04   Tgeo
+Th5   7hst2   R02   Thst
+Fr0   7jan3   R05   Tjan
+Fr1   7jnm2   R04   Tjnm
+Fr2   7mat3   R01   Tmat
+Fr3   7wyf3   R03   Twyf
+Fr4   7jpl4   R00   Tjpl
+Fr5   7bio1   R04   Tbio
+
+Group: G8
+----------------------------
+Mo0   8wyf2   R03   Twyf
+Mo1   8fiz2   R06   Tfiz
+Mo2   8che2   R06   Tche
+Mo3   8jpl1   R00   Tjpl
+Mo4   8mat4   R01   Tmat
+Tu0   8wyf1   R03   Twyf
+Tu1   8inf1   R06   Tinf
+Tu2   8jan2   R05   Tjan
+Tu3   8jpl3   R00   Tjpl
+Tu4   8hst1   R02   Thst
+Tu5   8mat1   R01   Tmat
+We0   8jnm2   R04   Tjnm
+We1   8hst2   R02   Thst
+We2   8geo1   R04   Tgeo
+We3   8jpl2   R00   Tjpl
+We4   8mat3   R01   Tmat
+Th0   8bio1   R04   Tbio
+Th1   8wyf3   R03   Twyf
+Th2   8che1   R06   Tche
+Th3   8jan3   R05   Tjan
+Th4   8fiz1   R06   Tfiz
+Th5   8jpl5   R00   Tjpl
+Fr0   8jnm1   R04   Tjnm
+Fr1   8mat2   R01   Tmat
+Fr2   8wyf4   R03   Twyf
+Fr3   8jpl4   R00   Tjpl
+Fr4   8jan1   R05   Tjan
+
+NEOS Server Home
+
