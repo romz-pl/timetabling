@@ -63,7 +63,7 @@
 
 
 ### Day function
-Function $QD : S \mapsto \mathbb{N}$ returns the day corresponding to timeslot $s \in S$. 
+Function $QD : S \mapsto \mathbb{N}$ returns the day corresponding to timeslot $s \in S$.
 In the most general way, the value of the function $QD$ can be provided for each $s \in S$.
 
 If $S$ is the set of consecutive natural numbers starting from zero and each day consists of the same number of time slots, then $QD[s] = \text{floor}(s / N_h)$, where $N_h$ is th enumber of hours per day.
