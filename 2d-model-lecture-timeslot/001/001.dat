@@ -1,0 +1,1260 @@
+#
+# Elementary school
+# =================
+#
+# 4th grade
+# ---------
+# jpl – 5 hours
+# jan – 3 hours
+# mat – 4 hours
+# inf – 1 hour
+# tch – 1 hour
+# hst – 1 hour
+# prz – 1 hour
+# muz – 1 hour
+# pla – 1 hour
+# wyf – 4 hours
+#
+#
+# 5th grade
+# ---------
+# jpl – 5 hours
+# jan – 3 hours
+# mat – 4 hours
+# inf – 1 hour
+# tch – 1 hour
+# geo - 1 hour
+# bio - 1 hour
+# hst – 2 hour
+# muz – 1 hour
+# pla – 1 hour
+# wyf – 4 hours
+#
+#
+# 6th grade
+# ---------
+# jpl – 5 hours
+# jan – 3 hours
+# mat – 4 hours
+# inf – 1 hour
+# tch – 1 hour
+# geo - 1 hour
+# bio - 1 hour
+# hst – 2 hour
+# muz – 1 hour
+# pla – 1 hour
+# wyf – 4 hours
+#
+#
+# 7th grade
+# ---------
+# jpl – 5 hours
+# jan – 3 hours
+# mat – 4 hours
+# inf – 1 hour
+# geo - 2 hour
+# bio - 2 hour
+# che - 2 hours
+# fiz - 2 hours
+# hst – 2 hour
+# muz – 1 hour
+# pla – 1 hour
+# wyf – 4 hours
+# jnm - 2 hours
+#
+#
+# 8th grade
+# ---------
+# jpl – 5 hours
+# jan – 3 hours
+# mat – 4 hours
+# inf – 1 hour
+# geo - 1 hour
+# bio - 1 hour
+# che - 2 hours
+# fiz - 2 hours
+# hst – 2 hour
+# wyf – 4 hours
+# jnm - 2 hours
+
+
+set S :=
+Mo0
+Mo1
+Mo2
+Mo3
+Mo4
+Mo5
+Mo6
+Tu0
+Tu1
+Tu2
+Tu3
+Tu4
+Tu5
+Tu6
+We0
+We1
+We2
+We3
+We4
+We5
+We6
+Th0
+Th1
+Th2
+Th3
+Th4
+Th5
+Th6
+Fr0
+Fr1
+Fr2
+Fr3
+Fr4
+Fr5
+Fr6
+;
+
+set D :=
+Mo
+Tu
+We
+Th
+Fr
+;
+
+set SD[Mo] :=
+Mo0
+Mo1
+Mo2
+Mo3
+Mo4
+Mo5
+Mo6
+;
+
+set SD[Tu] :=
+Tu0
+Tu1
+Tu2
+Tu3
+Tu4
+Tu5
+Tu6
+;
+
+set SD[We] :=
+We0
+We1
+We2
+We3
+We4
+We5
+We6
+;
+
+set SD[Th] :=
+Th0
+Th1
+Th2
+Th3
+Th4
+Th5
+Th6
+;
+
+set SD[Fr] :=
+Fr0
+Fr1
+Fr2
+Fr3
+Fr4
+Fr5
+Fr6
+;
+
+
+set L :=
+4jpl1
+4jpl2
+4jpl3
+4jpl4
+4jpl5
+4jan1
+4jan2
+4jan3
+4mat1
+4mat2
+4mat3
+4mat4
+4inf1
+4tch1
+4hst1
+4prz1
+4muz1
+4pla1
+4wyf1
+4wyf2
+4wyf3
+4wyf4
+#
+5jpl1
+5jpl2
+5jpl3
+5jpl4
+5jpl5
+5jan1
+5jan2
+5jan3
+5mat1
+5mat2
+5mat3
+5mat4
+5inf1
+5tch1
+5geo1
+5bio1
+5hst1
+5hst2
+5muz1
+5pla1
+5wyf1
+5wyf2
+5wyf3
+5wyf4
+#
+6jpl1
+6jpl2
+6jpl3
+6jpl4
+6jpl5
+6jan1
+6jan2
+6jan3
+6mat1
+6mat2
+6mat3
+6mat4
+6inf1
+6tch1
+6geo1
+6bio1
+6hst1
+6hst2
+6muz1
+6pla1
+6wyf1
+6wyf2
+6wyf3
+6wyf4
+#
+7jpl1
+7jpl2
+7jpl3
+7jpl4
+7jpl5
+7jan1
+7jan2
+7jan3
+7mat1
+7mat2
+7mat3
+7mat4
+7inf1
+7geo1
+7geo2
+7bio1
+7bio2
+7che1
+7che2
+7fiz1
+7fiz2
+7hst1
+7hst2
+7muz1
+7pla1
+7wyf1
+7wyf2
+7wyf3
+7wyf4
+7jnm1
+7jnm2
+#
+8jpl1
+8jpl2
+8jpl3
+8jpl4
+8jpl5
+8jan1
+8jan2
+8jan3
+8mat1
+8mat2
+8mat3
+8mat4
+8inf1
+8geo1
+8bio1
+8che1
+8che2
+8fiz1
+8fiz2
+8hst1
+8hst2
+8wyf1
+8wyf2
+8wyf3
+8wyf4
+8jnm1
+8jnm2
+;
+
+
+
+set T :=
+TjplA
+TjanA
+TmatA
+TinfA
+TtchA
+ThstA
+TprzA
+TmuzA
+TplaA
+TwyfA
+TgeoA
+TbioA
+TfizA
+TcheA
+TjnmA
+;
+
+set R :=
+R00
+R01
+R02
+R03
+R04
+R05
+R06
+;
+
+set G :=
+G4
+G5
+G6
+G7
+G8
+;
+
+
+
+set C :=
+C4jpl
+C4jan
+C4mat
+C4inf
+C4tch
+C4hst
+C4prz
+C4muz
+C4pla
+C4wyf
+#
+C5jpl
+C5jan
+C5mat
+C5inf
+C5tch
+C5geo
+C5bio
+C5hst
+C5muz
+C5pla
+C5wyf
+#
+C6jpl
+C6jan
+C6mat
+C6inf
+C6tch
+C6geo
+C6bio
+C6hst
+C6muz
+C6pla
+C6wyf
+#
+C7jpl
+C7jan
+C7mat
+C7inf
+C7geo
+C7bio
+C7che
+C7fiz
+C7hst
+C7muz
+C7pla
+C7wyf
+C7jnm
+#
+C8jpl
+C8jan
+C8mat
+C8inf
+C8geo
+C8bio
+C8che
+C8fiz
+C8hst
+C8wyf
+C8jnm
+;
+
+set LC[C4jpl] :=
+4jpl1
+4jpl2
+4jpl3
+4jpl4
+4jpl5
+;
+
+set LC[C4jan] :=
+4jan1
+4jan2
+4jan3
+;
+
+set LC[C4mat] :=
+4mat1
+4mat2
+4mat3
+4mat4
+;
+
+set LC[C4inf] :=
+4inf1
+;
+
+set LC[C4tch] :=
+4tch1
+;
+
+set LC[C4hst] :=
+4hst1
+;
+
+set LC[C4prz] :=
+4prz1
+;
+
+set LC[C4muz] :=
+4muz1
+;
+
+set LC[C4pla] :=
+4pla1
+;
+
+set LC[C4wyf] :=
+4wyf1
+4wyf2
+4wyf3
+4wyf4
+;
+
+set LC[C5jpl] :=
+5jpl1
+5jpl2
+5jpl3
+5jpl4
+5jpl5
+;
+
+set LC[C5jan] :=
+5jan1
+5jan2
+5jan3
+;
+
+set LC[C5mat] :=
+5mat1
+5mat2
+5mat3
+5mat4
+;
+
+set LC[C5inf] :=
+5inf1
+;
+
+set LC[C5tch] :=
+5tch1
+;
+
+set LC[C5geo] :=
+5geo1
+;
+
+set LC[C5bio] :=
+5bio1
+;
+
+set LC[C5hst] :=
+5hst1
+5hst2
+;
+
+set LC[C5muz] :=
+5muz1
+;
+
+set LC[C5pla] :=
+5pla1
+;
+
+set LC[C5wyf] :=
+5wyf1
+5wyf2
+5wyf3
+5wyf4
+;
+
+set LC[C6jpl] :=
+6jpl1
+6jpl2
+6jpl3
+6jpl4
+6jpl5
+;
+
+set LC[C6jan] :=
+6jan1
+6jan2
+6jan3
+;
+
+set LC[C6mat] :=
+6mat1
+6mat2
+6mat3
+6mat4
+;
+
+set LC[C6inf] :=
+6inf1
+;
+
+set LC[C6tch] :=
+6tch1
+;
+
+set LC[C6geo] :=
+6geo1
+;
+
+set LC[C6bio] :=
+6bio1
+;
+
+set LC[C6hst] :=
+6hst1
+6hst2
+;
+
+set LC[C6muz] :=
+6muz1
+;
+
+set LC[C6pla] :=
+6pla1
+;
+
+set LC[C6wyf] :=
+6wyf1
+6wyf2
+6wyf3
+6wyf4
+;
+
+set LC[C7jpl] :=
+7jpl1
+7jpl2
+7jpl3
+7jpl4
+7jpl5
+;
+
+set LC[C7jan] :=
+7jan1
+7jan2
+7jan3
+;
+
+set LC[C7mat] :=
+7mat1
+7mat2
+7mat3
+7mat4
+;
+
+set LC[C7inf] :=
+7inf1
+;
+
+set LC[C7geo] :=
+7geo1
+7geo2
+;
+
+set LC[C7bio] :=
+7bio1
+7bio2
+;
+
+set LC[C7che] :=
+7che1
+7che2
+;
+
+set LC[C7fiz] :=
+7fiz1
+7fiz2
+;
+
+set LC[C7hst] :=
+7hst1
+7hst2
+;
+
+set LC[C7muz] :=
+7muz1
+;
+
+set LC[C7pla] :=
+7pla1
+;
+
+set LC[C7wyf] :=
+7wyf1
+7wyf2
+7wyf3
+7wyf4
+;
+
+set LC[C7jnm] :=
+7jnm1
+7jnm2
+;
+
+set LC[C8jpl] :=
+8jpl1
+8jpl2
+8jpl3
+8jpl4
+8jpl5
+;
+
+set LC[C8jan] :=
+8jan1
+8jan2
+8jan3
+;
+
+set LC[C8mat] :=
+8mat1
+8mat2
+8mat3
+8mat4
+;
+
+set LC[C8inf] :=
+8inf1
+;
+
+set LC[C8geo] :=
+8geo1
+;
+
+set LC[C8bio] :=
+8bio1
+;
+
+set LC[C8che] :=
+8che1
+8che2
+;
+
+set LC[C8fiz] :=
+8fiz1
+8fiz2
+;
+
+set LC[C8hst] :=
+8hst1
+8hst2
+;
+
+set LC[C8wyf] :=
+8wyf1
+8wyf2
+8wyf3
+8wyf4
+;
+
+set LC[C8jnm] :=
+8jnm1
+8jnm2
+;
+
+set LT[TjplA] :=
+4jpl1
+4jpl2
+4jpl3
+4jpl4
+4jpl5
+#
+5jpl1
+5jpl2
+5jpl3
+5jpl4
+5jpl5
+#
+6jpl1
+6jpl2
+6jpl3
+6jpl4
+6jpl5
+#
+7jpl1
+7jpl2
+7jpl3
+7jpl4
+7jpl5
+#
+8jpl1
+8jpl2
+8jpl3
+8jpl4
+8jpl5
+;
+
+set LT[TjanA] :=
+4jan1
+4jan2
+4jan3
+#
+5jan1
+5jan2
+5jan3
+#
+6jan1
+6jan2
+6jan3
+#
+7jan1
+7jan2
+7jan3
+#
+8jan1
+8jan2
+8jan3
+;
+
+set LT[TmatA] :=
+4mat1
+4mat2
+4mat3
+4mat4
+#
+5mat1
+5mat2
+5mat3
+5mat4
+#
+6mat1
+6mat2
+6mat3
+6mat4
+#
+7mat1
+7mat2
+7mat3
+7mat4
+#
+8mat1
+8mat2
+8mat3
+8mat4
+;
+
+set LT[TinfA] :=
+4inf1
+5inf1
+6inf1
+7inf1
+8inf1
+;
+
+set LT[TtchA] :=
+4tch1
+5tch1
+6tch1
+;
+
+set LT[TgeoA] :=
+5geo1
+6geo1
+7geo1
+7geo2
+8geo1
+;
+
+set LT[TbioA] :=
+5bio1
+6bio1
+7bio1
+7bio2
+8bio1
+;
+
+set LT[TcheA] :=
+7che1
+7che2
+8che1
+8che2
+;
+
+set LT[TfizA] :=
+7fiz1
+7fiz2
+8fiz1
+8fiz2
+;
+
+set LT[ThstA] :=
+4hst1
+5hst1
+5hst2
+6hst1
+6hst2
+7hst1
+7hst2
+8hst1
+8hst2
+;
+
+set LT[TprzA] :=
+4prz1
+;
+
+set LT[TmuzA] :=
+4muz1
+5muz1
+6muz1
+7muz1
+;
+
+set LT[TplaA] :=
+4pla1
+5pla1
+6pla1
+7pla1
+;
+
+set LT[TwyfA] :=
+4wyf1
+4wyf2
+4wyf3
+4wyf4
+#
+5wyf1
+5wyf2
+5wyf3
+5wyf4
+#
+6wyf1
+6wyf2
+6wyf3
+6wyf4
+#
+7wyf1
+7wyf2
+7wyf3
+7wyf4
+#
+8wyf1
+8wyf2
+8wyf3
+8wyf4
+;
+
+set LT[TjnmA] :=
+7jnm1
+7jnm2
+#
+8jnm1
+8jnm2
+;
+
+set LR[R00] :=
+4jpl1
+4jpl2
+4jpl3
+4jpl4
+4jpl5
+#
+5jpl1
+5jpl2
+5jpl3
+5jpl4
+5jpl5
+#
+6jpl1
+6jpl2
+6jpl3
+6jpl4
+6jpl5
+#
+7jpl1
+7jpl2
+7jpl3
+7jpl4
+7jpl5
+#
+8jpl1
+8jpl2
+8jpl3
+8jpl4
+8jpl5
+;
+
+set LR[R01] :=
+4mat1
+4mat2
+4mat3
+4mat4
+#
+5mat1
+5mat2
+5mat3
+5mat4
+#
+6mat1
+6mat2
+6mat3
+6mat4
+#
+7mat1
+7mat2
+7mat3
+7mat4
+#
+8mat1
+8mat2
+8mat3
+8mat4
+;
+
+set LR[R02] :=
+4hst1
+4prz1
+4muz1
+4pla1
+#
+5hst1
+5hst2
+5muz1
+5pla1
+#
+6hst1
+6hst2
+6muz1
+6pla1
+#
+7hst1
+7hst2
+7muz1
+7pla1
+#
+8hst1
+8hst2
+;
+
+set LR[R03] :=
+4wyf1
+4wyf2
+4wyf3
+4wyf4
+#
+5wyf1
+5wyf2
+5wyf3
+5wyf4
+#
+6wyf1
+6wyf2
+6wyf3
+6wyf4
+#
+7wyf1
+7wyf2
+7wyf3
+7wyf4
+#
+8wyf1
+8wyf2
+8wyf3
+8wyf4
+;
+
+set LR[R04] :=
+7jnm1
+7jnm2
+#
+8jnm1
+8jnm2
+#
+5geo1
+5bio1
+#
+6geo1
+6bio1
+#
+7geo1
+7geo2
+7bio1
+7bio2
+#
+8geo1
+8bio1
+;
+
+set LR[R05] :=
+4jan1
+4jan2
+4jan3
+#
+5jan1
+5jan2
+5jan3
+#
+6jan1
+6jan2
+6jan3
+#
+7jan1
+7jan2
+7jan3
+#
+8jan1
+8jan2
+8jan3
+;
+
+set LR[R06] :=
+4inf1
+5inf1
+6inf1
+7inf1
+8inf1
+#
+4tch1
+5tch1
+6tch1
+#
+7che1
+7che2
+8che1
+8che2
+#
+7fiz1
+7fiz2
+8fiz1
+8fiz2
+;
+
+
+set LG[G4] :=
+4jpl1
+4jpl2
+4jpl3
+4jpl4
+4jpl5
+4jan1
+4jan2
+4jan3
+4mat1
+4mat2
+4mat3
+4mat4
+4inf1
+4tch1
+4hst1
+4prz1
+4muz1
+4pla1
+4wyf1
+4wyf2
+4wyf3
+4wyf4
+;
+
+set LG[G5] :=
+5jpl1
+5jpl2
+5jpl3
+5jpl4
+5jpl5
+5jan1
+5jan2
+5jan3
+5mat1
+5mat2
+5mat3
+5mat4
+5inf1
+5tch1
+5geo1
+5bio1
+5hst1
+5hst2
+5muz1
+5pla1
+5wyf1
+5wyf2
+5wyf3
+5wyf4
+;
+
+set LG[G6] :=
+6jpl1
+6jpl2
+6jpl3
+6jpl4
+6jpl5
+6jan1
+6jan2
+6jan3
+6mat1
+6mat2
+6mat3
+6mat4
+6inf1
+6tch1
+6geo1
+6bio1
+6hst1
+6hst2
+6muz1
+6pla1
+6wyf1
+6wyf2
+6wyf3
+6wyf4
+;
+
+set LG[G7] :=
+7jpl1
+7jpl2
+7jpl3
+7jpl4
+7jpl5
+7jan1
+7jan2
+7jan3
+7mat1
+7mat2
+7mat3
+7mat4
+7inf1
+7geo1
+7geo2
+7bio1
+7bio2
+7che1
+7che2
+7fiz1
+7fiz2
+7hst1
+7hst2
+7muz1
+7pla1
+7wyf1
+7wyf2
+7wyf3
+7wyf4
+7jnm1
+7jnm2
+;
+
+set LG[G8] :=
+8jpl1
+8jpl2
+8jpl3
+8jpl4
+8jpl5
+8jan1
+8jan2
+8jan3
+8mat1
+8mat2
+8mat3
+8mat4
+8inf1
+8geo1
+8bio1
+8che1
+8che2
+8fiz1
+8fiz2
+8hst1
+8hst2
+8wyf1
+8wyf2
+8wyf3
+8wyf4
+8jnm1
+8jnm2
+;
+
+param WG [*,*] (tr)
+:      G4   G5   G6   G7   G8  :=
+Mo0     0    0    0    0    0
+Mo1     1    1    1    1    1
+Mo2     2    2    2    2    2
+Mo3     3    3    3    3    3
+Mo4     4    4    4    4    4
+Mo5     5    5    5    5    5
+Mo6     6    6    6    6    6
+Tu0     0    0    0    0    0
+Tu1     1    1    1    1    1
+Tu2     2    2    2    2    2
+Tu3     3    3    3    3    3
+Tu4     4    4    4    4    4
+Tu5     5    5    5    5    5
+Tu6     6    6    6    6    6
+We0     0    0    0    0    0
+We1     1    1    1    1    1
+We2     2    2    2    2    2
+We3     3    3    3    3    3
+We4     4    4    4    4    4
+We5     5    5    5    5    5
+We6     6    6    6    6    6
+Th0     0    0    0    0    0
+Th1     1    1    1    1    1
+Th2     2    2    2    2    2
+Th3     3    3    3    3    3
+Th4     4    4    4    4    4
+Th5     5    5    5    5    5
+Th6     6    6    6    6    6
+Fr0     0    0    0    0    0
+Fr1     1    1    1    1    1
+Fr2     2    2    2    2    2
+Fr3     3    3    3    3    3
+Fr4     4    4    4    4    4
+Fr5     5    5    5    5    5
+Fr6     6    6    6    6    6
+;
