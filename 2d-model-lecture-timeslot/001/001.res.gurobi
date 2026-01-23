@@ -3,12 +3,12 @@
 *************************************************************
 
    NEOS Server Version 6.0
-   Job#     : 18270623
-   Password : vqAsJalg
+   Job#     : 18270848
+   Password : LnmlrCqA
    User     : 
    Solver   : milp:Gurobi:AMPL
-   Start    : 2026-01-23 05:08:28
-   End      : 2026-01-23 05:08:34
+   Start    : 2026-01-23 07:05:05
+   End      : 2026-01-23 07:05:13
    Host     : prod-sub-1.neos-server.org
 
    Disclaimer:
@@ -26,7 +26,7 @@ Checking ampl.com for gurobi_options...
 Executing AMPL.
 processing data.
 processing commands.
-Executing on prod-exec-7.neos-server.org
+Executing on prod-exec-1.neos-server.org
 set L :=
 4jpl1   4tch1   5jpl5   5hst2   6jan2   6pla1   7mat1   7hst1   8jpl4   8che2
 4jpl2   4hst1   5jan1   5muz1   6jan3   6wyf1   7mat2   7hst2   8jpl5   8fiz1
@@ -536,7 +536,7 @@ Constraints:  10314 linear;
 Set parameter InfUnbdInfo to value 1
 Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
 
-CPU model: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+CPU model: Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz, instruction set [SSE2|AVX|AVX2]
 Thread count: 32 physical cores, 64 logical processors, using up to 4 threads
 
 Non-default parameters:
@@ -554,7 +554,7 @@ Coefficient statistics:
   RHS range        [1e+00, 1e+00]
 Found heuristic solution: objective 360.0000000
 Presolve removed 9606 rows and 1 columns
-Presolve time: 0.10s
+Presolve time: 0.13s
 Presolved: 708 rows, 4480 columns, 17080 nonzeros
 Variable types: 0 continuous, 4480 integer (4480 binary)
 Root relaxation presolved: 708 rows, 4480 columns, 17080 nonzeros
@@ -570,7 +570,7 @@ Root relaxation: objective 2.710000e+02, 1391 iterations, 0.02 seconds (0.01 wor
 H    0     0                     271.0000000  271.00000  0.00%     -    0s
      0     0  271.00000    0  324  271.00000  271.00000  0.00%     -    0s
 
-Explored 1 nodes (1391 simplex iterations) in 0.12 seconds (0.13 work units)
+Explored 1 nodes (1391 simplex iterations) in 0.15 seconds (0.13 work units)
 Thread count was 4 (of 64 available processors)
 
 Solution count 2: 271 360 
@@ -1029,336 +1029,342 @@ C8mat   1   1   1   0   1
 C8wyf   1   1   0   1   1
 ;
 
+
+
 The final schedule for teachers
 ===============================
 Teacher: Tjpl
-------------
-Mo0 4jpl4
-Mo1 5jpl3
-Mo3 8jpl1
-Mo4 6jpl1
-Mo5 7jpl5
-Tu0 4jpl1
-Tu1 6jpl4
-Tu3 8jpl3
-Tu4 5jpl1
-Tu6 7jpl3
-We0 5jpl4
-We1 4jpl5
-We2 6jpl3
-We3 8jpl2
-We4 7jpl1
-Th0 7jpl2
-Th1 6jpl2
-Th2 5jpl5
-Th4 4jpl2
-Th5 8jpl5
-Fr0 4jpl3
-Fr1 5jpl2
-Fr2 6jpl5
-Fr3 8jpl4
-Fr4 7jpl4
+-------------------------------
+Mo0   4jpl4   G4   R00
+Mo1   5jpl3   G5   R00
+Mo3   8jpl1   G8   R00
+Mo4   6jpl1   G6   R00
+Mo5   7jpl5   G7   R00
+Tu0   4jpl1   G4   R00
+Tu1   6jpl4   G6   R00
+Tu3   8jpl3   G8   R00
+Tu4   5jpl1   G5   R00
+Tu6   7jpl3   G7   R00
+We0   5jpl4   G5   R00
+We1   4jpl5   G4   R00
+We2   6jpl3   G6   R00
+We3   8jpl2   G8   R00
+We4   7jpl1   G7   R00
+Th0   7jpl2   G7   R00
+Th1   6jpl2   G6   R00
+Th2   5jpl5   G5   R00
+Th4   4jpl2   G4   R00
+Th5   8jpl5   G8   R00
+Fr0   4jpl3   G4   R00
+Fr1   5jpl2   G5   R00
+Fr2   6jpl5   G6   R00
+Fr3   8jpl4   G8   R00
+Fr4   7jpl4   G7   R00
 
 Teacher: Tjan
-------------
-Mo0 7jan1
-Mo2 5jan2
-Tu1 4jan1
-Tu2 8jan2
-Tu4 7jan2
-We0 6jan1
-We1 5jan1
-We2 4jan2
-Th1 4jan3
-Th2 6jan2
-Th3 8jan3
-Fr0 7jan3
-Fr2 5jan3
-Fr3 6jan3
-Fr4 8jan1
+-------------------------------
+Mo0   7jan1   G7   R05
+Mo2   5jan2   G5   R05
+Tu1   4jan1   G4   R05
+Tu2   8jan2   G8   R05
+Tu4   7jan2   G7   R05
+We0   6jan1   G6   R05
+We1   5jan1   G5   R05
+We2   4jan2   G4   R05
+Th1   4jan3   G4   R05
+Th2   6jan2   G6   R05
+Th3   8jan3   G8   R05
+Fr0   7jan3   G7   R05
+Fr2   5jan3   G5   R05
+Fr3   6jan3   G6   R05
+Fr4   8jan1   G8   R05
 
 Teacher: Tmat
-------------
-Mo0 5mat3
-Mo1 4mat1
-Mo2 6mat4
-Mo3 7mat1
-Mo4 8mat4
-Tu0 6mat3
-Tu1 5mat1
-Tu4 4mat2
-Tu5 8mat1
-We0 4mat3
-We4 8mat3
-We5 7mat4
-Th0 4mat4
-Th2 7mat2
-Th3 5mat4
-Th4 6mat1
-Fr0 6mat2
-Fr1 8mat2
-Fr2 7mat3
-Fr4 5mat2
+-------------------------------
+Mo0   5mat3   G5   R01
+Mo1   4mat1   G4   R01
+Mo2   6mat4   G6   R01
+Mo3   7mat1   G7   R01
+Mo4   8mat4   G8   R01
+Tu0   6mat3   G6   R01
+Tu1   5mat1   G5   R01
+Tu4   4mat2   G4   R01
+Tu5   8mat1   G8   R01
+We0   4mat3   G4   R01
+We4   8mat3   G8   R01
+We5   7mat4   G7   R01
+Th0   4mat4   G4   R01
+Th2   7mat2   G7   R01
+Th3   5mat4   G5   R01
+Th4   6mat1   G6   R01
+Fr0   6mat2   G6   R01
+Fr1   8mat2   G8   R01
+Fr2   7mat3   G7   R01
+Fr4   5mat2   G5   R01
 
 Teacher: Tinf
-------------
-Mo3 5inf1
-Tu1 8inf1
-We1 6inf1
-We3 7inf1
-Fr3 4inf1
+-------------------------------
+Mo3   5inf1   G5   R06
+Tu1   8inf1   G8   R06
+We1   6inf1   G6   R06
+We3   7inf1   G7   R06
+Fr3   4inf1   G4   R06
 
 Teacher: Ttch
-------------
-Tu2 6tch1
-Th1 5tch1
-Th3 4tch1
+-------------------------------
+Tu2   6tch1   G6   R06
+Th1   5tch1   G5   R06
+Th3   4tch1   G4   R06
 
 Teacher: Thst
-------------
-Tu0 5hst2
-Tu1 7hst1
-Tu2 4hst1
-Tu4 8hst1
-We1 8hst2
-Th3 6hst2
-Th4 5hst1
-Th5 7hst2
-Fr1 6hst1
+-------------------------------
+Tu0   5hst2   G5   R02
+Tu1   7hst1   G7   R02
+Tu2   4hst1   G4   R02
+Tu4   8hst1   G8   R02
+We1   8hst2   G8   R02
+Th3   6hst2   G6   R02
+Th4   5hst1   G5   R02
+Th5   7hst2   G7   R02
+Fr1   6hst1   G6   R02
 
 Teacher: Tprz
-------------
-Mo3 4prz1
+-------------------------------
+Mo3   4prz1   G4   R02
 
 Teacher: Tmuz
-------------
-Mo1 7muz1
-We3 4muz1
-We4 5muz1
-Th0 6muz1
+-------------------------------
+Mo1   7muz1   G7   R02
+We3   4muz1   G4   R02
+We4   5muz1   G5   R02
+Th0   6muz1   G6   R02
 
 Teacher: Tpla
-------------
-Mo0 6pla1
-Mo2 7pla1
-Tu3 5pla1
-Fr2 4pla1
+-------------------------------
+Mo0   6pla1   G6   R02
+Mo2   7pla1   G7   R02
+Tu3   5pla1   G5   R02
+Fr2   4pla1   G4   R02
 
 Teacher: Twyf
-------------
-Mo0 8wyf2
-Mo2 4wyf1
-Mo3 6wyf4
-Tu0 8wyf1
-Tu2 5wyf1
-Tu3 4wyf3
-Tu4 6wyf1
-Tu5 7wyf2
-We0 7wyf1
-We2 5wyf2
-We3 6wyf3
-Th0 5wyf3
-Th1 8wyf3
-Th2 4wyf4
-Th3 7wyf4
-Fr0 5wyf4
-Fr1 4wyf2
-Fr2 8wyf4
-Fr3 7wyf3
-Fr4 6wyf2
+-------------------------------
+Mo0   8wyf2   G8   R03
+Mo2   4wyf1   G4   R03
+Mo3   6wyf4   G6   R03
+Tu0   8wyf1   G8   R03
+Tu2   5wyf1   G5   R03
+Tu3   4wyf3   G4   R03
+Tu4   6wyf1   G6   R03
+Tu5   7wyf2   G7   R03
+We0   7wyf1   G7   R03
+We2   5wyf2   G5   R03
+We3   6wyf3   G6   R03
+Th0   5wyf3   G5   R03
+Th1   8wyf3   G8   R03
+Th2   4wyf4   G4   R03
+Th3   7wyf4   G7   R03
+Fr0   5wyf4   G5   R03
+Fr1   4wyf2   G4   R03
+Fr2   8wyf4   G8   R03
+Fr3   7wyf3   G7   R03
+Fr4   6wyf2   G6   R03
 
 Teacher: Tgeo
-------------
-Mo1 6geo1
-We1 7geo2
-We2 8geo1
-Th4 7geo1
-Fr3 5geo1
+-------------------------------
+Mo1   6geo1   G6   R04
+We1   7geo2   G7   R04
+We2   8geo1   G8   R04
+Th4   7geo1   G7   R04
+Fr3   5geo1   G5   R04
 
 Teacher: Tbio
-------------
-Tu3 6bio1
-We3 5bio1
-Th0 8bio1
-Th1 7bio2
-Fr5 7bio1
+-------------------------------
+Tu3   6bio1   G6   R04
+We3   5bio1   G5   R04
+Th0   8bio1   G8   R04
+Th1   7bio2   G7   R04
+Fr5   7bio1   G7   R04
 
 Teacher: Tfiz
-------------
-Mo1 8fiz2
-Mo4 7fiz1
-Tu3 7fiz2
-Th4 8fiz1
+-------------------------------
+Mo1   8fiz2   G8   R06
+Mo4   7fiz1   G7   R06
+Tu3   7fiz2   G7   R06
+Th4   8fiz1   G8   R06
 
 Teacher: Tche
-------------
-Mo2 8che2
-Tu0 7che2
-We2 7che1
-Th2 8che1
+-------------------------------
+Mo2   8che2   G8   R06
+Tu0   7che2   G7   R06
+We2   7che1   G7   R06
+Th2   8che1   G8   R06
 
 Teacher: Tjnm
-------------
-Tu2 7jnm1
-We0 8jnm2
-Fr0 8jnm1
-Fr1 7jnm2
+-------------------------------
+Tu2   7jnm1   G7   R04
+We0   8jnm2   G8   R04
+Fr0   8jnm1   G8   R04
+Fr1   7jnm2   G7   R04
+
+
 
 The final schedule for rooms
-============================
+===============================
 Room: R00
-------------
-Mo0 4jpl4
-Mo1 5jpl3
-Mo3 8jpl1
-Mo4 6jpl1
-Mo5 7jpl5
-Tu0 4jpl1
-Tu1 6jpl4
-Tu3 8jpl3
-Tu4 5jpl1
-Tu6 7jpl3
-We0 5jpl4
-We1 4jpl5
-We2 6jpl3
-We3 8jpl2
-We4 7jpl1
-Th0 7jpl2
-Th1 6jpl2
-Th2 5jpl5
-Th4 4jpl2
-Th5 8jpl5
-Fr0 4jpl3
-Fr1 5jpl2
-Fr2 6jpl5
-Fr3 8jpl4
-Fr4 7jpl4
+-------------------------------
+Mo0   4jpl4   G4   Tjpl
+Mo1   5jpl3   G5   Tjpl
+Mo3   8jpl1   G8   Tjpl
+Mo4   6jpl1   G6   Tjpl
+Mo5   7jpl5   G7   Tjpl
+Tu0   4jpl1   G4   Tjpl
+Tu1   6jpl4   G6   Tjpl
+Tu3   8jpl3   G8   Tjpl
+Tu4   5jpl1   G5   Tjpl
+Tu6   7jpl3   G7   Tjpl
+We0   5jpl4   G5   Tjpl
+We1   4jpl5   G4   Tjpl
+We2   6jpl3   G6   Tjpl
+We3   8jpl2   G8   Tjpl
+We4   7jpl1   G7   Tjpl
+Th0   7jpl2   G7   Tjpl
+Th1   6jpl2   G6   Tjpl
+Th2   5jpl5   G5   Tjpl
+Th4   4jpl2   G4   Tjpl
+Th5   8jpl5   G8   Tjpl
+Fr0   4jpl3   G4   Tjpl
+Fr1   5jpl2   G5   Tjpl
+Fr2   6jpl5   G6   Tjpl
+Fr3   8jpl4   G8   Tjpl
+Fr4   7jpl4   G7   Tjpl
 
 Room: R01
-------------
-Mo0 5mat3
-Mo1 4mat1
-Mo2 6mat4
-Mo3 7mat1
-Mo4 8mat4
-Tu0 6mat3
-Tu1 5mat1
-Tu4 4mat2
-Tu5 8mat1
-We0 4mat3
-We4 8mat3
-We5 7mat4
-Th0 4mat4
-Th2 7mat2
-Th3 5mat4
-Th4 6mat1
-Fr0 6mat2
-Fr1 8mat2
-Fr2 7mat3
-Fr4 5mat2
+-------------------------------
+Mo0   5mat3   G5   Tmat
+Mo1   4mat1   G4   Tmat
+Mo2   6mat4   G6   Tmat
+Mo3   7mat1   G7   Tmat
+Mo4   8mat4   G8   Tmat
+Tu0   6mat3   G6   Tmat
+Tu1   5mat1   G5   Tmat
+Tu4   4mat2   G4   Tmat
+Tu5   8mat1   G8   Tmat
+We0   4mat3   G4   Tmat
+We4   8mat3   G8   Tmat
+We5   7mat4   G7   Tmat
+Th0   4mat4   G4   Tmat
+Th2   7mat2   G7   Tmat
+Th3   5mat4   G5   Tmat
+Th4   6mat1   G6   Tmat
+Fr0   6mat2   G6   Tmat
+Fr1   8mat2   G8   Tmat
+Fr2   7mat3   G7   Tmat
+Fr4   5mat2   G5   Tmat
 
 Room: R02
-------------
-Mo0 6pla1
-Mo1 7muz1
-Mo2 7pla1
-Mo3 4prz1
-Tu0 5hst2
-Tu1 7hst1
-Tu2 4hst1
-Tu3 5pla1
-Tu4 8hst1
-We1 8hst2
-We3 4muz1
-We4 5muz1
-Th0 6muz1
-Th3 6hst2
-Th4 5hst1
-Th5 7hst2
-Fr1 6hst1
-Fr2 4pla1
+-------------------------------
+Mo0   6pla1   G6   Tpla
+Mo1   7muz1   G7   Tmuz
+Mo2   7pla1   G7   Tpla
+Mo3   4prz1   G4   Tprz
+Tu0   5hst2   G5   Thst
+Tu1   7hst1   G7   Thst
+Tu2   4hst1   G4   Thst
+Tu3   5pla1   G5   Tpla
+Tu4   8hst1   G8   Thst
+We1   8hst2   G8   Thst
+We3   4muz1   G4   Tmuz
+We4   5muz1   G5   Tmuz
+Th0   6muz1   G6   Tmuz
+Th3   6hst2   G6   Thst
+Th4   5hst1   G5   Thst
+Th5   7hst2   G7   Thst
+Fr1   6hst1   G6   Thst
+Fr2   4pla1   G4   Tpla
 
 Room: R03
-------------
-Mo0 8wyf2
-Mo2 4wyf1
-Mo3 6wyf4
-Tu0 8wyf1
-Tu2 5wyf1
-Tu3 4wyf3
-Tu4 6wyf1
-Tu5 7wyf2
-We0 7wyf1
-We2 5wyf2
-We3 6wyf3
-Th0 5wyf3
-Th1 8wyf3
-Th2 4wyf4
-Th3 7wyf4
-Fr0 5wyf4
-Fr1 4wyf2
-Fr2 8wyf4
-Fr3 7wyf3
-Fr4 6wyf2
+-------------------------------
+Mo0   8wyf2   G8   Twyf
+Mo2   4wyf1   G4   Twyf
+Mo3   6wyf4   G6   Twyf
+Tu0   8wyf1   G8   Twyf
+Tu2   5wyf1   G5   Twyf
+Tu3   4wyf3   G4   Twyf
+Tu4   6wyf1   G6   Twyf
+Tu5   7wyf2   G7   Twyf
+We0   7wyf1   G7   Twyf
+We2   5wyf2   G5   Twyf
+We3   6wyf3   G6   Twyf
+Th0   5wyf3   G5   Twyf
+Th1   8wyf3   G8   Twyf
+Th2   4wyf4   G4   Twyf
+Th3   7wyf4   G7   Twyf
+Fr0   5wyf4   G5   Twyf
+Fr1   4wyf2   G4   Twyf
+Fr2   8wyf4   G8   Twyf
+Fr3   7wyf3   G7   Twyf
+Fr4   6wyf2   G6   Twyf
 
 Room: R04
-------------
-Mo1 6geo1
-Tu2 7jnm1
-Tu3 6bio1
-We0 8jnm2
-We1 7geo2
-We2 8geo1
-We3 5bio1
-Th0 8bio1
-Th1 7bio2
-Th4 7geo1
-Fr0 8jnm1
-Fr1 7jnm2
-Fr3 5geo1
-Fr5 7bio1
+-------------------------------
+Mo1   6geo1   G6   Tgeo
+Tu2   7jnm1   G7   Tjnm
+Tu3   6bio1   G6   Tbio
+We0   8jnm2   G8   Tjnm
+We1   7geo2   G7   Tgeo
+We2   8geo1   G8   Tgeo
+We3   5bio1   G5   Tbio
+Th0   8bio1   G8   Tbio
+Th1   7bio2   G7   Tbio
+Th4   7geo1   G7   Tgeo
+Fr0   8jnm1   G8   Tjnm
+Fr1   7jnm2   G7   Tjnm
+Fr3   5geo1   G5   Tgeo
+Fr5   7bio1   G7   Tbio
 
 Room: R05
-------------
-Mo0 7jan1
-Mo2 5jan2
-Tu1 4jan1
-Tu2 8jan2
-Tu4 7jan2
-We0 6jan1
-We1 5jan1
-We2 4jan2
-Th1 4jan3
-Th2 6jan2
-Th3 8jan3
-Fr0 7jan3
-Fr2 5jan3
-Fr3 6jan3
-Fr4 8jan1
+-------------------------------
+Mo0   7jan1   G7   Tjan
+Mo2   5jan2   G5   Tjan
+Tu1   4jan1   G4   Tjan
+Tu2   8jan2   G8   Tjan
+Tu4   7jan2   G7   Tjan
+We0   6jan1   G6   Tjan
+We1   5jan1   G5   Tjan
+We2   4jan2   G4   Tjan
+Th1   4jan3   G4   Tjan
+Th2   6jan2   G6   Tjan
+Th3   8jan3   G8   Tjan
+Fr0   7jan3   G7   Tjan
+Fr2   5jan3   G5   Tjan
+Fr3   6jan3   G6   Tjan
+Fr4   8jan1   G8   Tjan
 
 Room: R06
-------------
-Mo1 8fiz2
-Mo2 8che2
-Mo3 5inf1
-Mo4 7fiz1
-Tu0 7che2
-Tu1 8inf1
-Tu2 6tch1
-Tu3 7fiz2
-We1 6inf1
-We2 7che1
-We3 7inf1
-Th1 5tch1
-Th2 8che1
-Th3 4tch1
-Th4 8fiz1
-Fr3 4inf1
+-------------------------------
+Mo1   8fiz2   G8   Tfiz
+Mo2   8che2   G8   Tche
+Mo3   5inf1   G5   Tinf
+Mo4   7fiz1   G7   Tfiz
+Tu0   7che2   G7   Tche
+Tu1   8inf1   G8   Tinf
+Tu2   6tch1   G6   Ttch
+Tu3   7fiz2   G7   Tfiz
+We1   6inf1   G6   Tinf
+We2   7che1   G7   Tche
+We3   7inf1   G7   Tinf
+Th1   5tch1   G5   Ttch
+Th2   8che1   G8   Tche
+Th3   4tch1   G4   Ttch
+Th4   8fiz1   G8   Tfiz
+Fr3   4inf1   G4   Tinf
+
+
 
 The final schedule for groups
-=============================
+===============================
 Group: G4
-----------------------------
+-------------------------------
 Mo0   4jpl4   R00   Tjpl
 Mo1   4mat1   R01   Tmat
 Mo2   4wyf1   R03   Twyf
@@ -1383,7 +1389,7 @@ Fr2   4pla1   R02   Tpla
 Fr3   4inf1   R06   Tinf
 
 Group: G5
-----------------------------
+-------------------------------
 Mo0   5mat3   R01   Tmat
 Mo1   5jpl3   R00   Tjpl
 Mo2   5jan2   R05   Tjan
@@ -1410,7 +1416,7 @@ Fr3   5geo1   R04   Tgeo
 Fr4   5mat2   R01   Tmat
 
 Group: G6
-----------------------------
+-------------------------------
 Mo0   6pla1   R02   Tpla
 Mo1   6geo1   R04   Tgeo
 Mo2   6mat4   R01   Tmat
@@ -1437,7 +1443,7 @@ Fr3   6jan3   R05   Tjan
 Fr4   6wyf2   R03   Twyf
 
 Group: G7
-----------------------------
+-------------------------------
 Mo0   7jan1   R05   Tjan
 Mo1   7muz1   R02   Tmuz
 Mo2   7pla1   R02   Tpla
@@ -1471,7 +1477,7 @@ Fr4   7jpl4   R00   Tjpl
 Fr5   7bio1   R04   Tbio
 
 Group: G8
-----------------------------
+-------------------------------
 Mo0   8wyf2   R03   Twyf
 Mo1   8fiz2   R06   Tfiz
 Mo2   8che2   R06   Tche
@@ -1501,4 +1507,3 @@ Fr3   8jpl4   R00   Tjpl
 Fr4   8jan1   R05   Tjan
 
 NEOS Server Home
-

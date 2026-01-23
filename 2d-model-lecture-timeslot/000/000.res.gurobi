@@ -3,12 +3,12 @@
 *************************************************************
 
    NEOS Server Version 6.0
-   Job#     : 18270625
-   Password : lVnPEIBW
+   Job#     : 18270842
+   Password : gnAKPGpk
    User     : 
    Solver   : milp:Gurobi:AMPL
-   Start    : 2026-01-23 05:15:49
-   End      : 2026-01-23 05:15:52
+   Start    : 2026-01-23 07:03:34
+   End      : 2026-01-23 07:03:42
    Host     : prod-sub-1.neos-server.org
 
    Disclaimer:
@@ -26,7 +26,7 @@ Checking ampl.com for gurobi_options...
 Executing AMPL.
 processing data.
 processing commands.
-Executing on prod-exec-7.neos-server.org
+Executing on prod-exec-1.neos-server.org
 set L :=
 4m1   4m3   4p2   4b2   5p1   5p3   5p5   5b1   5b3   5b5   5a1   5a3   5a5
 4m2   4p1   4b1   5m1   5p2   5p4   5p6   5b2   5b4   5b6   5a2   5a4   5a6;
@@ -215,7 +215,7 @@ Constraints:  2197 linear;
 Set parameter InfUnbdInfo to value 1
 Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
 
-CPU model: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+CPU model: Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz, instruction set [SSE2|AVX|AVX2]
 Thread count: 32 physical cores, 64 logical processors, using up to 4 threads
 
 Non-default parameters:
@@ -249,7 +249,7 @@ Root relaxation: objective 3.000000e+01, 295 iterations, 0.00 seconds (0.00 work
 H    0     0                      30.0000000   30.00000  0.00%     -    0s
      0     0   30.00000    0   48   30.00000   30.00000  0.00%     -    0s
 
-Explored 1 nodes (295 simplex iterations) in 0.02 seconds (0.02 work units)
+Explored 1 nodes (295 simplex iterations) in 0.03 seconds (0.02 work units)
 Thread count was 4 (of 64 available processors)
 
 Solution count 2: 30 53 
@@ -473,87 +473,93 @@ sum{l in  LC[c], s in  SD[d]} X[l,s] [*,*]
 5p   2   1   1   1   1
 ;
 
+
+
 The final schedule for teachers
 ===============================
 Teacher: Ana
-------------
-Mo1 5b6
-Mo3 5b1
-Tu0 5b4
-We0 5b2
-Th0 4b2
-Th1 5b3
-Fr0 5b5
-Fr1 4b1
+-------------------------------
+Mo1   5b6   G5   R10
+Mo3   5b1   G5   R10
+Tu0   5b4   G5   R10
+We0   5b2   G5   R10
+Th0   4b2   G4   R10
+Th1   5b3   G5   R10
+Fr0   5b5   G5   R10
+Fr1   4b1   G4   R10
 
 Teacher: Pwl
-------------
-Mo0 4m3
-Tu0 4m1
-Th3 5m1
-Fr0 4m2
+-------------------------------
+Mo0   4m3   G4   R11
+Tu0   4m1   G4   R11
+Th3   5m1   G5   R11
+Fr0   4m2   G4   R11
 
 Teacher: Zbg
-------------
-Mo0 5p5
-Mo2 5p6
-Tu1 5p3
-We0 4p2
-We1 5p4
-Th0 5p1
-Th1 4p1
-Fr1 5p2
+-------------------------------
+Mo0   5p5   G5   R12
+Mo2   5p6   G5   R12
+Tu1   5p3   G5   R12
+We0   4p2   G4   R12
+We1   5p4   G5   R12
+Th0   5p1   G5   R12
+Th1   4p1   G4   R12
+Fr1   5p2   G5   R12
 
 Teacher: Eva
-------------
-Mo4 5a3
-Tu2 5a2
-We2 5a4
-We3 5a1
-Th2 5a6
-Fr2 5a5
+-------------------------------
+Mo4   5a3   G5   R11
+Tu2   5a2   G5   R11
+We2   5a4   G5   R11
+We3   5a1   G5   R11
+Th2   5a6   G5   R11
+Fr2   5a5   G5   R11
+
+
 
 The final schedule for rooms
-============================
+===============================
 Room: R10
-------------
-Mo1 5b6
-Mo3 5b1
-Tu0 5b4
-We0 5b2
-Th0 4b2
-Th1 5b3
-Fr0 5b5
-Fr1 4b1
+-------------------------------
+Mo1   5b6   G5   Ana
+Mo3   5b1   G5   Ana
+Tu0   5b4   G5   Ana
+We0   5b2   G5   Ana
+Th0   4b2   G4   Ana
+Th1   5b3   G5   Ana
+Fr0   5b5   G5   Ana
+Fr1   4b1   G4   Ana
 
 Room: R11
-------------
-Mo0 4m3
-Mo4 5a3
-Tu0 4m1
-Tu2 5a2
-We2 5a4
-We3 5a1
-Th2 5a6
-Th3 5m1
-Fr0 4m2
-Fr2 5a5
+-------------------------------
+Mo0   4m3   G4   Pwl
+Mo4   5a3   G5   Eva
+Tu0   4m1   G4   Pwl
+Tu2   5a2   G5   Eva
+We2   5a4   G5   Eva
+We3   5a1   G5   Eva
+Th2   5a6   G5   Eva
+Th3   5m1   G5   Pwl
+Fr0   4m2   G4   Pwl
+Fr2   5a5   G5   Eva
 
 Room: R12
-------------
-Mo0 5p5
-Mo2 5p6
-Tu1 5p3
-We0 4p2
-We1 5p4
-Th0 5p1
-Th1 4p1
-Fr1 5p2
+-------------------------------
+Mo0   5p5   G5   Zbg
+Mo2   5p6   G5   Zbg
+Tu1   5p3   G5   Zbg
+We0   4p2   G4   Zbg
+We1   5p4   G5   Zbg
+Th0   5p1   G5   Zbg
+Th1   4p1   G4   Zbg
+Fr1   5p2   G5   Zbg
+
+
 
 The final schedule for groups
-=============================
+===============================
 Group: G4
-----------------------------
+-------------------------------
 Mo0   4m3   R11   Pwl
 Tu0   4m1   R11   Pwl
 We0   4p2   R12   Zbg
@@ -563,7 +569,7 @@ Fr0   4m2   R11   Pwl
 Fr1   4b1   R10   Ana
 
 Group: G5
-----------------------------
+-------------------------------
 Mo0   5p5   R12   Zbg
 Mo1   5b6   R10   Ana
 Mo2   5p6   R12   Zbg

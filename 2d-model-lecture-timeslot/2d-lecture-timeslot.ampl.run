@@ -81,18 +81,34 @@ printf "=========\n";
 display{c in C, d in D} (sum{l in LC[c], s in SD[d]} X[l, s]);
 
 
+printf "\n\n";
 printf "The final schedule for teachers\n";
 printf "===============================\n";
 for {t in T}
 {
     printf "Teacher: %s\n", t;
-    printf "------------\n";
+    printf "-------------------------------\n";
     for {s in S}
     {
         for {l in LT[t]}
         {
-            if X[l, s] > 0 then {
-                printf "%s %s\n", s, l;
+            if X[l, s] > 0 then
+            {
+                printf "%s   %s", s, l;
+                for {g in G}
+                {
+                    if l in LG[g] then
+                    {
+                        printf "   %s", g;
+                    }
+                }
+                for {r in R}
+                {
+                    if l in LR[r] then
+                    {
+                        printf "   %s\n", r;
+                    }
+                }
             }
         }
     }
@@ -100,18 +116,34 @@ for {t in T}
 }
 
 
+printf "\n\n";
 printf "The final schedule for rooms\n";
-printf "============================\n";
+printf "===============================\n";
 for {r in R}
 {
     printf "Room: %s\n", r;
-    printf "------------\n";
+    printf "-------------------------------\n";
     for {s in S}
     {
         for {l in LR[r]}
         {
-            if X[l, s] > 0 then {
-                printf "%s %s\n", s, l;
+            if X[l, s] > 0 then
+            {
+                printf "%s   %s", s, l;
+                for {g in G}
+                {
+                    if l in LG[g] then
+                    {
+                        printf "   %s", g;
+                    }
+                }
+                for {t in T}
+                {
+                    if l in LT[t] then
+                    {
+                        printf "   %s\n", t;
+                    }
+                }
             }
         }
     }
@@ -119,12 +151,13 @@ for {r in R}
 }
 
 
+printf "\n\n";
 printf "The final schedule for groups\n";
-printf "=============================\n";
+printf "===============================\n";
 for {g in G}
 {
     printf "Group: %s\n", g;
-    printf "----------------------------\n";
+    printf "-------------------------------\n";
     for {s in S}
     {
         for {l in LG[g]}
