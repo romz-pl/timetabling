@@ -62,18 +62,18 @@
 + The value of the element of the matrix $FL[l][s] =1$ means that the lecture $l \in L$ is fixed at timeslot $s \in S$ and it is excluded from the optimization process.
 
 
-### Day function, SD
-Function $SD : S \mapsto \mathbb{N}$ returns the day corresponding to timeslot $s \in S$. 
-In the most general way, the value of the function $SD$ can be provided for each $s \in S$.
+### Day function
+Function $QD : S \mapsto \mathbb{N}$ returns the day corresponding to timeslot $s \in S$. 
+In the most general way, the value of the function $QD$ can be provided for each $s \in S$.
 
-If $S$ is the set of consecutive natural numbers starting from zero and each day consists of the same number of time slots, then $SD[s] = \text{floor}(s / N_h)$, where $N_h$ is th enumber of hours per day.
+If $S$ is the set of consecutive natural numbers starting from zero and each day consists of the same number of time slots, then $QD[s] = \text{floor}(s / N_h)$, where $N_h$ is th enumber of hours per day.
 
 
-### Timeslot numer in the day function, SI
-Function $SI : S \mapsto \mathbb{N}$ returns timeslot number in the day corresponding to timeslot $s \in S$.
+### Timeslot numer in the day function
+Function $QI : S \mapsto \mathbb{N}$ returns timeslot number in the day corresponding to timeslot $s \in S$.
 In the most general way, the value of the function $SI$ can be provided for each $s \in S$.
 
-If $S$ is the set of consecutive natural numbers starting from zero and each day consists of the same number of time slots, then $SI[s] = s \text{ mod } N_h$, where $N_h$ is th enumber of hours per day.
+If $S$ is the set of consecutive natural numbers starting from zero and each day consists of the same number of time slots, then $QI[s] = s \text{ mod } N_h$, where $N_h$ is th enumber of hours per day.
 
 
 ## Variables of the model
