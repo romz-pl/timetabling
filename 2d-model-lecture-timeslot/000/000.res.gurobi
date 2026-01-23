@@ -3,12 +3,12 @@
 *************************************************************
 
    NEOS Server Version 6.0
-   Job#     : 18265290
-   Password : jovVScsD
+   Job#     : 18270625
+   Password : lVnPEIBW
    User     : 
    Solver   : milp:Gurobi:AMPL
-   Start    : 2026-01-22 00:41:55
-   End      : 2026-01-22 00:42:18
+   Start    : 2026-01-23 05:15:49
+   End      : 2026-01-23 05:15:52
    Host     : prod-sub-1.neos-server.org
 
    Disclaimer:
@@ -26,256 +26,562 @@ Checking ampl.com for gurobi_options...
 Executing AMPL.
 processing data.
 processing commands.
-Executing on prod-exec-6.neos-server.org
-set L := 4m1 4m2 4m3 4p1 4p2 4b1 4b2;
+Executing on prod-exec-7.neos-server.org
+set L :=
+4m1   4m3   4p2   4b2   5p1   5p3   5p5   5b1   5b3   5b5   5a1   5a3   5a5
+4m2   4p1   4b1   5m1   5p2   5p4   5p6   5b2   5b4   5b6   5a2   5a4   5a6;
 
-set S := Mo0 Mo1 Mo2 Tu0 Tu1 Tu2 We0 We1 We2 Th0 Th1 Th2 Fr0 Fr1 Fr2;
+set S :=
+Mo0   Mo3   Mo6   Tu2   Tu5   We1   We4   Th0   Th3   Th6   Fr2   Fr5
+Mo1   Mo4   Tu0   Tu3   Tu6   We2   We5   Th1   Th4   Fr0   Fr3   Fr6
+Mo2   Mo5   Tu1   Tu4   We0   We3   We6   Th2   Th5   Fr1   Fr4;
 
-set T := Ana Pwl Zbg;
+set T := Ana Pwl Zbg Eva;
 
 set R := R10 R11 R12;
 
+set G := G4 G5;
+
+set D := Mo Tu We Th Fr;
+
+set C := 4m 4p 4b 5a 5b 5m 5p;
+
 t = Ana
 
-set  LT[t] := 4b1 4b2;
+set  LT[t] := 4b1 4b2 5b1 5b2 5b3 5b4 5b5 5b6;
 
 t = Pwl
 
-set  LT[t] := 4m1 4m2 4m3;
+set  LT[t] := 4m1 4m2 4m3 5m1;
 
 t = Zbg
 
-set  LT[t] := 4p1 4p2;
+set  LT[t] := 4p1 4p2 5p1 5p2 5p3 5p4 5p5 5p6;
+
+t = Eva
+
+set  LT[t] := 5a1 5a2 5a3 5a4 5a5 5a6;
 
 r = R10
 
-set  LR[r] := 4b1 4b2;
+set  LR[r] := 4b1 4b2 5b1 5b2 5b3 5b4 5b5 5b6;
 
 r = R11
 
-set  LR[r] := 4m1 4m2 4m3;
+set  LR[r] := 4m1 4m2 4m3 5a1 5a2 5a3 5a4 5a5 5a6 5m1;
 
 r = R12
 
-set  LR[r] := 4p1 4p2;
+set  LR[r] := 4p1 4p2 5p1 5p2 5p3 5p4 5p5 5p6;
 
-AL [*,*] (tr)
-:   4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
-Mo0   1   1   1   1   1   1   1
-Mo1   1   1   1   1   1   1   1
-Mo2   1   1   1   1   1   1   1
-Tu0   1   1   1   1   1   1   1
-Tu1   1   1   1   1   1   1   1
-Tu2   1   1   1   1   1   1   1
-We0   1   1   1   1   1   1   1
-We1   1   1   1   1   1   1   1
-We2   1   1   1   1   1   1   1
-Th0   1   1   1   1   1   1   1
-Th1   1   1   1   1   1   1   1
-Th2   1   1   1   1   1   1   1
-Fr0   1   1   1   1   1   1   1
-Fr1   1   1   1   1   1   1   1
-Fr2   1   1   1   1   1   1   1
+g = G4
+
+set  LG[g] := 4m1 4m2 4m3 4p1 4p2 4b1 4b2;
+
+g = G5
+
+set  LG[g] :=
+5m1   5p2   5p4   5p6   5b2   5b4   5b6   5a2   5a4   5a6
+5p1   5p3   5p5   5b1   5b3   5b5   5a1   5a3   5a5;
+
+d = Mo
+
+set  SD[d] := Mo0 Mo1 Mo2 Mo3 Mo4 Mo5 Mo6;
+
+d = Tu
+
+set  SD[d] := Tu0 Tu1 Tu2 Tu3 Tu4 Tu5 Tu6;
+
+d = We
+
+set  SD[d] := We0 We1 We2 We3 We4 We5 We6;
+
+d = Th
+
+set  SD[d] := Th0 Th1 Th2 Th3 Th4 Th5 Th6;
+
+d = Fr
+
+set  SD[d] := Fr0 Fr1 Fr2 Fr3 Fr4 Fr5 Fr6;
+
+c = 4m
+
+set  LC[c] := 4m1 4m2 4m3;
+
+c = 4p
+
+set  LC[c] := 4p1 4p2;
+
+c = 4b
+
+set  LC[c] := 4b1 4b2;
+
+c = 5a
+
+set  LC[c] := 5a1 5a2 5a3 5a4 5a5 5a6;
+
+c = 5b
+
+set  LC[c] := 5b1 5b2 5b3 5b4 5b5 5b6;
+
+c = 5m
+
+set  LC[c] := 5m1;
+
+c = 5p
+
+set  LC[c] := 5p1 5p2 5p3 5p4 5p5 5p6;
+
+AL; #empty
+
+FL; #empty
+
+AT; #empty
+
+AR; #empty
+
+AG; #empty
+
+AC :=
+5a We   2
+5b Mo   2
+5p Mo   2
 ;
 
-AT [*,*] (tr)
-:   Ana Pwl Zbg    :=
-Mo0   0   1   1
-Mo1   0   1   1
-Mo2   0   1   1
-Tu0   0   1   0
-Tu1   0   1   0
-Tu2   0   1   0
-We0   0   0   0
-We1   0   0   0
-We2   0   0   0
-Th0   0   0   0
-Th1   0   0   0
-Th2   0   0   0
-Fr0   1   0   0
-Fr1   1   0   0
-Fr2   1   0   0
-;
-
-AR [*,*] (tr)
-:   R10 R11 R12    :=
-Mo0   1   1   1
-Mo1   1   1   1
-Mo2   1   1   1
-Tu0   1   1   1
-Tu1   1   1   1
-Tu2   1   1   1
-We0   1   1   1
-We1   1   1   1
-We2   1   1   1
-Th0   1   1   1
-Th1   1   1   1
-Th2   1   1   1
-Fr0   1   1   1
-Fr1   1   1   1
-Fr2   1   1   1
-;
-
-WL [*,*] (tr)
-:   4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
-Mo0   0   0   0   0   0   0   0
-Mo1   1   1   1   1   1   1   1
-Mo2   2   2   2   2   2   2   2
-Tu0   0   0   0   0   0   0   0
-Tu1   1   1   1   1   1   1   1
-Tu2   2   2   2   2   2   2   2
-We0   0   0   0   0   0   0   0
-We1   1   1   1   1   1   1   1
-We2   2   2   2   2   2   2   2
-Th0   0   0   0   0   0   0   0
-Th1   1   1   1   1   1   1   1
-Th2   2   2   2   2   2   2   2
-Fr0   0   0   0   0   0   0   0
-Fr1   1   1   1   1   1   1   1
-Fr2   2   2   2   2   2   2   2
+WG [*,*] (tr)
+:    G4  G5    :=
+Mo0   0   0
+Mo1   1   1
+Mo2   2   2
+Mo3   3   3
+Mo4   4   4
+Mo5   5   5
+Mo6   6   6
+Tu0   0   0
+Tu1   1   1
+Tu2   2   2
+Tu3   3   3
+Tu4   4   4
+Tu5   5   5
+Tu6   6   6
+We0   0   0
+We1   1   1
+We2   2   2
+We3   3   3
+We4   4   4
+We5   5   5
+We6   6   6
+Th0   0   0
+Th1   1   1
+Th2   2   2
+Th3   3   3
+Th4   4   4
+Th5   5   5
+Th6   6   6
+Fr0   0   0
+Fr1   1   1
+Fr2   2   2
+Fr3   3   3
+Fr4   4   4
+Fr5   5   5
+Fr6   6   6
 ;
 
 
 "option presolve 0;" used, but "option presolve 10;" might work better.
-106 variables:
-	105 binary variables
+911 variables:
+	910 binary variables
 	1 linear variable
-203 constraints, all linear; 491 nonzeros
-	8 equality constraints
-	195 inequality constraints
+2197 constraints, all linear; 7151 nonzeros
+	27 equality constraints
+	2170 inequality constraints
 1 linear objective; 1 nonzero.
 
 Gurobi 12.0.3:   tech:threads = 4
+  pre:solve = 2
+  alg:iisfind = 1
 Set parameter LogToConsole to value 1
   tech:outlev = 1
 
-AMPL MP initial flat model has 106 variables (0 integer, 105 binary);
+AMPL MP initial flat model has 911 variables (0 integer, 910 binary);
 Objectives: 1 linear; 
-Constraints:  203 linear;
+Constraints:  2197 linear;
 
-AMPL MP final model has 106 variables (0 integer, 105 binary);
+AMPL MP final model has 911 variables (0 integer, 910 binary);
 Objectives: 1 linear; 
-Constraints:  203 linear;
+Constraints:  2197 linear;
 
 
 Set parameter InfUnbdInfo to value 1
 Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
 
-CPU model: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
-Thread count: 36 physical cores, 72 logical processors, using up to 4 threads
+CPU model: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 4 threads
 
 Non-default parameters:
 InfUnbdInfo  1
+Presolve  2
 Threads  4
 
-Optimize a model with 203 rows, 106 columns and 491 nonzeros
-Model fingerprint: 0x12e0d5b5
-Variable types: 1 continuous, 105 integer (0 binary)
+Optimize a model with 2197 rows, 911 columns and 7151 nonzeros
+Model fingerprint: 0xf9ca9b36
+Variable types: 1 continuous, 910 integer (0 binary)
 Coefficient statistics:
-  Matrix range     [1e+00, 2e+00]
+  Matrix range     [1e+00, 6e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+00]
-  RHS range        [1e+00, 1e+00]
-Found heuristic solution: objective 4.0000000
-Presolve removed 194 rows and 88 columns
-Presolve time: 0.00s
-Presolved: 9 rows, 18 columns, 36 nonzeros
-Found heuristic solution: objective 3.0000000
-Variable types: 0 continuous, 18 integer (18 binary)
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective 53.0000000
+Presolve removed 1966 rows and 1 columns
+Presolve time: 0.02s
+Presolved: 231 rows, 910 columns, 3605 nonzeros
+Variable types: 0 continuous, 910 integer (910 binary)
+Root relaxation presolved: 231 rows, 910 columns, 3605 nonzeros
 
-Root relaxation: infeasible, 5 iterations, 0.00 seconds (0.00 work units)
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 3.000000e+01, 295 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0 infeasible    0         3.00000    3.00000  0.00%     -    0s
+H    0     0                      30.0000000   30.00000  0.00%     -    0s
+     0     0   30.00000    0   48   30.00000   30.00000  0.00%     -    0s
 
-Explored 1 nodes (5 simplex iterations) in 0.00 seconds (0.00 work units)
-Thread count was 4 (of 72 available processors)
+Explored 1 nodes (295 simplex iterations) in 0.02 seconds (0.02 work units)
+Thread count was 4 (of 64 available processors)
 
-Solution count 2: 3 4 
+Solution count 2: 30 53 
 
 Optimal solution found (tolerance 1.00e-04)
-Best objective 3.000000000000e+00, best bound 3.000000000000e+00, gap 0.0000%
-Gurobi 12.0.3: optimal solution; objective 3
-5 simplex iterations
+Best objective 3.000000000000e+01, best bound 3.000000000000e+01, gap 0.0000%
+Gurobi 12.0.3: optimal solution; objective 30
+295 simplex iterations
 1 branching node
-FL = 3
+FG = 30
 
 X [*,*] (tr)
-:   4b1 4b2 4m1 4m2 4m3 4p1 4p2    :=
-Mo0   0   0   1   0   0   1   0
-Mo1   0   0   0   0   0   0   1
-Mo2   0   0   0   0   0   0   0
-Tu0   0   0   0   1   0   0   0
-Tu1   0   0   0   0   1   0   0
+:   4b1 4b2 4m1 4m2 4m3 4p1 4p2 5a1 5a2 5a3 5a4 5a5 5a6 5b1 5b2 5b3 5b4 5b5 5b6 :=
+Mo0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Mo1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+Mo2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Mo3   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+Mo4   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0
+Mo5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Mo6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Tu0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+Tu1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Tu2   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0
+Tu3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Tu4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Tu5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Tu6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+We0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   1   0   0   0   0
+We1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+We2   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0
+We3   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0
+We4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+We5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+We6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Th0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Th1   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   1   0   0   0
+Th2   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0
+Th3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Th4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Th5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Th6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Fr0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
+Fr1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Fr2   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0
+Fr3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Fr4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Fr5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Fr6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+
+:   5m1 5p1 5p2 5p3 5p4 5p5 5p6    :=
+Mo0   0   0   0   0   0   1   0
+Mo1   0   0   0   0   0   0   0
+Mo2   0   0   0   0   0   0   1
+Mo3   0   0   0   0   0   0   0
+Mo4   0   0   0   0   0   0   0
+Mo5   0   0   0   0   0   0   0
+Mo6   0   0   0   0   0   0   0
+Tu0   0   0   0   0   0   0   0
+Tu1   0   0   0   1   0   0   0
 Tu2   0   0   0   0   0   0   0
+Tu3   0   0   0   0   0   0   0
+Tu4   0   0   0   0   0   0   0
+Tu5   0   0   0   0   0   0   0
+Tu6   0   0   0   0   0   0   0
 We0   0   0   0   0   0   0   0
-We1   0   0   0   0   0   0   0
+We1   0   0   0   0   1   0   0
 We2   0   0   0   0   0   0   0
-Th0   0   0   0   0   0   0   0
+We3   0   0   0   0   0   0   0
+We4   0   0   0   0   0   0   0
+We5   0   0   0   0   0   0   0
+We6   0   0   0   0   0   0   0
+Th0   0   1   0   0   0   0   0
 Th1   0   0   0   0   0   0   0
 Th2   0   0   0   0   0   0   0
-Fr0   1   0   0   0   0   0   0
-Fr1   0   1   0   0   0   0   0
+Th3   1   0   0   0   0   0   0
+Th4   0   0   0   0   0   0   0
+Th5   0   0   0   0   0   0   0
+Th6   0   0   0   0   0   0   0
+Fr0   0   0   0   0   0   0   0
+Fr1   0   0   1   0   0   0   0
 Fr2   0   0   0   0   0   0   0
+Fr3   0   0   0   0   0   0   0
+Fr4   0   0   0   0   0   0   0
+Fr5   0   0   0   0   0   0   0
+Fr6   0   0   0   0   0   0   0
 ;
 
-Matrix Y
+Matrix XT
+=========
 sum{l in  LT[t]} X[l,s] [*,*] (tr)
-:   Ana Pwl Zbg    :=
-Mo0   0   1   1
-Mo1   0   0   1
-Mo2   0   0   0
-Tu0   0   1   0
-Tu1   0   1   0
-Tu2   0   0   0
-We0   0   0   0
-We1   0   0   0
-We2   0   0   0
-Th0   0   0   0
-Th1   0   0   0
-Th2   0   0   0
-Fr0   1   0   0
-Fr1   1   0   0
-Fr2   0   0   0
+:   Ana Eva Pwl Zbg    :=
+Mo0   0   0   1   1
+Mo1   1   0   0   0
+Mo2   0   0   0   1
+Mo3   1   0   0   0
+Mo4   0   1   0   0
+Mo5   0   0   0   0
+Mo6   0   0   0   0
+Tu0   1   0   1   0
+Tu1   0   0   0   1
+Tu2   0   1   0   0
+Tu3   0   0   0   0
+Tu4   0   0   0   0
+Tu5   0   0   0   0
+Tu6   0   0   0   0
+We0   1   0   0   1
+We1   0   0   0   1
+We2   0   1   0   0
+We3   0   1   0   0
+We4   0   0   0   0
+We5   0   0   0   0
+We6   0   0   0   0
+Th0   1   0   0   1
+Th1   1   0   0   1
+Th2   0   1   0   0
+Th3   0   0   1   0
+Th4   0   0   0   0
+Th5   0   0   0   0
+Th6   0   0   0   0
+Fr0   1   0   1   0
+Fr1   1   0   0   1
+Fr2   0   1   0   0
+Fr3   0   0   0   0
+Fr4   0   0   0   0
+Fr5   0   0   0   0
+Fr6   0   0   0   0
 ;
 
-Matrix Z
+Matrix XR
+=========
 sum{l in  LR[r]} X[l,s] [*,*] (tr)
 :   R10 R11 R12    :=
 Mo0   0   1   1
-Mo1   0   0   1
-Mo2   0   0   0
-Tu0   0   1   0
-Tu1   0   1   0
-Tu2   0   0   0
-We0   0   0   0
-We1   0   0   0
-We2   0   0   0
-Th0   0   0   0
-Th1   0   0   0
-Th2   0   0   0
-Fr0   1   0   0
-Fr1   1   0   0
-Fr2   0   0   0
+Mo1   1   0   0
+Mo2   0   0   1
+Mo3   1   0   0
+Mo4   0   1   0
+Mo5   0   0   0
+Mo6   0   0   0
+Tu0   1   1   0
+Tu1   0   0   1
+Tu2   0   1   0
+Tu3   0   0   0
+Tu4   0   0   0
+Tu5   0   0   0
+Tu6   0   0   0
+We0   1   0   1
+We1   0   0   1
+We2   0   1   0
+We3   0   1   0
+We4   0   0   0
+We5   0   0   0
+We6   0   0   0
+Th0   1   0   1
+Th1   1   0   1
+Th2   0   1   0
+Th3   0   1   0
+Th4   0   0   0
+Th5   0   0   0
+Th6   0   0   0
+Fr0   1   1   0
+Fr1   1   0   1
+Fr2   0   1   0
+Fr3   0   0   0
+Fr4   0   0   0
+Fr5   0   0   0
+Fr6   0   0   0
 ;
 
-The final schedule
-==================
+Matrix XG
+=========
+sum{l in  LG[g]} X[l,s] [*,*] (tr)
+:    G4  G5    :=
+Mo0   1   1
+Mo1   0   1
+Mo2   0   1
+Mo3   0   1
+Mo4   0   1
+Mo5   0   0
+Mo6   0   0
+Tu0   1   1
+Tu1   0   1
+Tu2   0   1
+Tu3   0   0
+Tu4   0   0
+Tu5   0   0
+Tu6   0   0
+We0   1   1
+We1   0   1
+We2   0   1
+We3   0   1
+We4   0   0
+We5   0   0
+We6   0   0
+Th0   1   1
+Th1   1   1
+Th2   0   1
+Th3   0   1
+Th4   0   0
+Th5   0   0
+Th6   0   0
+Fr0   1   1
+Fr1   1   1
+Fr2   0   1
+Fr3   0   0
+Fr4   0   0
+Fr5   0   0
+Fr6   0   0
+;
+
+Matrix XC
+=========
+sum{l in  LC[c], s in  SD[d]} X[l,s] [*,*]
+:   Mo  Tu  We  Th  Fr    :=
+4b   0   0   0   1   1
+4m   1   1   0   0   1
+4p   0   0   1   1   0
+5a   1   1   2   1   1
+5b   2   1   1   1   1
+5m   0   0   0   1   0
+5p   2   1   1   1   1
+;
+
+The final schedule for teachers
+===============================
 Teacher: Ana
 ------------
-Fr0 4b1
-Fr1 4b2
+Mo1 5b6
+Mo3 5b1
+Tu0 5b4
+We0 5b2
+Th0 4b2
+Th1 5b3
+Fr0 5b5
+Fr1 4b1
 
 Teacher: Pwl
 ------------
-Mo0 4m1
-Tu0 4m2
-Tu1 4m3
+Mo0 4m3
+Tu0 4m1
+Th3 5m1
+Fr0 4m2
 
 Teacher: Zbg
 ------------
-Mo0 4p1
-Mo1 4p2
+Mo0 5p5
+Mo2 5p6
+Tu1 5p3
+We0 4p2
+We1 5p4
+Th0 5p1
+Th1 4p1
+Fr1 5p2
 
+Teacher: Eva
+------------
+Mo4 5a3
+Tu2 5a2
+We2 5a4
+We3 5a1
+Th2 5a6
+Fr2 5a5
+
+The final schedule for rooms
+============================
+Room: R10
+------------
+Mo1 5b6
+Mo3 5b1
+Tu0 5b4
+We0 5b2
+Th0 4b2
+Th1 5b3
+Fr0 5b5
+Fr1 4b1
+
+Room: R11
+------------
+Mo0 4m3
+Mo4 5a3
+Tu0 4m1
+Tu2 5a2
+We2 5a4
+We3 5a1
+Th2 5a6
+Th3 5m1
+Fr0 4m2
+Fr2 5a5
+
+Room: R12
+------------
+Mo0 5p5
+Mo2 5p6
+Tu1 5p3
+We0 4p2
+We1 5p4
+Th0 5p1
+Th1 4p1
+Fr1 5p2
+
+The final schedule for groups
+=============================
+Group: G4
+----------------------------
+Mo0   4m3   R11   Pwl
+Tu0   4m1   R11   Pwl
+We0   4p2   R12   Zbg
+Th0   4b2   R10   Ana
+Th1   4p1   R12   Zbg
+Fr0   4m2   R11   Pwl
+Fr1   4b1   R10   Ana
+
+Group: G5
+----------------------------
+Mo0   5p5   R12   Zbg
+Mo1   5b6   R10   Ana
+Mo2   5p6   R12   Zbg
+Mo3   5b1   R10   Ana
+Mo4   5a3   R11   Eva
+Tu0   5b4   R10   Ana
+Tu1   5p3   R12   Zbg
+Tu2   5a2   R11   Eva
+We0   5b2   R10   Ana
+We1   5p4   R12   Zbg
+We2   5a4   R11   Eva
+We3   5a1   R11   Eva
+Th0   5p1   R12   Zbg
+Th1   5b3   R10   Ana
+Th2   5a6   R11   Eva
+Th3   5m1   R11   Pwl
+Fr0   5b5   R10   Ana
+Fr1   5p2   R12   Zbg
+Fr2   5a5   R11   Eva
+
+NEOS Server Home
