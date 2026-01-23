@@ -313,21 +313,21 @@ set L :=
 
 
 set T :=
-TjplA
-TjanA
-TmatA
-TinfA
-TtchA
-ThstA
-TprzA
-TmuzA
-TplaA
-TwyfA
-TgeoA
-TbioA
-TfizA
-TcheA
-TjnmA
+Tjpl
+Tjan
+Tmat
+Tinf
+Ttch
+Thst
+Tprz
+Tmuz
+Tpla
+Twyf
+Tgeo
+Tbio
+Tfiz
+Tche
+Tjnm
 ;
 
 set R :=
@@ -709,7 +709,7 @@ set LC[C8jnm] :=
 8jnm2
 ;
 
-set LT[TjplA] :=
+set LT[Tjpl] :=
 4jpl1
 4jpl2
 4jpl3
@@ -741,7 +741,7 @@ set LT[TjplA] :=
 8jpl5
 ;
 
-set LT[TjanA] :=
+set LT[Tjan] :=
 4jan1
 4jan2
 4jan3
@@ -763,7 +763,7 @@ set LT[TjanA] :=
 8jan3
 ;
 
-set LT[TmatA] :=
+set LT[Tmat] :=
 4mat1
 4mat2
 4mat3
@@ -790,7 +790,7 @@ set LT[TmatA] :=
 8mat4
 ;
 
-set LT[TinfA] :=
+set LT[Tinf] :=
 4inf1
 5inf1
 6inf1
@@ -798,13 +798,13 @@ set LT[TinfA] :=
 8inf1
 ;
 
-set LT[TtchA] :=
+set LT[Ttch] :=
 4tch1
 5tch1
 6tch1
 ;
 
-set LT[TgeoA] :=
+set LT[Tgeo] :=
 5geo1
 6geo1
 7geo1
@@ -812,7 +812,7 @@ set LT[TgeoA] :=
 8geo1
 ;
 
-set LT[TbioA] :=
+set LT[Tbio] :=
 5bio1
 6bio1
 7bio1
@@ -820,21 +820,21 @@ set LT[TbioA] :=
 8bio1
 ;
 
-set LT[TcheA] :=
+set LT[Tche] :=
 7che1
 7che2
 8che1
 8che2
 ;
 
-set LT[TfizA] :=
+set LT[Tfiz] :=
 7fiz1
 7fiz2
 8fiz1
 8fiz2
 ;
 
-set LT[ThstA] :=
+set LT[Thst] :=
 4hst1
 5hst1
 5hst2
@@ -846,25 +846,25 @@ set LT[ThstA] :=
 8hst2
 ;
 
-set LT[TprzA] :=
+set LT[Tprz] :=
 4prz1
 ;
 
-set LT[TmuzA] :=
+set LT[Tmuz] :=
 4muz1
 5muz1
 6muz1
 7muz1
 ;
 
-set LT[TplaA] :=
+set LT[Tpla] :=
 4pla1
 5pla1
 6pla1
 7pla1
 ;
 
-set LT[TwyfA] :=
+set LT[Twyf] :=
 4wyf1
 4wyf2
 4wyf3
@@ -891,7 +891,7 @@ set LT[TwyfA] :=
 8wyf4
 ;
 
-set LT[TjnmA] :=
+set LT[Tjnm] :=
 7jnm1
 7jnm2
 #
