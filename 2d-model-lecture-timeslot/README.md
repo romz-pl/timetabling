@@ -221,6 +221,12 @@ this condition can not be directly used in the linear model.
 To express the order of lectures as the linear function of $X$ the function $QI$ is applied.
 The function $QI : S \mapsto \mathbb{N}$ is an increasing function that returns the number corresponding to a timeslot $s \in S$.
 For example, if $s_a \in S$ is the first timeslot and $s_b \in S$ is the second timeslot, then $QI[s_a] = 1$ and then $QI[s_b] = 2$.
+Applying the function $QI$ the condition $s_1 < s_2$ can be stated as
+
+$$
+QI[s_1] < QI[s_2]
+$$
+
 Furthermore, the most fundamental constraint states that the lecture must be given exectly once.
 In other words, for each lecture $l \in L$ we have the equation
 
@@ -259,6 +265,11 @@ To express this condition as the linear function of $X$ the function $QD$ is app
 The function $QD : S \mapsto \mathbb{N}$ is an increasing function and returns the number corresponding to the weekday to which a timeslot $s \in S$ belongs.
 For example, if $s_a \in \text{Monday} \subseteq S$ is the first day in the timetable, and $s_b \in \text{Tuesday} \subseteq S$ is the second day in the timetable,
 then $QD[s_a] = 1$ and then $QD[s_b] = 2$.
+Applying the function $QD$, the condition that two lectures $l_1, l_2 \in L$ must be conducted on the same weekday at timeslots $s_1, s_2 \in S$ can be stated as
+
+$$
+QD[s_1] = QD[s_2]
+$$
 
 Having defined the function $QD$, the reasoning proceeds analogously to that presented in the **"Order of Lectures"** section,
 employing the properties of the fundamental constraint.
