@@ -207,7 +207,7 @@ $$
 
 ### Order of lectures
 
-Let's assume that the lectures $l_1, l_2 \in L$, must be conducted in a specific order: first $l_1$, then $l_2$.
+Let's assume that the lectures $l_1, l_2 \in L$ must be conducted in a specific order: first $l_1$, then $l_2$.
 If lecture $l_1 \in L$ is conducted in timeslot $s_1 \in S$ and lecture $l_2 \in L$ is conducted in timeslot $s_2 \in S$, then the condition
 
 $$
@@ -260,7 +260,7 @@ The above condition is a linear function of X and can therefore be used in a lin
 
 ### Lectures on the same weekday
 
-Let's assume that the lectures $l_1, l_2 \in L$, must be conducted on the same weekday.
+Let's assume that the lectures $l_1, l_2 \in L$ must be conducted on the same weekday.
 To express this condition as the linear function of $X$ the function $QD$ is applied.
 The function $QD : S \mapsto \mathbb{N}$ is an increasing function and returns the number corresponding to the weekday to which a timeslot $s \in S$ belongs.
 For example, if $s_a \in \text{Monday} \subseteq S$ is the first day in the timetable, and $s_b \in \text{Tuesday} \subseteq S$ is the second day in the timetable,
