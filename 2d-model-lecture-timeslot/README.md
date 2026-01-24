@@ -64,14 +64,14 @@
 
 ### Day function
 Function $QD : S \mapsto \mathbb{N}$ returns the day corresponding to timeslot $s \in S$.
-In the most general way, the value of the function $QD$ can be provided for each $s \in S$.
+In the most general way, the value of the function $QD$ can be provided for each $s \in S$, and then $QD$ is a vector.
 
 If $S$ is the set of consecutive natural numbers starting from zero and each day consists of the same number of time slots, then $QD[s] = \text{floor}(s / N_h)$, where $N_h$ is th enumber of hours per day.
 
 
 ### Timeslot numer in the day function
-Function $QI : S \mapsto \mathbb{N}$ returns timeslot number in the day corresponding to timeslot $s \in S$.
-In the most general way, the value of the function $SI$ can be provided for each $s \in S$.
+Function $QI : S \mapsto \mathbb{N}$ returns timeslot number corresponding to timeslot $s \in S$.
+In the most general way, the value of the function $SI$ can be provided for each $s \in S$, and then $QI$ is a vector.
 
 If $S$ is the set of consecutive natural numbers starting from zero and each day consists of the same number of time slots, then $QI[s] = s \text{ mod } N_h$, where $N_h$ is th enumber of hours per day.
 
@@ -146,12 +146,14 @@ $$
 \forall_{l \in L} \qquad \sum_{s \in S} X[l][s] = 1
 $$
 
+
 ### Enforce when lecture are unavailable
 If the element of the matrix, $AL[l][s]$ is zero, then lecture $l \in L$ cannot occur in timeslot $s \in S$:
 
 $$
 \forall_{L \in L} \forall_{s \in S} \qquad X[l][s] \leq AL[l][s]
 $$
+
 
 ### Only one teacher conducts the lecture
 The second fundamental constraint is that any teacher $t \in T$ can teach exactly one lecture at a given time slot $s \in S$.
@@ -160,6 +162,7 @@ If the element of the matrix $AT[t][s]$ is zero, then teacher $r \in R$ is unava
 $$
 \forall_{t \in T} \forall_{s \in S} \qquad \sum_{l \in LT[t]} X[l][s] \leq AT[t][s]
 $$
+
 
 ### Only one lecture is allowed in the room
 The third fundamental constraint is that only one lecture can be conducted in room $r \in R$ at time slot $s \in S$.
@@ -178,6 +181,7 @@ $$
 \forall_{g \in G} \forall_{s \in S} \qquad \sum_{l \in LG[g]} X[l][s] \leq AG[g][s]
 $$
 
+
 ### Limit the number of lectures in the course per day
 
 $$
@@ -192,6 +196,7 @@ $$
 X[l_1][s] = X[l_2][s]
 $$
 
+
 ### Two lectures one after another
 Let the function $\text{next}(s)$ returns the timeslot that comes right after timeslot $s \in S$. Then, if lectures $l_1, l_2 \in L$ must take place one after another, then we have the constraint:
 
@@ -200,6 +205,44 @@ X[l_1][s] = X[l_2][\text{next}(s)]
 $$
 
 
+### Order of lectures
+
+Let's assume that the lectures $l_1, l_2 \in L$, must be conducted in a specific order: first, $l_1$, then $l_2$.
+If the lecture $l_1 \in L$ is conducted in time slot $s_1 \in S$ and the lecture $l_2 \in L$ is conducted in time slot $s_2 \in S$ then the condition
+If lecture $l_1 \in L$ is conducted in time slot $s_1 \in S$ and lecture $l_2 \in L$ is conducted in time slot $s_2 \in S$, then the condition
+
+$$
+s_1 < s_2
+$$
+
+express the requirements: first, $l_1$, then $l_2$. The above condition is not the linear condition of the variable $X[l][s]$,
+but rather the linear condition of the indices of the matrix $X$, i.e., the timeslots $s_1$ and $s_2$. Hence,
+this condition can not be directly used in the linear model.
+
+To express the order of lectures as the linear function of $X$ the function $QI$ is applied.
+The function $QI : S \mapsto \mathbb{N}$ is an increasing function that returns the timeslot number corresponding to a timeslot $s \in S$.
+For example, if $s_a \in S$ is the first timeslot, then $QI[s_a] = 1$.
+Furthermore, the most fundamental constraint states that the lecture must be given only once. In other words, we have the equation
+
+$$
+\forall_{l \in L} \qquad \sum_{s \in S} X[l][s] = 1
+$$
+
+This means that for a specific $l_a \in L$, exactly one element of the vector $X[l_a][s]$ is equal to 1, and the others are equal to 0.
+Based on the above conditions and definitions, it follows, that in the sum
+
+$$
+\sum_{s \in S} QI[s] \cdot X[l][s]
+$$
+
+exectly one element of the sum is not zero.
+Therefore, the requirement that $l_1$ happen before $l_2$ can be expressed as follows:
+
+$$
+\sum_{s \in S} QI[s] \cdot X[l_1][s] < \sum_{s \in S} QI[s] \cdot X[l_2][s]
+$$
+
+The above condition is a linear function of X and can therefore be used in a linear model.
 
 
 ## Objective function
