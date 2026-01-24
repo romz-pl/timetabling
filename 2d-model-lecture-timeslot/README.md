@@ -250,7 +250,7 @@ The above condition is a linear function of X and can therefore be used in a lin
 
 Let's assume that the lectures $l_1, l_2 \in L$, must be conducted on the same weekday.
 To express this condition as the linear function of $X$ the function $QD$ is applied.
-The function $QD : S \mapsto \mathbb{N}$ is an increasing function that returns the number corresponding to weekday a timeslot $s \in S$ belongs.
+The function $QD : S \mapsto \mathbb{N}$ is an increasing function and returns the number corresponding to the weekday to which a timeslot $s \in S$ belongs.
 For example, if $s_a \in \text{Monday} \subset S$ is the first day in the timetable, and $s_b \in \text{Tuesday} \subset S$ is the second day in the timetable,
 then $QD[s_a] = 1$ and then $QD[s_b] = 2$.
 
