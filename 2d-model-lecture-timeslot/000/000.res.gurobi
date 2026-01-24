@@ -3,12 +3,12 @@
 *************************************************************
 
    NEOS Server Version 6.0
-   Job#     : 18270842
-   Password : gnAKPGpk
+   Job#     : 18274553
+   Password : HgfZbGNT
    User     : 
    Solver   : milp:Gurobi:AMPL
-   Start    : 2026-01-23 07:03:34
-   End      : 2026-01-23 07:03:42
+   Start    : 2026-01-24 06:38:39
+   End      : 2026-01-24 06:38:57
    Host     : prod-sub-1.neos-server.org
 
    Disclaimer:
@@ -26,7 +26,7 @@ Checking ampl.com for gurobi_options...
 Executing AMPL.
 processing data.
 processing commands.
-Executing on prod-exec-1.neos-server.org
+Executing on prod-exec-7.neos-server.org
 set L :=
 4m1   4m3   4p2   4b2   5p1   5p3   5p5   5b1   5b3   5b5   5a1   5a3   5a5
 4m2   4p1   4b1   5m1   5p2   5p4   5p6   5b2   5b4   5b6   5a2   5a4   5a6;
@@ -188,13 +188,15 @@ Fr6   6   6
 ;
 
 
+Presolve eliminates 1820 logical constraints.
 "option presolve 0;" used, but "option presolve 10;" might work better.
+Adjusted problem:
 911 variables:
 	910 binary variables
 	1 linear variable
-2197 constraints, all linear; 7151 nonzeros
+377 constraints, all linear; 5331 nonzeros
 	27 equality constraints
-	2170 inequality constraints
+	350 inequality constraints
 1 linear objective; 1 nonzero.
 
 Gurobi 12.0.3:   tech:threads = 4
@@ -205,17 +207,17 @@ Set parameter LogToConsole to value 1
 
 AMPL MP initial flat model has 911 variables (0 integer, 910 binary);
 Objectives: 1 linear; 
-Constraints:  2197 linear;
+Constraints:  377 linear;
 
 AMPL MP final model has 911 variables (0 integer, 910 binary);
 Objectives: 1 linear; 
-Constraints:  2197 linear;
+Constraints:  377 linear;
 
 
 Set parameter InfUnbdInfo to value 1
 Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
 
-CPU model: Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz, instruction set [SSE2|AVX|AVX2]
+CPU model: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
 Thread count: 32 physical cores, 64 logical processors, using up to 4 threads
 
 Non-default parameters:
@@ -223,8 +225,8 @@ InfUnbdInfo  1
 Presolve  2
 Threads  4
 
-Optimize a model with 2197 rows, 911 columns and 7151 nonzeros
-Model fingerprint: 0xf9ca9b36
+Optimize a model with 377 rows, 911 columns and 5331 nonzeros
+Model fingerprint: 0x80c3dadf
 Variable types: 1 continuous, 910 integer (0 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 6e+00]
@@ -232,7 +234,7 @@ Coefficient statistics:
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 2e+00]
 Found heuristic solution: objective 53.0000000
-Presolve removed 1966 rows and 1 columns
+Presolve removed 146 rows and 1 columns
 Presolve time: 0.02s
 Presolved: 231 rows, 910 columns, 3605 nonzeros
 Variable types: 0 continuous, 910 integer (910 binary)
@@ -249,7 +251,7 @@ Root relaxation: objective 3.000000e+01, 295 iterations, 0.00 seconds (0.00 work
 H    0     0                      30.0000000   30.00000  0.00%     -    0s
      0     0   30.00000    0   48   30.00000   30.00000  0.00%     -    0s
 
-Explored 1 nodes (295 simplex iterations) in 0.03 seconds (0.02 work units)
+Explored 1 nodes (295 simplex iterations) in 0.02 seconds (0.02 work units)
 Thread count was 4 (of 64 available processors)
 
 Solution count 2: 30 53 
