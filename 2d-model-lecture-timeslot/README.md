@@ -232,9 +232,10 @@ This means that for a specific $l_a \in L$, exactly one element of the vector $X
 Based on the above conditions and definitions, it follows that exactly one element of the sum
 
 $$
-\sum_{s \in S} QI[s] \cdot X[l][s]
+\sum_{s \in S} QI[s] \cdot X[l_a][s]
 $$
-is not zero, and this non-zero element corresponds to the lecture timeslot $l_a$.
+
+is not zero, and this non-zero element corresponds timeslot when the lecture $l_a$ is conducted.
 Therefore, the requirement that $l_1$ happen before $l_2$ can be expressed as follows:
 
 $$
