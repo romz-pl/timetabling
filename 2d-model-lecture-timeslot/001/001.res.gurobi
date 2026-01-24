@@ -3,12 +3,12 @@
 *************************************************************
 
    NEOS Server Version 6.0
-   Job#     : 18270848
-   Password : LnmlrCqA
+   Job#     : 18274561
+   Password : owKJuHtg
    User     : 
    Solver   : milp:Gurobi:AMPL
-   Start    : 2026-01-23 07:05:05
-   End      : 2026-01-23 07:05:13
+   Start    : 2026-01-24 06:43:57
+   End      : 2026-01-24 06:44:02
    Host     : prod-sub-1.neos-server.org
 
    Disclaimer:
@@ -26,7 +26,7 @@ Checking ampl.com for gurobi_options...
 Executing AMPL.
 processing data.
 processing commands.
-Executing on prod-exec-1.neos-server.org
+Executing on prod-exec-6.neos-server.org
 set L :=
 4jpl1   4tch1   5jpl5   5hst2   6jan2   6pla1   7mat1   7hst1   8jpl4   8che2
 4jpl2   4hst1   5jan1   5muz1   6jan3   6wyf1   7mat2   7hst2   8jpl5   8fiz1
@@ -509,13 +509,15 @@ Fr6   6   6   6   6   6
 ;
 
 
+Presolve eliminates 8960 logical constraints.
 "option presolve 0;" used, but "option presolve 10;" might work better.
+Adjusted problem:
 4481 variables:
 	4480 binary variables
 	1 linear variable
-10314 constraints, all linear; 35201 nonzeros
+1354 constraints, all linear; 26241 nonzeros
 	129 equality constraints
-	10185 inequality constraints
+	1225 inequality constraints
 1 linear objective; 1 nonzero.
 
 Gurobi 12.0.3:   tech:threads = 4
@@ -526,26 +528,26 @@ Set parameter LogToConsole to value 1
 
 AMPL MP initial flat model has 4481 variables (0 integer, 4480 binary);
 Objectives: 1 linear; 
-Constraints:  10314 linear;
+Constraints:  1354 linear;
 
 AMPL MP final model has 4481 variables (0 integer, 4480 binary);
 Objectives: 1 linear; 
-Constraints:  10314 linear;
+Constraints:  1354 linear;
 
 
 Set parameter InfUnbdInfo to value 1
 Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
 
-CPU model: Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz, instruction set [SSE2|AVX|AVX2]
-Thread count: 32 physical cores, 64 logical processors, using up to 4 threads
+CPU model: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 36 physical cores, 72 logical processors, using up to 4 threads
 
 Non-default parameters:
 InfUnbdInfo  1
 Presolve  2
 Threads  4
 
-Optimize a model with 10314 rows, 4481 columns and 35201 nonzeros
-Model fingerprint: 0x8ee87e49
+Optimize a model with 1354 rows, 4481 columns and 26241 nonzeros
+Model fingerprint: 0x5b25cafb
 Variable types: 1 continuous, 4480 integer (0 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 6e+00]
@@ -553,8 +555,8 @@ Coefficient statistics:
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 1e+00]
 Found heuristic solution: objective 360.0000000
-Presolve removed 9606 rows and 1 columns
-Presolve time: 0.13s
+Presolve removed 646 rows and 1 columns
+Presolve time: 0.10s
 Presolved: 708 rows, 4480 columns, 17080 nonzeros
 Variable types: 0 continuous, 4480 integer (4480 binary)
 Root relaxation presolved: 708 rows, 4480 columns, 17080 nonzeros
@@ -570,8 +572,8 @@ Root relaxation: objective 2.710000e+02, 1391 iterations, 0.02 seconds (0.01 wor
 H    0     0                     271.0000000  271.00000  0.00%     -    0s
      0     0  271.00000    0  324  271.00000  271.00000  0.00%     -    0s
 
-Explored 1 nodes (1391 simplex iterations) in 0.15 seconds (0.13 work units)
-Thread count was 4 (of 64 available processors)
+Explored 1 nodes (1391 simplex iterations) in 0.12 seconds (0.13 work units)
+Thread count was 4 (of 72 available processors)
 
 Solution count 2: 271 360 
 
