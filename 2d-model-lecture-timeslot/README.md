@@ -217,23 +217,24 @@ $$
 expresses the requirements. However, the above condition is not the linear condition of the variable $X[l][s]$,
 but rather the linear condition of the indices of the matrix $X[l][s]$, i.e., the timeslots $s_1$ and $s_2$. Hence,
 this condition can not be directly used in the linear model.
+
 To express the order of lectures as the linear function of $X$ the function $QI$ is applied.
 The function $QI : S \mapsto \mathbb{N}$ is an increasing function that returns the number corresponding to a timeslot $s \in S$.
 For example, if $s_a \in S$ is the first timeslot and $s_b \in S$ is the second timeslot, then $QI[s_a] = 1$ and then $QI[s_b] = 2$.
-Furthermore, the most fundamental constraint states that the lecture must be given only once. In other words, we have the equation
+Furthermore, the most fundamental constraint states that the lecture must be given exectly once.
+In other words, for each lecture $l \in L$ we have the equation
 
 $$
-\forall_{l \in L} \qquad \sum_{s \in S} X[l][s] = 1
+\sum_{s \in S} X[l][s] = 1
 $$
 
-This means that for a specific $l_a \in L$, exactly one element of the vector $X[l_a][s]$ is equal to 1, and the others are equal to 0.
-Based on the above conditions and definitions, it follows, that in the sum
+This means that for a specific $l_a \in L$, exactly one element of the vector $X[l_a][s]$ is equal to $1$, and the others are equal to $0$.
+Based on the above conditions and definitions, it follows that exactly one element of the sum
 
 $$
 \sum_{s \in S} QI[s] \cdot X[l][s]
 $$
-
-exectly one element of the sum is not zero.
+is not zero, and this non-zero element corresponds to the lecture timeslot $l_a$.
 Therefore, the requirement that $l_1$ happen before $l_2$ can be expressed as follows:
 
 $$
