@@ -255,7 +255,7 @@ For example, if $s_a \in \text{Monday} \subseteq S$ is the first day in the time
 then $QD[s_a] = 1$ and then $QD[s_b] = 2$.
 
 Having defined the function $QD$, the reasoning proceeds analogously to that presented in the **"Order of Lectures"** section,
-employing the properties of the fundamental constraint. We observe that exactly one element of the sum
+employing the properties of the fundamental constraint. We observe that for each $l_a \in L$ exactly one element of the sum
 
 $$
 \sum_{s \in S} QD[s] \cdot X[l_a][s]
