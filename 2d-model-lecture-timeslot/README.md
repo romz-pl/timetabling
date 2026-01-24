@@ -70,7 +70,7 @@ If $S$ is the set of consecutive natural numbers starting from zero and each day
 
 
 ### Timeslot numer in the day function
-Function $QI : S \mapsto \mathbb{N}$ returns timeslot number corresponding to timeslot $s \in S$.
+Function $QI : S \mapsto \mathbb{N}$ returns number corresponding to timeslot $s \in S$.
 In the most general way, the value of the function $SI$ can be provided for each $s \in S$, and then $QI$ is a vector.
 
 If $S$ is the set of consecutive natural numbers starting from zero and each day consists of the same number of time slots, then $QI[s] = s \text{ mod } N_h$, where $N_h$ is th enumber of hours per day.
@@ -214,13 +214,12 @@ $$
 s_1 < s_2
 $$
 
-expresses the requirements: first $l_1$, then $l_2$. The above condition is not the linear condition of the variable $X[l][s]$,
-but rather the linear condition of the indices of the matrix $X$, i.e., the timeslots $s_1$ and $s_2$. Hence,
+expresses the requirements. However, the above condition is not the linear condition of the variable $X[l][s]$,
+but rather the linear condition of the indices of the matrix $X[l][s]$, i.e., the timeslots $s_1$ and $s_2$. Hence,
 this condition can not be directly used in the linear model.
-
 To express the order of lectures as the linear function of $X$ the function $QI$ is applied.
-The function $QI : S \mapsto \mathbb{N}$ is an increasing function that returns the timeslot number corresponding to a timeslot $s \in S$.
-For example, if $s_a \in S$ is the first timeslot, then $QI[s_a] = 1$.
+The function $QI : S \mapsto \mathbb{N}$ is an increasing function that returns the number corresponding to a timeslot $s \in S$.
+For example, if $s_a \in S$ is the first timeslot and $s_b \in S$ is the second timeslot, then $QI[s_a] = 1$ and then $QI[s_b] = 2$.
 Furthermore, the most fundamental constraint states that the lecture must be given only once. In other words, we have the equation
 
 $$
