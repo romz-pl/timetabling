@@ -1,4 +1,4 @@
-# Timetabling
+# AMPL models for solving Timetabling problem
 
 > [!IMPORTANT]
 > **Timetabling** is the allocation, subject to constraints, of given resources to objects being placed in space-time, in such way as to satisfy as nearly as possible a set of desirable objectives.
