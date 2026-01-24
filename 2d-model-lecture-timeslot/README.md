@@ -207,15 +207,14 @@ $$
 
 ### Order of lectures
 
-Let's assume that the lectures $l_1, l_2 \in L$, must be conducted in a specific order: first, $l_1$, then $l_2$.
-If the lecture $l_1 \in L$ is conducted in time slot $s_1 \in S$ and the lecture $l_2 \in L$ is conducted in time slot $s_2 \in S$ then the condition
-If lecture $l_1 \in L$ is conducted in time slot $s_1 \in S$ and lecture $l_2 \in L$ is conducted in time slot $s_2 \in S$, then the condition
+Let's assume that the lectures $l_1, l_2 \in L$, must be conducted in a specific order: first $l_1$, then $l_2$.
+If lecture $l_1 \in L$ is conducted in timeslot $s_1 \in S$ and lecture $l_2 \in L$ is conducted in timeslot $s_2 \in S$, then the condition
 
 $$
 s_1 < s_2
 $$
 
-express the requirements: first, $l_1$, then $l_2$. The above condition is not the linear condition of the variable $X[l][s]$,
+expresses the requirements: first $l_1$, then $l_2$. The above condition is not the linear condition of the variable $X[l][s]$,
 but rather the linear condition of the indices of the matrix $X$, i.e., the timeslots $s_1$ and $s_2$. Hence,
 this condition can not be directly used in the linear model.
 
