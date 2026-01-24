@@ -236,10 +236,36 @@ $$
 $$
 
 is not zero, and this non-zero element corresponds to the timeslot when lecture $l_a$ is conducted.
-Therefore, the requirement that $l_1$ happen before $l_2$ can be expressed as follows:
+Therefore, the requirement that $l_1$ happens before $l_2$ can be expressed as follows:
 
 $$
 \sum_{s \in S} QI[s] \cdot X[l_1][s] < \sum_{s \in S} QI[s] \cdot X[l_2][s]
+$$
+
+The above condition is a linear function of X and can therefore be used in a linear model.
+
+
+
+### Lectures on the same weekday
+
+Let's assume that the lectures $l_1, l_2 \in L$, must be conducted on the same weekday.
+To express this condition as the linear function of $X$ the function $QD$ is applied.
+The function $QD : S \mapsto \mathbb{N}$ is an increasing function that returns the number corresponding to day a timeslot $s \in S$ belongs.
+For example, if $s_a \in \text{Monday}S$ the first day in the timetable and $s_b \in \text{Tuesday}$ is the second day in the timetable,
+then $QD[s_a] = 1$ and then $QD[s_b] = 2$.
+
+Having defined the function $QD$, the reasoning proceeds analogously to that presented in the **"Order of Lectures"** section,
+employing the properties of the fundamental constraint. We observe that exactly one element of the sum
+
+$$
+\sum_{s \in S} QD[s] \cdot X[l_a][s]
+$$
+
+is not zero, and this non-zero element corresponds to the weekday when lecture $l_a$ is conducted.
+Therefore, the requirement that $l_1$ and $l_2$ happen on the same weekday can be expressed as follows:
+
+$$
+\sum_{s \in S} QD[s] \cdot X[l_1][s] = \sum_{s \in S} QD[s] \cdot X[l_2][s]
 $$
 
 The above condition is a linear function of X and can therefore be used in a linear model.
