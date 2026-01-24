@@ -235,7 +235,7 @@ $$
 \sum_{s \in S} QI[s] \cdot X[l_a][s]
 $$
 
-is not zero, and this non-zero element corresponds timeslot when the lecture $l_a$ is conducted.
+is not zero, and this non-zero element corresponds to the timeslot when lecture $l_a$ is conducted.
 Therefore, the requirement that $l_1$ happen before $l_2$ can be expressed as follows:
 
 $$
