@@ -228,7 +228,7 @@ $$
 \sum_{s \in S} X[l][s] = 1
 $$
 
-This means that for a specific $l_a \in L$, exactly one element of the vector $X[l_a][s]$ is equal to $1$, and the others are equal to $0$.
+This means that for a specific lecture $l_a \in L$, exactly one element of the vector $X[l_a][s]$ is equal to $1$, and the others are equal to $0$.
 Based on the above conditions and definitions, it follows that exactly one element of the sum
 
 $$
@@ -236,6 +236,12 @@ $$
 $$
 
 is not zero, and this non-zero element corresponds to the timeslot when lecture $l_a$ is conducted.
+Furthermore, if lecture $l_a \in L$ is conducted at timeslot $s_a \in S$, then it holds:
+
+$$
+\sum_{s \in S} QI[s] \cdot X[l_a][s] = QI[s_a]
+$$
+
 Therefore, the requirement that $l_1$ happens before $l_2$ can be expressed as follows:
 
 $$
@@ -255,13 +261,19 @@ For example, if $s_a \in \text{Monday} \subseteq S$ is the first day in the time
 then $QD[s_a] = 1$ and then $QD[s_b] = 2$.
 
 Having defined the function $QD$, the reasoning proceeds analogously to that presented in the **"Order of Lectures"** section,
-employing the properties of the fundamental constraint. We observe that for each $l_a \in L$ exactly one element of the sum
+employing the properties of the fundamental constraint.
+We observe, that for lecture $l_a \in L$ conducted at timeslot $s_a \in S$ exactly one element of the sum
 
 $$
 \sum_{s \in S} QD[s] \cdot X[l_a][s]
 $$
 
-is not zero, and this non-zero element corresponds to the weekday when lecture $l_a$ is conducted.
+is not zero, and this non-zero element corresponds to the weekday when lecture $l_a$ is conducted, hence we have
+
+$$
+\sum_{s \in S} QD[s] \cdot X[l_a][s] = QD[s_a]
+$$
+
 Therefore, the requirement that $l_1$ and $l_2$ happen on the same weekday can be expressed as follows:
 
 $$
