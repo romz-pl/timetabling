@@ -202,12 +202,12 @@ subject to lecture_must {l in L}:
 
 # Enforce when lectures are unavailable
 subject to available_lecture {l in L, s in S}:
-    X[l, s] <= AL[l, s];
+    AL[l, s] = 0 ==> X[l, s] = 0;
 
 
 # Matrix of fixed lectures
 subject to fixed_lectures {l in L, s in S}:
-    X[l, s] >= FL[l, s];
+    FL[l, s] = 1 ==> X[l, s] = 1;
 
 
 # Only one teacher conducts the lecture
