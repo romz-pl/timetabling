@@ -10,13 +10,12 @@
 >
 > Wikipedia: [Integer programming](https://en.wikipedia.org/wiki/Integer_programming)
 
-## Our Models based on MILP
+## Our Model Lecture-Timeslot based on MILP
 
-+ [2D model Lecture-Timeslot](./2d-model-lecture-timeslot/README.md)
++ [Timetabling Problem in High Schools](./2d-model-lecture-timeslot/README.md)
 
 
-## Models based on MILP that have been published in the literature
-
+## References
 
 
 ### 2022
