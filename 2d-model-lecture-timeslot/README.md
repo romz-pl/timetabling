@@ -1,4 +1,4 @@
-# Model 2D: Lecture-Timeslot
+# Timetabling Problem in High Schools 
 
 ## Input parameters
 
