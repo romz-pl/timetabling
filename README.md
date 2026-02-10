@@ -10,7 +10,7 @@
 >
 > Wikipedia: [Integer programming](https://en.wikipedia.org/wiki/Integer_programming)
 
-## Our Model Lecture-Timeslot based on MILP
+## Our Lecture-Timeslot Model based on Integer Linear Programming
 
 + [Timetabling Problem in High Schools](./2d-model-lecture-timeslot/README.md)
 
