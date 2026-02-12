@@ -37,3 +37,7 @@
 
 ### 2014
 + Integer programming for the generalized high school timetabling problem, [Journal of Scheduling](https://doi.org/10.1007/s10951-014-0405-x)
+
+
+### 2003
++ D.M. Gay, B.W. Kernighan [AMPL: A Modeling Language for Mathematical Programming](https://ampl.com/wp-content/uploads/BOOK.pdf)
